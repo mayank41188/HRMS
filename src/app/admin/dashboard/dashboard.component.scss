@@ -1,0 +1,35 @@
+.ActivityList{
+    li{
+        margin-bottom: 18px;
+        padding-left: 22px;
+        position: relative;
+        &::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 4px;
+            display: block;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: #98B8F5;
+        }
+        &::after{
+            content: "";
+            border: 1px dashed #98B8F5;
+            position: absolute;
+            left: 6px;
+            top: 20px;
+            height: 100%;
+        }
+        &:last-child::after{
+            display: none;
+        }
+        &.active::before{
+            background: #3272EC;
+        }
+    }
+}
+td:first-child{
+    min-width: 130px;
+}

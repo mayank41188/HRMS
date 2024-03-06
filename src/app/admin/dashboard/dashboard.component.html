@@ -1,6 +1,6 @@
 <div class="w-full p-6 md:flex">
     <div class="md:w-9/12 md:pr-2">
-        <div class="grid grid-cols-4 gap-4">
+        <div class="grid md:grid-cols-4 grid-cols-1 gap-3">
             <mat-card class="shadow p-3 md:flex flex-row">
                 <img src="../../../assets/icons/d-Projects.svg" alt="" class="w-12 mr-3">
                 <div>
@@ -34,29 +34,122 @@
             </mat-card>
         </div>
 
-        <mat-card class="shadow p-4 my-5">
+        <mat-card class="shadow p-4 my-3">
             <h5 class="text-lg font-bold mb-5">Projects Statistics</h5>
             <img src="../../../assets/images/graph.png" alt="">
         </mat-card>
 
-        <div class="grid grid-cols-3 gap-4">
-            <mat-card class="shadow md:flex flex-row">
-                <h5 class="text-lg font-semibold mb-5 flex justify-between items-center w-full p-4">Clients
-                    <a class="text-primary text-sm font-medium flex items-center">View All <mat-icon color="primary" svgIcon="heroicons_mini:chevron-right"></mat-icon></a>
+        <div class="grid md:grid-cols-3 grid-cols-1 gap-3">
+            <mat-card class="shadow pb-4">
+                <h5 class="text-lg font-semibold flex justify-between items-center w-full p-4">Clients
+                    <a class="text-primary text-sm font-medium flex items-center cursor-pointer">View All <img src="../../../assets/icons/right-arrow.svg" alt="" class="w-1.5 ml-2"> </a>
                 </h5>
 
-                <table class="w-full">
-                    <tr>
-                        <th>Name</th>
-                        <th>Project</th>
-                        <th>Email</th>
-                    </tr>
-                    <tr>
-                        <td>Barry Cuda</td>
-                        <td>DMS</td>
-                        <td>barrycuda@gmailcom</td>
-                    </tr>
-                </table>
+                <div class="w-full overflow-x-auto">
+                    <table class="w-full">
+                        <tr class="border-b">
+                            <th>Name</th>
+                            <th>Project</th>
+                            <th>Email</th>
+                        </tr>
+                        <tr class="border-b">
+                            <td>
+                                <div class="flex items-center"><img src="../../../assets/images/avatars/brian-hughes.jpg" alt="" class="rounded-full h-full w-8 mr-2"> Barry Cuda</div>
+                            </td>
+                            <td>DMS</td>
+                            <td>barrycuda@gmailcom</td>
+                        </tr>
+                        <tr class="border-b">
+                            <td>
+                                <div class="flex items-center"><img src="../../../assets/images/avatars/brian-hughes.jpg" alt="" class="rounded-full h-full w-8 mr-2"> Tressa</div>
+                            </td>
+                            <td>DMS</td>
+                            <td>barrycuda@gmailcom</td>
+                        </tr>
+                        <tr class="border-b">
+                            <td>
+                                <div class="flex items-center"><img src="../../../assets/images/avatars/brian-hughes.jpg" alt="" class="rounded-full h-full w-8 mr-2"> Barry Cuda</div>
+                            </td>
+                            <td>DMS</td>
+                            <td>barrycuda@gmailcom</td>
+                        </tr>
+                        <tr class="">
+                            <td>
+                                <div class="flex items-center"><img src="../../../assets/images/avatars/brian-hughes.jpg" alt="" class="rounded-full h-full w-8 mr-2"> Tressa</div>
+                            </td>
+                            <td>DMS</td>
+                            <td>barrycuda@gmailcom</td>
+                        </tr>
+                    </table>
+                </div>
+            </mat-card>
+
+            <mat-card class="shadow p-4">
+                <h5 class="text-lg font-semibold flex justify-between items-center w-full mb-3">Task Statistics
+                    <a class="text-primary text-sm font-medium flex items-center cursor-pointer">View All <img src="../../../assets/icons/right-arrow.svg" alt="" class="w-1.5 ml-2"> </a>
+                </h5>
+                <div class="grid md:grid-cols-2 grid-cols-1 gap-3">
+                    <div class="bg-[#EEEFF1] text-center p-1">
+                        <p class="text-md">Total Tasks</p>
+                        <h5 class="font-semibold text-xl">50</h5>
+                    </div>
+                    <div class="bg-[#EEEFF1] text-center p-1">
+                        <p class="text-md">Overdue Tasks</p>
+                        <h5 class="font-semibold text-xl">5</h5>
+                    </div>
+                </div>
+
+                <div class="text-white mt-4">
+                    <span class="text-center bg-[#9368E8] w-3/12 inline-block p-1 text-xs rounded-l-full">40%</span>
+                    <span class="text-center bg-[#FFBC34] w-3/12 inline-block p-1 text-xs">30%</span>
+                    <span class="text-center bg-[#55CE63] w-2/12 inline-block p-1 text-xs">10%</span>
+                    <span class="text-center bg-[#F62D51] w-2/12 inline-block p-1 text-xs">20%</span>
+                    <span class="text-center bg-[#019EFB] w-2/12 inline-block p-1 text-xs rounded-r-full">10%</span>
+                </div>
+                <div class="flex items-center justify-between mt-3 font-medium">
+                    <p>Completed Task</p>
+                    <p class="text-[#9368E8]">20</p>
+                </div>
+                <div class="flex items-center justify-between mt-3 font-medium">
+                    <p>Inprogress Task</p>
+                    <p class="text-[#FFBC34]">10</p>
+                </div>
+                <div class="flex items-center justify-between mt-3 font-medium">
+                    <p>On Hold Task</p>
+                    <p class="text-[#55CE63]">5</p>
+                </div>
+                <div class="flex items-center justify-between mt-3 font-medium">
+                    <p>Pending Task</p>
+                    <p class="text-[#F62D51]">15</p>
+                </div>
+                <div class="flex items-center justify-between mt-3 font-medium">
+                    <p>Review Task</p>
+                    <p class="text-[#019EFB]">5</p>
+                </div>
+            </mat-card>
+
+            <mat-card class="shadow p-4">
+                <h5 class="text-lg font-semibold flex justify-between items-center w-full mb-3">Recent Activity
+                    <a class="text-primary text-sm font-medium flex items-center cursor-pointer">View All <img src="../../../assets/icons/right-arrow.svg" alt="" class="w-1.5 ml-2"> </a>
+                </h5>
+
+                <ul class="ActivityList">
+                    <li class="active">
+                        <h5 class="font-medium mb-1">Approved Request 1</h5>
+                        <p class="text-md">From "Samyuktha" HR Manager On Monday 25 Feb 2024</p>
+                    </li>
+
+                    <li>
+                        <h5 class="font-medium mb-1">Approved Request 2</h5>
+                        <p class="text-md">From "Samyuktha" HR Manager On Monday 25 Feb 2024</p>
+                    </li>
+
+                    <li>
+                        <h5 class="font-medium mb-1">Approved Request 3</h5>
+                        <p class="text-md">From "Samyuktha" HR Manager On Monday 25 Feb 2024</p>
+                    </li>
+                </ul>
+
             </mat-card>
         </div>
     </div>

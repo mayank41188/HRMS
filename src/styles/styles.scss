@@ -9,3 +9,10 @@ fuse-vertical-navigation-basic-item > .fuse-vertical-navigation-item-wrapper .fu
 fuse-vertical-navigation fuse-vertical-navigation-basic-item > .fuse-vertical-navigation-item-wrapper{
     margin-right: 0 !important;
 }
+tr{
+    height: 40px;
+}
+th,td{
+    padding-left: 16px;
+    text-align: left;
+}
