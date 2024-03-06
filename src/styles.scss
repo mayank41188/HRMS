@@ -8,7 +8,7 @@ body { margin: 0; font-family: 'Poppins', sans-serif !important; }
 :root {
     --ion-color-main: #3272EC;
     --ion-color-white: #FFFFFF;
-    --ion-color-black: #363636;
+    --ion-color-black: #6F6D6D;
     --ion-color-grey: #EFEFEF;
     --ion-color-input: #FCFDFE;
     --ion-color-border: #101010;
@@ -390,4 +390,8 @@ hr {
     .popup-body{
         padding: 0px 20px 30px;
     }
+}
+
+.blue-text{
+color: (var(--ion-color-main));
 }

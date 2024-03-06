@@ -13,7 +13,7 @@
 
 .mat-expansion-panel-header {
     height: 42px !important;
-    padding: 0 20px;
+    padding: 0 10px;
     border-radius: 0;
     .mat-content.mat-content-hide-toggle,.mat-expansion-panel-header-title{
         margin: 0 !important;
@@ -39,15 +39,16 @@
 }
 .logo{
     margin: 0 auto;
-    width: 60%;
-    padding: 10px 0;
+    width: 40%;
+    padding: 20px 0 30px 0px;
     display: block;
 }
 .active,.mat-expansion-panel-header:hover{
     background: var(--ion-color-main) !important;
+    border-radius: 100px 0px 0px 100px;
     h4{
         color: var(--ion-color-white);
-        font-weight: 600;
+        font-weight: 500;
     }
     img {
         filter: brightness(0) invert(1);
@@ -87,6 +88,13 @@ footer{
         width: 100%;
     }
 }
+.ng-tns-c1859850774-9{
+    color: var(--ion-color-black);
+    font-size: 14px;
+    margin-bottom: 0;
+    line-height: 1.4;
+    font-weight: 500;
+}
 @media only screen and (max-width: 767px) {
     .mat-expansion-panel-header{
         padding: 0 10px;
@@ -95,3 +103,9 @@ footer{
         padding-left: 20px !important;
     }
 }
+
+.dropdown{
+    margin-left: 20px !important;
+    
+}
+

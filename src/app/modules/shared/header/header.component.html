@@ -1,1 +1,26 @@
-<p>header works!</p>
+<mat-toolbar>
+    
+        <button mat-icon-button><mat-icon>notifications</mat-icon></button>
+
+    <div class="flex">
+    <button mat-icon-button><mat-icon>notifications</mat-icon></button>
+
+    
+    <div class="user">
+        <div class="profile"> <img src="../../../../assets/images/1-profile-pic.png" alt="Profil-Pic"></div>
+        <div>
+            <span class="blue-text">Samyuktha</span>
+            <span> HR Manager </span>
+        </div>
+    </div>
+
+    
+
+    <button class="blue-text" mat-icon-button [matMenuTriggerFor]="logout"><mat-icon>expand_more</mat-icon></button>
+    <mat-menu #logout="matMenu">
+    
+        <button mat-menu-item>Logout</button>
+      </mat-menu>
+    </div>
+
+    </mat-toolbar> 
