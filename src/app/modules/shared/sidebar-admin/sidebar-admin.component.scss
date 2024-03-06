@@ -104,8 +104,26 @@ footer{
     }
 }
 
+
 .dropdown{
-    margin-left: 20px !important;
-    
+    margin-left: 42px !important;
+    cursor: pointer;
+    height: 42px !important;
+    padding: 0 10px;
+    border-radius: 0;
+}
+.circle{
+    font-size: 15px;
+    height: 15px;
+    color: var(--ion-color-white);
 }
 
+
+.active,.dropdown:hover{
+        color: var(--ion-color-main);
+        
+    }
+    
+    
+        
+    
