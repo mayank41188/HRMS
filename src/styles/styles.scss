@@ -1,0 +1,11 @@
+body { 
+    font-family: 'Poppins', sans-serif; 
+}
+fuse-vertical-navigation-basic-item > .fuse-vertical-navigation-item-wrapper .fuse-vertical-navigation-item:not(.fuse-vertical-navigation-item-disabled).fuse-vertical-navigation-item-active {
+    background-color: #3272EC !important;
+    color: #ffffff !important;
+    border-radius: 100px 0px 0px 100px;
+}
+fuse-vertical-navigation fuse-vertical-navigation-basic-item > .fuse-vertical-navigation-item-wrapper{
+    margin-right: 0 !important;
+}
