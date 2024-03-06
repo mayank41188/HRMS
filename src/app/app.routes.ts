@@ -67,6 +67,6 @@ export const appRoutes: Route[] = [
         resolve: {
             initialData: initialDataResolver
         },
-        loadChildren: () => import('./modules/dashboard/dashboard.module').then(m => m.DashboardModule)
+        loadChildren: () => import('./admin/dashboard/dashboard.module').then(m => m.DashboardModule)
     }
 ];
