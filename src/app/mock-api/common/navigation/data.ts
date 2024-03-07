@@ -16,6 +16,14 @@ export const defaultNavigation: FuseNavigationItem[] = [
         icon : 'mat_outline:dashboard',
         link : '/projects'
     },
+    {
+        id   : 'hr-employees',
+        title: 'Employees',
+        type : 'basic',
+        icon : 'mat_outline:dashboard',
+        link : '/hr-employees'
+    },
+
 
 {
         id: 'master-management',

@@ -78,5 +78,18 @@ export const appRoutes: Route[] = [
             initialData: initialDataResolver
         },
         loadChildren: () => import('./admin/projects/projects.module').then(m => m.ProjectsModule)
-    }
+    },
+
+    // HR routes
+
+    {
+        path: 'hr-employees',
+        canActivate: [AuthGuard],
+        canActivateChild: [AuthGuard],
+        component: LayoutComponent,
+        resolve: {
+            initialData: initialDataResolver
+        },
+        loadChildren: () => import('./hr/employee/employee.module').then(m => m.EmployeeModule)
+    },
 ];
