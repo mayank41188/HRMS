@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { AuthForgotPasswordComponent } from 'app/modules/auth/forgot-password/forgot-password.component';
+import { AuthForgotPasswordComponent } from 'Modules/auth/forgot-password/forgot-password.component';
 
 export default [
     {

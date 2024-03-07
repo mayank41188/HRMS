@@ -23,3 +23,39 @@ img{
     width: auto;
     display: inline;
 }
+
+.orange {
+
+    .mat-mdc-form-field-flex{
+        background: #F59E0C !important;
+        .mat-mdc-form-field-infix {
+            min-height: 36px !important;
+        }
+    }
+    }
+    .theme-brand.light .mat-mdc-select-value {
+        color: #ffffff;
+    }
+    
+    .mat-mdc-select-arrow{
+        color: #ffffff !important;
+    } 
+    
+    .theme-brand.light .mat-button-toggle-appearance-standard 
+    {
+        background-color: #3272EC !important;
+        color: #ffffff !important;
+        padding: 5px;
+        max-height: 40px;
+    }
+    .mat-button-toggle-group .mat-button-toggle.mat-button-toggle-checked .mat-button-toggle-label-content{
+        background-color: #ffffff;
+        color: #3272EC;
+        border-radius: 100px;
+        
+    }
+    
+    .mat-button-toggle-group .mat-button-toggle .mat-button-toggle-label-content{
+        color: #ffffff !important;
+        
+    }

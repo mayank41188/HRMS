@@ -8,6 +8,36 @@ export const defaultNavigation: FuseNavigationItem[] = [
         type : 'basic',
         icon : 'mat_outline:dashboard',
         link : '/dashboard'
+    },
+    {
+        id   : 'projects',
+        title: 'Projects',
+        type : 'basic',
+        icon : 'mat_outline:dashboard',
+        link : '/projects'
+    },
+
+{
+        id: 'master-management',
+        title: 'Master Management',
+        type: 'collapsable',
+        icon: 'mat_solid:admin_panel_settings',
+        children: [
+            {
+                id: 'Gates',
+                title: 'Parking Gates',
+                type: 'basic',
+                icon: 'mat_solid:exit_to_app',
+                link: '/gates',
+            },
+            {
+                id: 'POSDevices',
+                title: 'POS Devices',
+                type: 'basic',
+                icon: 'mat_solid:device_hub',
+                link: '/pos-devices',
+            }
+        ],
     }
 ];
 

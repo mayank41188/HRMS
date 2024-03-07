@@ -23,11 +23,11 @@ export const appRoutes: Route[] = [
             layout: 'empty'
         },
         children: [
-            {path: 'confirmation-required', loadChildren: () => import('app/modules/auth/confirmation-required/confirmation-required.routes')},
-            {path: 'forgot-password', loadChildren: () => import('app/modules/auth/forgot-password/forgot-password.routes')},
-            {path: 'reset-password', loadChildren: () => import('app/modules/auth/reset-password/reset-password.routes')},
-            {path: 'sign-in', loadChildren: () => import('app/modules/auth/sign-in/sign-in.routes')},
-            {path: 'sign-up', loadChildren: () => import('app/modules/auth/sign-up/sign-up.routes')}
+            {path: 'confirmation-required', loadChildren: () => import('Modules/auth/confirmation-required/confirmation-required.routes')},
+            {path: 'forgot-password', loadChildren: () => import('Modules/auth/forgot-password/forgot-password.routes')},
+            {path: 'reset-password', loadChildren: () => import('Modules/auth/reset-password/reset-password.routes')},
+            {path: 'sign-in', loadChildren: () => import('Modules/auth/sign-in/sign-in.routes')},
+            {path: 'sign-up', loadChildren: () => import('Modules/auth/sign-up/sign-up.routes')}
         ]
     },
 
@@ -41,8 +41,8 @@ export const appRoutes: Route[] = [
             layout: 'empty'
         },
         children: [
-            {path: 'sign-out', loadChildren: () => import('app/modules/auth/sign-out/sign-out.routes')},
-            {path: 'unlock-session', loadChildren: () => import('app/modules/auth/unlock-session/unlock-session.routes')}
+            {path: 'sign-out', loadChildren: () => import('Modules/auth/sign-out/sign-out.routes')},
+            {path: 'unlock-session', loadChildren: () => import('Modules/auth/unlock-session/unlock-session.routes')}
         ]
     },
 
@@ -54,7 +54,7 @@ export const appRoutes: Route[] = [
             layout: 'empty'
         },
         children: [
-            {path: 'home', loadChildren: () => import('app/modules/landing/home/home.routes')},
+            {path: 'home', loadChildren: () => import('Modules/landing/home/home.routes')},
         ]
     },
 
@@ -68,5 +68,15 @@ export const appRoutes: Route[] = [
             initialData: initialDataResolver
         },
         loadChildren: () => import('./admin/dashboard/dashboard.module').then(m => m.DashboardModule)
+    },
+    {
+        path: 'projects',
+        canActivate: [AuthGuard],
+        canActivateChild: [AuthGuard],
+        component: LayoutComponent,
+        resolve: {
+            initialData: initialDataResolver
+        },
+        loadChildren: () => import('./admin/projects/projects.module').then(m => m.ProjectsModule)
     }
 ];

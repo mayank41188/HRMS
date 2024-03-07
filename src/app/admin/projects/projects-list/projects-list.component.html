@@ -1,0 +1,152 @@
+<div class="w-full p-6 md:flex">
+    <div class="grid  md:grid-cols-3 grid-cols-1 gap-4">
+        <mat-card class="shadow p-4">
+
+            <mat-menu #menu="matMenu" xPosition="before">
+                <button mat-menu-item routerLink="/projects/view">View</button>
+                <button mat-menu-item>Delete Project</button>
+            </mat-menu>
+
+            <div class="flex justify-between">
+                <h5 class="font-semibold text-xl">Toyota DMS</h5>
+                <button mat-icon-button class="threedots" [matMenuTriggerFor]="menu"><mat-icon>more_vert</mat-icon></button>
+            </div>
+            <p class="my-2">Toyota DMS is a software solution that optimizes operations in Toyota dealerships,
+                integrating inventory, sales, CRM, and service functions. It aims to enhance efficiency and customer
+                service while boosting profitability.</p>
+
+            <div class="flex ml-2">
+                <p class="text-lg w-7/12">Created On:</p>
+                <p class="font-medium text-lg w-5/12">12 Jan 2018</p>
+            </div>
+
+            <div class="flex my-2 ml-2">
+                <p class="text-lg w-7/12">Created By:</p>
+                <p class="font-medium text-lg w-5/12">Sujatha</p>
+            </div>
+
+            <div class="flex my-2 ml-2">
+                <p class="text-lg w-7/12">Client Name: </p>
+                <p class="font-medium text-lg w-5/12">Toyota</p>
+            </div>
+
+            <div class="flex my-2 ml-2">
+                <p class="text-lg w-7/12">Contact Person: </p>
+                <p class="font-medium text-lg w-5/12">Mayank</p>
+            </div>
+
+            <div class="flex my-2 ml-2">
+                <p class="text-lg w-7/12">Status:</p>
+                <p class="font-medium text-lg w-5/12">In Progress</p>
+            </div>
+
+            <div class="flex my-2 ml-2">
+                <p class="text-lg w-7/12">Project Lead:</p>
+                <p class="font-medium text-lg w-5/12">Sujatha</p>
+            </div>
+
+            <div class="flex my-2 ml-2">
+                <p class="text-lg w-7/12">Tickets:</p>
+                <p class="font-medium text-lg w-5/12">125</p>
+            </div>
+
+            <div class="my-2 ml-2">
+                <p class="text-lg w-5/12">Team: </p>
+                <div class="flex">
+                    <img src="../../../../assets/images/avatars/female-01.jpg" alt="">
+                    <img src="../../../../assets/images/avatars/male-02.jpg" alt="">
+                    <img src="../../../../assets/images/avatars/male-03.jpg" alt="">
+                    <img src="../../../../assets/images/avatars/female-02.jpg" alt="">
+                    <img src="../../../../assets/images/avatars/female-03.jpg" alt="">
+                    <img src="../../../../assets/images/avatars/male-04.jpg" alt="">
+                    <img src="../../../../assets/images/avatars/female-04.jpg" alt="">
+                    <img src="../../../../assets/images/avatars/+10.svg" alt="">
+                </div>
+            </div>
+
+            <span class="border-bottom"></span>
+
+            <div>
+                <span class="flex ">
+                    <p class="text-lg w-9/12">25%</p>
+                    <p class="text-lg w-1/12">Progress</p>
+                </span>
+                <mat-progress-bar mode="determinate" value="25"></mat-progress-bar>
+            </div>
+
+        </mat-card>
+
+        <mat-card class="shadow p-4">
+            <div class="flex justify-between">
+            <h5 class="font-semibold text-xl">Toyota Drive App</h5>
+            <button mat-icon-button class="threedots" [matMenuTriggerFor]="menu"><mat-icon>more_vert</mat-icon></button>
+            </div>
+            <p class="my-2">Toyota Drive App is a software solution that optimizes operations in Toyota dealerships,
+                integrating inventory, sales, CRM, and service functions. It aims to enhance efficiency and customer
+                service while boosting profitability.</p>
+
+            <div class="flex ml-2">
+                <p class="text-lg w-7/12">Created On:</p>
+                <p class="font-medium text-lg w-5/12">12 Jan 2018</p>
+            </div>
+
+            <div class="flex my-2 ml-2">
+                <p class="text-lg w-7/12">Created By:</p>
+                <p class="font-medium text-lg w-5/12">Sujatha</p>
+            </div>
+
+            <div class="flex my-2 ml-2">
+                <p class="text-lg w-7/12">Client Name: </p>
+                <p class="font-medium text-lg w-5/12">Toyota</p>
+            </div>
+
+            <div class="flex my-2 ml-2">
+                <p class="text-lg w-7/12">Contact Person: </p>
+                <p class="font-medium text-lg w-5/12">Mayank</p>
+            </div>
+
+            <div class="flex my-2 ml-2">
+                <p class="text-lg w-7/12">Status:</p>
+                <p class="font-medium text-lg w-5/12">In Progress</p>
+            </div>
+
+            <div class="flex my-2 ml-2">
+                <p class="text-lg w-7/12">Project Lead:</p>
+                <p class="font-medium text-lg w-5/12">Sujatha</p>
+            </div>
+
+            <div class="flex my-2 ml-2">
+                <p class="text-lg w-7/12">Tickets:</p>
+                <p class="font-medium text-lg w-5/12">125</p>
+            </div>
+
+            <div class="my-2 ml-2">
+                <p class="text-lg w-5/12">Team: </p>
+                <div class="flex">
+                    <img src="../../../../assets/images/avatars/female-01.jpg" alt="">
+                    <img src="../../../../assets/images/avatars/male-02.jpg" alt="">
+                    <img src="../../../../assets/images/avatars/male-03.jpg" alt="">
+                    <img src="../../../../assets/images/avatars/female-02.jpg" alt="">
+                    <img src="../../../../assets/images/avatars/female-03.jpg" alt="">
+                    <img src="../../../../assets/images/avatars/male-04.jpg" alt="">
+                    <img src="../../../../assets/images/avatars/female-04.jpg" alt="">
+                    <img src="../../../../assets/images/avatars/+10.svg" alt="">
+                </div>
+            </div>
+
+            <span class="border-bottom"></span>
+
+            <div>
+                <span class="flex ">
+                    <p class="text-lg w-9/12">55%</p>
+                    <p class="text-lg w-1/12">Progress</p>
+                </span>
+                <mat-progress-bar mode="determinate" value="55"></mat-progress-bar>
+            </div>
+
+        </mat-card>
+
+
+
+    </div>
+</div>
