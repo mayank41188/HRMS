@@ -11,7 +11,7 @@ export class ClientsListComponent {
 }
 
 export interface PeriodicElement {
-  no: string;
+  no: number;
   Image: string;
   Client: string;
   ContactPerson: string;
@@ -23,9 +23,9 @@ export interface PeriodicElement {
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
-  {no: '1', Image: 'hi', Client: 'DMS', ContactPerson:'John Doe', Project: 'DMS', ClientID: 'SIM-0001', Email: 'john@recstech.in', Mobile: '+91 9182736451', Action: '', },
-  {no: '2', Image: 'hi', Client: 'DMS', ContactPerson:'John Doe', Project: 'DMS', ClientID: 'SIM-0001', Email: 'john@recstech.in', Mobile: '+91 9182736451', Action: '', },
-  {no: '3', Image: 'hi', Client: 'DMS', ContactPerson:'John Doe', Project: 'DMS', ClientID: 'SIM-0001', Email: 'john@recstech.in', Mobile: '+91 9182736451', Action: '', },
-  {no: '4', Image: 'hi', Client: 'DMS', ContactPerson:'John Doe', Project: 'DMS', ClientID: 'SIM-0001', Email: 'john@recstech.in', Mobile: '+91 9182736451', Action: '', },
+  {no: 1, Image: 'hi', Client: 'DMS', ContactPerson:'John Doe', Project: 'DMS', ClientID: 'SIM-0001', Email: 'john@recstech.in', Mobile: '+91 9182736451', Action: '', },
+  {no: 2, Image: 'hi', Client: 'DMS', ContactPerson:'John Doe', Project: 'DMS', ClientID: 'SIM-0001', Email: 'john@recstech.in', Mobile: '+91 9182736451', Action: '', },
+  {no: 3, Image: 'hi', Client: 'DMS', ContactPerson:'John Doe', Project: 'DMS', ClientID: 'SIM-0001', Email: 'john@recstech.in', Mobile: '+91 9182736451', Action: '', },
+  {no: 4, Image: 'hi', Client: 'DMS', ContactPerson:'John Doe', Project: 'DMS', ClientID: 'SIM-0001', Email: 'john@recstech.in', Mobile: '+91 9182736451', Action: '', },
 
 ];
