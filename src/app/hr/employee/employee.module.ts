@@ -6,7 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AddEmployeeComponent } from './add-employee/add-employee.component';
 
 const routes: Routes = [{ path: '', component: EmployeeListComponent },
-{ path: 'add-employee', component: AddEmployeeComponent }
+{ path: 'add-employee', component: AddEmployeeComponent },
 
 ]
 
