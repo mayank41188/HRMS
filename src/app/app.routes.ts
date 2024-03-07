@@ -80,6 +80,19 @@ export const appRoutes: Route[] = [
         loadChildren: () => import('./admin/projects/projects.module').then(m => m.ProjectsModule)
     },
 
+    // admin Clients
+
+    {
+        path: 'clients',
+        canActivate: [AuthGuard],
+        canActivateChild: [AuthGuard],
+        component: LayoutComponent,
+        resolve: {
+            initialData: initialDataResolver
+        },
+        loadChildren: () => import('./admin/clients/clients.module').then(m => m.ClientsModule)
+    },
+
     // HR routes
 
     {
