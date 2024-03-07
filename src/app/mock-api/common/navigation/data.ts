@@ -7,46 +7,37 @@ export const defaultNavigation: FuseNavigationItem[] = [
         title: 'Dashboard',
         type : 'basic',
         icon : 'mat_outline:dashboard',
-        link : '/dashboard'
-    },
-    {
-        id   : 'projects',
-        title: 'Projects',
-        type : 'basic',
-        icon : 'mat_outline:dashboard',
-        link : '/projects'
+        link : ''
     },
     {
         id   : 'hr-employees',
         title: 'Employees',
         type : 'basic',
-        icon : 'mat_outline:dashboard',
+        icon : 'heroicons_outline:user-group',
         link : '/hr-employees'
     },
-
-
-// {
-//         id: 'master-management',
-//         title: 'Master Management',
-//         type: 'collapsable',
-//         icon: 'mat_solid:admin_panel_settings',
-//         children: [
-//             {
-//                 id: 'Gates',
-//                 title: 'Parking Gates',
-//                 type: 'basic',
-//                 icon: 'mat_solid:exit_to_app',
-//                 link: '/gates',
-//             },
-//             {
-//                 id: 'POSDevices',
-//                 title: 'POS Devices',
-//                 type: 'basic',
-//                 icon: 'mat_solid:device_hub',
-//                 link: '/pos-devices',
-//             }
-//         ],
-//     }
+    {
+        id   : 'leave-management',
+        title: 'Leave Management',
+        type : 'collapsable',
+        icon : 'exit_to_app',
+        link : '/hr-leave-management',
+        children:[
+            {
+                id   : 'hr-employees',
+                title: 'Employees',
+                type : 'basic',
+                link : ''
+            },  
+        ]
+    },
+    {
+        id   : 'Holidays',
+        title: 'Holidays',
+        type : 'basic',
+        icon : 'heroicons_outline:calendar-days',
+        link : '/hr-holidays'
+    },
 ];
 
 
