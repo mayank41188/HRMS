@@ -1,17 +1,22 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LeaveRequestComponent } from './leave-request/leave-request.component';
-import { ApplyLeaveComponent } from './apply-leave/apply-leave.component';
+import { LeaveRequestListComponent } from './leave-request-list/leave-request-list.component';
+import { ApplyLeaveListComponent } from './apply-leave-list/apply-leave-list.component';
 import { MaterialModule } from 'app/material/material.module';
 import { RouterModule, Routes } from '@angular/router';
+import { ViewLeaveRequestComponent } from './popups/view-leave-request/view-leave-request.component';
+import { ApplyLeaveComponent } from './popups/apply-leave/apply-leave.component';
 
 const routes: Routes = [
-  { path: '', component: LeaveRequestComponent },
+  { path: 'list', component: LeaveRequestListComponent },
+  { path: 'apply-leave', component: ApplyLeaveListComponent },
 ]
 
 @NgModule({
   declarations: [
-    LeaveRequestComponent,
+    LeaveRequestListComponent,
+    ApplyLeaveListComponent,
+    ViewLeaveRequestComponent,
     ApplyLeaveComponent
   ],
   imports: [

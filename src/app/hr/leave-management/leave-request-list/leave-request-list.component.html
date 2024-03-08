@@ -1,0 +1,103 @@
+<div class="w-full p-6">
+
+    <div class=" flex justify-between w-full mb-4 items-center">   
+        <h1 class="text-xl font-bold w-full " >Leave Management</h1>
+    
+    <div class="flex items-center">   
+        <button mat-icon-button> <mat-icon><img src="../../../../assets/icons/home-navigation.svg" class="w-5"></mat-icon></button>
+        <mat-icon><img src="../../../../assets/icons/arrow.png"></mat-icon>
+        <button mat-button class="rounded font-semibold p-1">Leave Request</button>
+    </div>
+    </div>
+    
+    <div class="bg-primary-100 w-full items-center p-3 flex justify-between rounded-t-md">
+        <div class="flex items-center">
+            <h3 class="text-lg font-semibold mr-5">Leave Request List</h3>
+            <mat-form-field appearance="fill" class="search ">
+                <input matInput placeholder="Search">
+                <mat-icon matSuffix>search</mat-icon>
+            </mat-form-field>
+        </div>
+        <div>
+            <button mat-icon-button><img src="../../../../assets/icons/refresh.svg"></button>
+            <button mat-icon-button><img src="../../../../assets/icons/xlsx-export.svg"></button>
+        </div>
+        
+    </div>
+    <div class="overflow-x-auto w-full">
+    <table mat-table [dataSource]="dataSource"> 
+        
+        <ng-container matColumnDef="no">
+          <th mat-header-cell *matHeaderCellDef width="50"> No. </th>
+          <td mat-cell *matCellDef="let element"> {{element.no}} </td>
+        </ng-container>
+    
+        <!-- <ng-container matColumnDef="Image" >
+            <th mat-header-cell *matHeaderCellDef class="text-center"> Image </th>
+            <td mat-cell *matCellDef="let element"> 
+                <div class="w-9 h-9 rounded-full border-gray-600 m-auto"><img src="../../../../assets/images/avatars/female-01.jpg" class="rounded-full"></div> </td>
+          </ng-container> -->
+      
+        
+        <ng-container matColumnDef="Name">
+          <th mat-header-cell *matHeaderCellDef> Name </th>
+          <td mat-cell *matCellDef="let element"> {{element.Name}} </td>
+        </ng-container>
+      
+        
+        <ng-container matColumnDef="appliedOn">
+          <th mat-header-cell *matHeaderCellDef> Applied On </th>
+          <td mat-cell *matCellDef="let element"> {{element.appliedOn}} </td>
+        </ng-container>
+      
+        
+        <ng-container matColumnDef="fromDate">
+          <th mat-header-cell *matHeaderCellDef> From Date </th>
+          <td mat-cell *matCellDef="let element"> {{element.fromDate}} </td>
+        </ng-container>
+    
+        <ng-container matColumnDef="toDate">
+            <th mat-header-cell *matHeaderCellDef> To Date </th>
+            <td mat-cell *matCellDef="let element"> {{element.toDate}} </td>
+          </ng-container>
+    
+          <ng-container matColumnDef="leaveType">
+            <th mat-header-cell *matHeaderCellDef> Leave Type </th>
+            <td mat-cell *matCellDef="let element"> {{element.leaveType}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="leaveReason">
+            <th mat-header-cell *matHeaderCellDef> Leave Reason </th>
+            <td mat-cell *matCellDef="let element"> {{element.leaveReason}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="leaveLeft">
+            <th mat-header-cell *matHeaderCellDef> Leave Left </th>
+            <td mat-cell *matCellDef="let element"> {{element.leaveLeft}} </td>
+          </ng-container>
+    
+          
+    
+          <ng-container matColumnDef="Action">
+            <th mat-header-cell *matHeaderCellDef class="text-center"> Action </th>
+            <td mat-cell *matCellDef="let element" class="text-center"> <button mat-icon-button routerLink="/hr-employees/add-employee" >
+                <img src="../../../../assets/icons/edit.svg"></button> <button mat-icon-button> <img src="../../../../assets/icons/delete.svg">
+            </button> </td>
+          </ng-container>
+    
+          
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr class="cursor-pointer" (click)="edit()" mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+
+      <mat-paginator [length]="100"
+              [pageSize]="10"
+              [pageSizeOptions]="[5, 10, 25, 100]"
+              aria-label="Select page">
+    </mat-paginator>
+
+    </div>
+
+</div>
+      
