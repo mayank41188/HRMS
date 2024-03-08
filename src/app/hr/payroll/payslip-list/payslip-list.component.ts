@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { GeneratePayslipComponent } from '../popups/generate-payslip/generate-payslip.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-payslip-list',
@@ -7,7 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PayslipListComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dialog: MatDialog,) { }
+
+  generate() {
+    this.dialog.open(GeneratePayslipComponent, {
+      autoFocus: false
+    })
+  }
 
   displayedColumns: string[] = ['no', 'Name', 'EmpID', 'GeneratedOn', 'Details', 'Action'];
   dataSource = ELEMENT_DATA;

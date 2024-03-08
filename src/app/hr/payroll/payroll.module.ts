@@ -5,6 +5,7 @@ import { MaterialModule } from 'app/material/material.module';
 import { RouterModule, Routes } from '@angular/router';
 import { AddPayrollComponent } from './add-payroll/add-payroll.component';
 import { PayslipListComponent } from './payslip-list/payslip-list.component';
+import { GeneratePayslipComponent } from './popups/generate-payslip/generate-payslip.component';
 
 
 const routes: Routes = [
@@ -18,6 +19,7 @@ const routes: Routes = [
     PayrollListComponent,
     AddPayrollComponent,
     PayslipListComponent,
+    GeneratePayslipComponent,
   ],
   imports: [
     CommonModule,
