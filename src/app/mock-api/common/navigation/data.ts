@@ -43,18 +43,18 @@ export const defaultNavigation: FuseNavigationItem[] = [
         id   : 'payroll',
         title: 'Payroll',
         type : 'collapsable',
-        icon : 'exit_to_app',
-        link : '/payroll-list',
+        icon : 'mat_outline:account_balance_wallet',
+        link : '',
         children:[
             {
-                id   : 'leave-request',
-                title: 'Leave Request',
+                id   : 'payroll-list',
+                title: 'Add to Payroll',
                 type : 'basic',
-                link : ''
+                link : '/payroll'
             },  
             {
-                id   : 'apply-leave',
-                title: 'Apply Leave',
+                id   : 'generate-payslip',
+                title: 'Generate Payslip',
                 type : 'basic',
                 link : ''
             },  

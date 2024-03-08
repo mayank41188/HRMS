@@ -1,0 +1,126 @@
+<div class="w-full p-6">
+    <div class=" flex justify-between w-full mb-3">
+        <h1 class="text-xl font-bold w-full ">Add Payroll</h1>
+
+
+        <div class="flex items-center">
+            <button mat-icon-button> <mat-icon><img src="../../../../assets/icons/home-navigation.svg"
+                        class="w-5"></mat-icon></button>
+            <mat-icon><img src="../../../../assets/icons/arrow.png"></mat-icon>
+            <button routerLink="/hr-employees" mat-button class="rounded font-semibold p-1">Payroll</button>
+            <mat-icon><img src="../../../../assets/icons/arrow.png"></mat-icon>
+            <button mat-button class="rounded font-semibold p-1">Add Payroll</button>
+        </div>
+    </div>
+
+
+    <div class="shadow p-4 bg-white rounded pr-0">
+
+        <div class="border p-5 m-5">
+
+            <div>
+                <mat-form-field class="w-full md:w-4/12 md:pr-4" appearance="outline">
+                    <mat-label>Employee ID</mat-label>
+                    <input placeholder="Enter Employee ID" id="employeeId" matInput>
+                </mat-form-field>
+            </div>
+
+            <div>
+                <h5 class="font-semibold text-xl mt-10 mb-4">Earnings - RT0002</h5>
+                <mat-form-field class="w-full md:w-4/12 md:pr-4" appearance="outline">
+                    <mat-label>Basic</mat-label>
+                    <input placeholder="Basic" id="basic" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="w-full md:w-4/12 md:pr-4" appearance="outline">
+                    <mat-label>HRA</mat-label>
+                    <input placeholder="HRA" id="hra" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="w-full md:w-4/12" appearance="outline">
+                    <mat-label>CONV. Allowance</mat-label>
+                    <input placeholder="CONV. Allowance" id="convAllowance" matInput>
+                </mat-form-field>
+                <mat-form-field class="w-full md:w-4/12 md:pr-4" appearance="outline">
+                    <mat-label>Bonus</mat-label>
+                    <input placeholder="Bonus" id="bonus" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="w-full md:w-4/12 md:pr-4" appearance="outline">
+                    <mat-label>Special Allowance</mat-label>
+                    <input placeholder="Special Allowance" id="specialAllowance" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="w-full md:w-4/12" appearance="outline">
+                    <mat-label>Total Earnings</mat-label>
+                    <input placeholder="Total Earnings" id="earnings" matInput>
+                </mat-form-field>
+            </div>
+
+            <hr>
+
+            <div>
+                <h5 class="font-semibold text-xl mb-4">Deductions</h5>
+                <mat-form-field class="w-full md:w-4/12 md:pr-4" appearance="outline">
+                    <mat-label>Professional Tax</mat-label>
+                    <input placeholder="Professional Tax" id="tax" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="w-full md:w-4/12 md:pr-4" appearance="outline">
+                    <mat-label>TDS</mat-label>
+                    <input placeholder="TDS" id="tds" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="w-full md:w-4/12" appearance="outline">
+                    <mat-label>PF</mat-label>
+                    <input placeholder="PF" id="pf" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="w-full md:w-4/12 md:pr-4" appearance="outline">
+                    <mat-label>Advance</mat-label>
+                    <input placeholder="Advance" id="advance" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="w-full md:w-4/12 md:pr-4" appearance="outline">
+                    <mat-label>Total Deductions</mat-label>
+                    <input placeholder="Total Deductions" id="deductions" matInput>
+                </mat-form-field>
+            </div>
+
+            <hr>
+
+            <div>
+                <h5 class="font-semibold text-xl mb-4">Bank Transfer Details</h5>
+                <mat-form-field class="w-full md:w-6/12 md:pr-4" appearance="outline">
+                    <mat-label>Date of transfer</mat-label>
+                    <input placeholder="Date of transfer" matInput [matDatepicker]="picker">
+                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+
+                <mat-form-field class="w-full md:w-6/12" appearance="outline">
+                    <mat-label>Account Holder Name</mat-label>
+                    <input placeholder="Account Holder Name" id="name" matInput>
+                </mat-form-field>
+                <mat-form-field class="w-full md:w-6/12 md:pr-4" appearance="outline">
+                    <mat-label>Bank Name</mat-label>
+                    <input placeholder="Bank Name" id="bankName" matInput>
+                </mat-form-field>
+                <mat-form-field class="w-full md:w-6/12" appearance="outline">
+                    <mat-label>Account Number</mat-label>
+                    <input placeholder="Account Number" id="number" matInput>
+                </mat-form-field>
+            </div>
+           
+            <div class="mt-5 text-right">
+                <button mat-stroked-button class="rounded mr-5">Cancel</button>
+                <button color="primary" class="rounded min-w-[100px]" mat-raised-button>Save</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="md:flex">
+        <div class="md:w-4/12 md:pr-2"></div>
+    </div>
+
+</div>
