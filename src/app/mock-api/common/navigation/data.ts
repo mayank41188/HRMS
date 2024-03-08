@@ -16,27 +16,32 @@ export const defaultNavigation: FuseNavigationItem[] = [
         icon : 'heroicons_outline:user-group',
         link : '/hr-employees'
     },
-    
     {
         id   : 'leave-management',
         title: 'Leave Request',
         type : 'collapsable',
         icon : 'exit_to_app',
-        link : '/hr-leave-management',
         children:[
             {
                 id   : 'leave-request',
                 title: 'Leave Request',
                 type : 'basic',
-                link : ''
+                link : '/leave-management/list'
             },  
             {
                 id   : 'apply-leave',
                 title: 'Apply Leave',
                 type : 'basic',
-                link : ''
+                link : '/leave-management/apply-leave'
             },  
         ]
+    },
+    {
+        id   : 'Holidays',
+        title: 'Holidays',
+        type : 'basic',
+        icon : 'heroicons_outline:calendar-days',
+        link : '/hr-holiday'
     },
 
     {
@@ -60,13 +65,7 @@ export const defaultNavigation: FuseNavigationItem[] = [
             },  
         ]
     },
-    {
-        id   : 'Holidays',
-        title: 'Holidays',
-        type : 'basic',
-        icon : 'heroicons_outline:calendar-days',
-        link : '/hr-holidays'
-    },
+   
 ];
 
 
