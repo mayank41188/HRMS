@@ -115,4 +115,14 @@ export const appRoutes: Route[] = [
         },
         loadChildren: () => import('./hr/leave-management/leave-management.module').then(m => m.LeaveManagementModule)
     },
+    {
+        path: 'payroll-list',
+        canActivate: [AuthGuard],
+        canActivateChild: [AuthGuard],
+        component: LayoutComponent,
+        resolve: {
+            initialData: initialDataResolver
+        },
+        loadChildren: () => import('./hr/payroll/payroll.module').then(m => m.PayrollModule)
+    },
 ];

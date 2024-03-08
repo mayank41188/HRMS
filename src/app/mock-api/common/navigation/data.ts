@@ -16,12 +16,35 @@ export const defaultNavigation: FuseNavigationItem[] = [
         icon : 'heroicons_outline:user-group',
         link : '/hr-employees'
     },
+    
     {
         id   : 'leave-management',
         title: 'Leave Request',
         type : 'collapsable',
         icon : 'exit_to_app',
         link : '/hr-leave-management',
+        children:[
+            {
+                id   : 'leave-request',
+                title: 'Leave Request',
+                type : 'basic',
+                link : ''
+            },  
+            {
+                id   : 'apply-leave',
+                title: 'Apply Leave',
+                type : 'basic',
+                link : ''
+            },  
+        ]
+    },
+
+    {
+        id   : 'payroll',
+        title: 'Payroll',
+        type : 'collapsable',
+        icon : 'exit_to_app',
+        link : '/payroll-list',
         children:[
             {
                 id   : 'leave-request',
