@@ -18,14 +18,20 @@ export const defaultNavigation: FuseNavigationItem[] = [
     },
     {
         id   : 'leave-management',
-        title: 'Leave Management',
+        title: 'Leave Request',
         type : 'collapsable',
         icon : 'exit_to_app',
         link : '/hr-leave-management',
         children:[
             {
-                id   : 'hr-employees',
-                title: 'Employees',
+                id   : 'leave-request',
+                title: 'Leave Request',
+                type : 'basic',
+                link : ''
+            },  
+            {
+                id   : 'apply-leave',
+                title: 'Apply Leave',
                 type : 'basic',
                 link : ''
             },  
@@ -68,3 +74,5 @@ export const horizontalNavigation: FuseNavigationItem[] = [
         link : '/example'
     }
 ];
+
+

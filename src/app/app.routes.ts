@@ -105,4 +105,14 @@ export const appRoutes: Route[] = [
         },
         loadChildren: () => import('./hr/employee/employee.module').then(m => m.EmployeeModule)
     },
+    {
+        path: 'hr-leave-management',
+        canActivate: [AuthGuard],
+        canActivateChild: [AuthGuard],
+        component: LayoutComponent,
+        resolve: {
+            initialData: initialDataResolver
+        },
+        loadChildren: () => import('./hr/leave-management/leave-management.module').then(m => m.LeaveManagementModule)
+    },
 ];
