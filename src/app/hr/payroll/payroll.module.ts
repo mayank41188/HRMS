@@ -4,17 +4,20 @@ import { PayrollListComponent } from './payroll-list/payroll-list.component';
 import { MaterialModule } from 'app/material/material.module';
 import { RouterModule, Routes } from '@angular/router';
 import { AddPayrollComponent } from './add-payroll/add-payroll.component';
+import { PayslipListComponent } from './payslip-list/payslip-list.component';
 
 
 const routes: Routes = [
-  { path: '', component: PayrollListComponent },
+  { path: 'payroll-list', component: PayrollListComponent },
   { path: 'add-payroll', component: AddPayrollComponent},
+  { path: 'payslip-list', component: PayslipListComponent},
 
 ]
 @NgModule({
   declarations: [
     PayrollListComponent,
     AddPayrollComponent,
+    PayslipListComponent,
   ],
   imports: [
     CommonModule,

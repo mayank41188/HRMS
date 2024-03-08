@@ -50,13 +50,13 @@ export const defaultNavigation: FuseNavigationItem[] = [
                 id   : 'payroll-list',
                 title: 'Add to Payroll',
                 type : 'basic',
-                link : '/payroll'
+                link : '/payroll/payroll-list'
             },  
             {
-                id   : 'generate-payslip',
+                id   : 'payslip-list',
                 title: 'Generate Payslip',
                 type : 'basic',
-                link : ''
+                link : '/payroll/payslip-list'
             },  
         ]
     },
