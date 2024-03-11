@@ -172,5 +172,25 @@ export const appRoutes: Route[] = [
         },
         loadChildren: () => import('./HR/hr-dashboard/hr-dashboard.module').then(m => m.HrDashboardModule)
     },
+    {
+        path: 'hr-tasks',
+        canActivate: [AuthGuard],
+        canActivateChild: [AuthGuard],
+        component: LayoutComponent,
+        resolve: {
+            initialData: initialDataResolver
+        },
+        loadChildren: () => import('./hr/tasks/tasks.module').then(m => m.TasksModule)
+    },
+    {
+        path: 'hr-policies',
+        canActivate: [AuthGuard],
+        canActivateChild: [AuthGuard],
+        component: LayoutComponent,
+        resolve: {
+            initialData: initialDataResolver
+        },
+        loadChildren: () => import('./hr/policies/policies.module').then(m => m.PoliciesModule)
+    },
 
 ];
