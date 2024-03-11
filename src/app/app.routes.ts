@@ -9,9 +9,9 @@ import { LayoutComponent } from 'app/layout/layout.component';
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 export const appRoutes: Route[] = [
 
-    {path: '', pathMatch : 'full', redirectTo: 'dashboard'},
+    { path: '', pathMatch: 'full', redirectTo: 'dashboard' },
 
-    {path: 'signed-in-redirect', pathMatch : 'full', redirectTo: 'dashboard'},
+    { path: 'signed-in-redirect', pathMatch: 'full', redirectTo: 'dashboard' },
 
     // Auth routes for guests
     {
@@ -23,11 +23,11 @@ export const appRoutes: Route[] = [
             layout: 'empty'
         },
         children: [
-            {path: 'confirmation-required', loadChildren: () => import('Modules/auth/confirmation-required/confirmation-required.routes')},
-            {path: 'forgot-password', loadChildren: () => import('Modules/auth/forgot-password/forgot-password.routes')},
-            {path: 'reset-password', loadChildren: () => import('Modules/auth/reset-password/reset-password.routes')},
-            {path: 'sign-in', loadChildren: () => import('Modules/auth/sign-in/sign-in.routes')},
-            {path: 'sign-up', loadChildren: () => import('Modules/auth/sign-up/sign-up.routes')}
+            { path: 'confirmation-required', loadChildren: () => import('Modules/auth/confirmation-required/confirmation-required.routes') },
+            { path: 'forgot-password', loadChildren: () => import('Modules/auth/forgot-password/forgot-password.routes') },
+            { path: 'reset-password', loadChildren: () => import('Modules/auth/reset-password/reset-password.routes') },
+            { path: 'sign-in', loadChildren: () => import('Modules/auth/sign-in/sign-in.routes') },
+            { path: 'sign-up', loadChildren: () => import('Modules/auth/sign-up/sign-up.routes') }
         ]
     },
 
@@ -41,8 +41,8 @@ export const appRoutes: Route[] = [
             layout: 'empty'
         },
         children: [
-            {path: 'sign-out', loadChildren: () => import('Modules/auth/sign-out/sign-out.routes')},
-            {path: 'unlock-session', loadChildren: () => import('Modules/auth/unlock-session/unlock-session.routes')}
+            { path: 'sign-out', loadChildren: () => import('Modules/auth/sign-out/sign-out.routes') },
+            { path: 'unlock-session', loadChildren: () => import('Modules/auth/unlock-session/unlock-session.routes') }
         ]
     },
 
@@ -54,7 +54,7 @@ export const appRoutes: Route[] = [
             layout: 'empty'
         },
         children: [
-            {path: 'home', loadChildren: () => import('Modules/landing/home/home.routes')},
+            { path: 'home', loadChildren: () => import('Modules/landing/home/home.routes') },
         ]
     },
 
@@ -126,7 +126,7 @@ export const appRoutes: Route[] = [
         loadChildren: () => import('./hr/payroll/payroll.module').then(m => m.PayrollModule)
     },
     {
-        path: 'leave-management',
+        path: 'hr-leave-management',
         canActivate: [AuthGuard],
         canActivateChild: [AuthGuard],
         component: LayoutComponent,
@@ -156,4 +156,25 @@ export const appRoutes: Route[] = [
         },
         loadChildren: () => import('./hr/attendance/attendance.module').then(m => m.AttendanceModule)
     },
+    {
+        path: 'hr-jobs',
+        canActivate: [AuthGuard],
+        canActivateChild: [AuthGuard],
+        component: LayoutComponent,
+        resolve: {
+            initialData: initialDataResolver
+        },
+        loadChildren: () => import('./hr/jobs-recruitment/jobs-recruitment.module').then(m => m.JobsRecruitmentModule)
+    },
+    {
+        path: 'hr-tasks',
+        canActivate: [AuthGuard],
+        canActivateChild: [AuthGuard],
+        component: LayoutComponent,
+        resolve: {
+            initialData: initialDataResolver
+        },
+        loadChildren: () => import('./hr/tasks/tasks.module').then(m => m.TasksModule)
+    },
+
 ];
