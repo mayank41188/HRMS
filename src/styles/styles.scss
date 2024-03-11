@@ -16,7 +16,9 @@ fuse-vertical-navigation-basic-item>.fuse-vertical-navigation-item-wrapper .fuse
 tr {
     height: 40px;
 }
-
+img{
+    display: inline;
+}
 th,
 td {
     padding-left: 16px;
@@ -25,11 +27,6 @@ td {
 
 .mat-mdc-text-field-wrapper .mat-mdc-form-field-flex .mat-mdc-floating-label {
     top: 50%;
-}
-
-img {
-    width: auto;
-    display: inline;
 }
 
 .orange {
@@ -43,32 +40,28 @@ img {
     }
 }
 
-// .theme-brand.light .mat-mdc-select-value {
-//     color: #ffffff;
-// }
-
-// .mat-mdc-select-arrow{
-//     color: #ffffff !important;
-// } 
-
-// .theme-brand.light .mat-button-toggle-appearance-standard 
-// {
-//     background-color: #3272EC !important;
-//     color: #ffffff !important;
-//     padding: 5px;
-//     max-height: 40px;
-// }
-// .mat-button-toggle-group .mat-button-toggle.mat-button-toggle-checked .mat-button-toggle-label-content{
-//     background-color: #ffffff;
-//     color: #3272EC;
-//     border-radius: 100px;
-
-// }
-
-// .mat-button-toggle-group .mat-button-toggle .mat-button-toggle-label-content{
-//     color: #ffffff !important;
-
-// }
+.mat-button-toggle-group{
+    background-color: #3272EC !important;
+    padding: 5px;
+    border-radius: 30px !important;
+}
+.mat-button-toggle-appearance-standard{
+    background: inherit !important;
+    .mat-button-toggle-label-content{
+        color: #ffffff !important;
+    }
+}
+.mat-button-toggle-group .mat-button-toggle .mat-button-toggle-label-content{
+    line-height: 26px !important;
+    padding: 0 12px;
+}
+.mat-button-toggle-group .mat-button-toggle.mat-button-toggle-checked{
+    background-color: #ffffff !important;
+    border-radius: 30px;
+    .mat-button-toggle-label-content{
+        color: #3272EC !important;
+    }
+}
 
 .search {
     width: 220px;
