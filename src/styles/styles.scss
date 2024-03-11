@@ -1,85 +1,100 @@
-body { 
-    font-family: 'Poppins', sans-serif; 
+body {
+    font-family: 'Poppins', sans-serif;
 }
-fuse-vertical-navigation-basic-item > .fuse-vertical-navigation-item-wrapper .fuse-vertical-navigation-item:not(.fuse-vertical-navigation-item-disabled).fuse-vertical-navigation-item-active {
+
+fuse-vertical-navigation-basic-item>.fuse-vertical-navigation-item-wrapper .fuse-vertical-navigation-item:not(.fuse-vertical-navigation-item-disabled).fuse-vertical-navigation-item-active {
     background-color: #3272EC !important;
     color: #ffffff !important;
     border-radius: 100px 0px 0px 100px;
 }
-fuse-vertical-navigation fuse-vertical-navigation-basic-item > .fuse-vertical-navigation-item-wrapper{
-    margin-right: 0 !important;
+
+fuse-vertical-navigation-collapsable-item>.fuse-vertical-navigation-item-wrapper .fuse-vertical-navigation-item:not(.fuse-vertical-navigation-item-active-forced):not(.fuse-vertical-navigation-item-active):not(.fuse-vertical-navigation-item-disabled):hover,
+fuse-vertical-navigation-basic-item>.fuse-vertical-navigation-item-wrapper .fuse-vertical-navigation-item:not(.fuse-vertical-navigation-item-active-forced):not(.fuse-vertical-navigation-item-active):not(.fuse-vertical-navigation-item-disabled):hover {
+    border-radius: 100px 0px 0px 100px;
 }
-tr{
+
+tr {
     height: 40px;
 }
-th,td{
+
+th,
+td {
     padding-left: 16px;
     text-align: left;
 }
+
 .mat-mdc-text-field-wrapper .mat-mdc-form-field-flex .mat-mdc-floating-label {
     top: 50%;
 }
-img{
+
+img {
     width: auto;
     display: inline;
 }
 
 .orange {
 
-    .mat-mdc-form-field-flex{
+    .mat-mdc-form-field-flex {
         background: #F59E0C !important;
+
         .mat-mdc-form-field-infix {
             min-height: 36px !important;
         }
     }
-    }
-    // .theme-brand.light .mat-mdc-select-value {
-    //     color: #ffffff;
-    // }
-    
-    // .mat-mdc-select-arrow{
-    //     color: #ffffff !important;
-    // } 
-    
-    // .theme-brand.light .mat-button-toggle-appearance-standard 
-    // {
-    //     background-color: #3272EC !important;
-    //     color: #ffffff !important;
-    //     padding: 5px;
-    //     max-height: 40px;
-    // }
-    // .mat-button-toggle-group .mat-button-toggle.mat-button-toggle-checked .mat-button-toggle-label-content{
-    //     background-color: #ffffff;
-    //     color: #3272EC;
-    //     border-radius: 100px;
-        
-    // }
-    
-    // .mat-button-toggle-group .mat-button-toggle .mat-button-toggle-label-content{
-    //     color: #ffffff !important;
-        
-    // }
+}
 
-    .search {
-        width: 220px;
-        .mat-mdc-form-field-infix {
-            min-height: 40px !important; 
-            
-        }
-    
-        .mat-mdc-form-field-subscript-wrapper {
-            display: none;
-        }
+// .theme-brand.light .mat-mdc-select-value {
+//     color: #ffffff;
+// }
+
+// .mat-mdc-select-arrow{
+//     color: #ffffff !important;
+// } 
+
+// .theme-brand.light .mat-button-toggle-appearance-standard 
+// {
+//     background-color: #3272EC !important;
+//     color: #ffffff !important;
+//     padding: 5px;
+//     max-height: 40px;
+// }
+// .mat-button-toggle-group .mat-button-toggle.mat-button-toggle-checked .mat-button-toggle-label-content{
+//     background-color: #ffffff;
+//     color: #3272EC;
+//     border-radius: 100px;
+
+// }
+
+// .mat-button-toggle-group .mat-button-toggle .mat-button-toggle-label-content{
+//     color: #ffffff !important;
+
+// }
+
+.search {
+    width: 220px;
+
+    .mat-mdc-form-field-infix {
+        min-height: 40px !important;
+
     }
 
-    hr {
-        margin: 0 0 24px;
-        border-bottom-width: 0;
+    .mat-mdc-form-field-subscript-wrapper {
+        display: none;
     }
+}
 
-    .popup-heading {
-        top: -24px;
-        position: relative;
-        left: -24px;
-        width: calc(100% + 48px);
-    }
+hr {
+    margin: 0 0 24px;
+    border-bottom-width: 0;
+}
+
+.popup-heading {
+    top: -24px;
+    position: relative;
+    left: -24px;
+    width: calc(100% + 48px);
+}
+
+.mat-mdc-icon-button {
+    --mdc-icon-button-icon-size: 30px !important;
+}

@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DashboardComponent } from './dashboard.component';
+import { AdminDashboardComponent } from './admin-dashboard.component';
 import { RouterModule, Routes } from '@angular/router';
 import { MaterialModule } from 'app/material/material.module';
 
-const routes: Routes = [{ path: '', component: DashboardComponent }]
+const routes: Routes = [{ path: '', component: AdminDashboardComponent }]
 
 @NgModule({
   declarations: [
-    DashboardComponent
+    AdminDashboardComponent
   ],
   imports: [
     CommonModule,

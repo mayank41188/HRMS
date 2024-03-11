@@ -3,11 +3,11 @@ import { FuseNavigationItem } from '@fuse/components/navigation';
 
 export const defaultNavigation: FuseNavigationItem[] = [
     {
-        id   : 'dashboard',
+        id   : 'hr-dashboard',
         title: 'Dashboard',
         type : 'basic',
         icon : 'mat_outline:dashboard',
-        link : ''
+        link : '/hr-dashboard'
     },
     {
         id   : 'hr-employees',
@@ -17,8 +17,8 @@ export const defaultNavigation: FuseNavigationItem[] = [
         link : '/hr-employees'
     },
     {
-        id   : 'leave-management',
-        title: 'Leave Request',
+        id   : 'hr-leave-management',
+        title: 'Leave Management',
         type : 'collapsable',
         icon : 'exit_to_app',
         children:[
@@ -26,13 +26,13 @@ export const defaultNavigation: FuseNavigationItem[] = [
                 id   : 'leave-request',
                 title: 'Leave Request',
                 type : 'basic',
-                link : '/leave-management/list'
+                link : '/hr-leave-management/list'
             },  
             {
                 id   : 'apply-leave',
                 title: 'Apply Leave',
                 type : 'basic',
-                link : '/leave-management/apply-leave'
+                link : '/hr-leave-management/apply-leave'
             },  
         ]
     },
@@ -73,7 +73,49 @@ export const defaultNavigation: FuseNavigationItem[] = [
         icon : 'heroicons_outline:calendar-days',
         link : '/attendance'
     },
-   
+
+    {
+        id   : 'jobs-recruitment',
+        title: 'Jobs & Recruitment',
+        type : 'collapsable',
+        icon : 'exit_to_app',
+        children:[
+            {
+                id   : 'jobs-list',
+                title: 'Jobs List',
+                type : 'basic',
+                link : '/hr-jobs/list'
+            },  
+            {
+                id   : 'candidates',
+                title: 'Candidates',
+                type : 'basic',
+                link : '/hr-jobs/candidatelist'
+            },  
+        ]
+    },
+    {
+        id   : 'tasks',
+        title: 'Tasks',
+        type : 'basic',
+        icon : 'heroicons_outline:calendar-days',
+        link : '/hr-tasks'
+    },
+    {
+        id   : 'tasks',
+        title: 'Tasks',
+        type : 'basic',
+        icon : 'heroicons_outline:calendar-days',
+        link : '/hr-tasks'
+    },
+    {
+        id   : 'policies',
+        title: 'Policies',
+        type : 'basic',
+        icon : 'heroicons_outline:calendar-days',
+        link : '/hr-policies'
+    },
+
 ];
 
 
