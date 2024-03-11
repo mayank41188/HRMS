@@ -1,0 +1,20 @@
+.min-height{
+    height: 80px;
+}
+
+.badge{
+    background: #22C55D;
+    color: #fff;
+    padding: 0.4rem;
+    border-radius: 5px;
+}
+
+.text-6xl {
+    font-size: 2rem !important;
+}
+
+@media (min-width: 600px){
+.sm\:text-6xl {
+    font-size: 2rem !important;
+}
+}
