@@ -9,9 +9,9 @@ import { LayoutComponent } from 'app/layout/layout.component';
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 export const appRoutes: Route[] = [
 
-    { path: '', pathMatch: 'full', redirectTo: 'dashboard' },
+    { path: '', pathMatch: 'full', redirectTo: 'hr-dashboard' },
 
-    { path: 'signed-in-redirect', pathMatch: 'full', redirectTo: 'dashboard' },
+    { path: 'signed-in-redirect', pathMatch: 'full', redirectTo: 'hr-dashboard' },
 
     // Auth routes for guests
     {
@@ -46,28 +46,16 @@ export const appRoutes: Route[] = [
         ]
     },
 
-    // Landing routes
-    {
-        path: '',
-        component: LayoutComponent,
-        data: {
-            layout: 'empty'
-        },
-        children: [
-            { path: 'home', loadChildren: () => import('Modules/landing/home/home.routes') },
-        ]
-    },
-
     // Admin routes
     {
-        path: 'dashboard',
+        path: 'admin-dashboard',
         canActivate: [AuthGuard],
         canActivateChild: [AuthGuard],
         component: LayoutComponent,
         resolve: {
             initialData: initialDataResolver
         },
-        loadChildren: () => import('./admin/dashboard/dashboard.module').then(m => m.DashboardModule)
+        loadChildren: () => import('./admin/admin-dashboard/dashboard.module').then(m => m.DashboardModule)
     },
     {
         path: 'projects',
@@ -79,9 +67,6 @@ export const appRoutes: Route[] = [
         },
         loadChildren: () => import('./admin/projects/projects.module').then(m => m.ProjectsModule)
     },
-
-    // admin Clients
-
     {
         path: 'clients',
         canActivate: [AuthGuard],
@@ -175,6 +160,17 @@ export const appRoutes: Route[] = [
             initialData: initialDataResolver
         },
         loadChildren: () => import('./hr/tasks/tasks.module').then(m => m.TasksModule)
+    },
+
+    {
+        path: 'hr-dashboard',
+        canActivate: [AuthGuard],
+        canActivateChild: [AuthGuard],
+        component: LayoutComponent,
+        resolve: {
+            initialData: initialDataResolver
+        },
+        loadChildren: () => import('./HR/hr-dashboard/hr-dashboard.module').then(m => m.HrDashboardModule)
     },
 
 ];

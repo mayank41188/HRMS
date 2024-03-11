@@ -6,8 +6,9 @@ fuse-vertical-navigation-basic-item > .fuse-vertical-navigation-item-wrapper .fu
     color: #ffffff !important;
     border-radius: 100px 0px 0px 100px;
 }
-fuse-vertical-navigation fuse-vertical-navigation-basic-item > .fuse-vertical-navigation-item-wrapper{
-    margin-right: 0 !important;
+fuse-vertical-navigation-collapsable-item > .fuse-vertical-navigation-item-wrapper .fuse-vertical-navigation-item:not(.fuse-vertical-navigation-item-active-forced):not(.fuse-vertical-navigation-item-active):not(.fuse-vertical-navigation-item-disabled):hover,
+fuse-vertical-navigation-basic-item > .fuse-vertical-navigation-item-wrapper .fuse-vertical-navigation-item:not(.fuse-vertical-navigation-item-active-forced):not(.fuse-vertical-navigation-item-active):not(.fuse-vertical-navigation-item-disabled):hover{
+    border-radius: 100px 0px 0px 100px;
 }
 tr{
     height: 40px;

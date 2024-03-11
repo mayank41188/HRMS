@@ -225,7 +225,7 @@ fuse-vertical-navigation {
                 display: flex;
                 align-items: center;
                 justify-content: flex-start;
-                padding: 10px 16px;
+                padding: 10px;
                 font-size: 13px;
                 font-weight: 500;
                 line-height: 20px;
@@ -239,7 +239,7 @@ fuse-vertical-navigation {
                 }
 
                 .fuse-vertical-navigation-item-icon {
-                    margin-right: 16px;
+                    margin-right: 10px;
                 }
 
                 .fuse-vertical-navigation-item-title-wrapper {
@@ -274,7 +274,7 @@ fuse-vertical-navigation {
     fuse-vertical-navigation-group-item {
 
         > .fuse-vertical-navigation-item-wrapper {
-            margin: 0 12px;
+            margin-left: 12px;
         }
     }
 
@@ -363,7 +363,7 @@ fuse-vertical-navigation {
             overflow: hidden;
 
             .fuse-vertical-navigation-item {
-                padding-left: 56px;
+                padding-left: 42px;
             }
 
             /* 2nd level */
