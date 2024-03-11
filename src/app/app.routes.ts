@@ -145,4 +145,15 @@ export const appRoutes: Route[] = [
         },
         loadChildren: () => import('./hr/holiday/holiday.module').then(m => m.HolidayModule)
     },
+
+    {
+        path: 'attendance',
+        canActivate: [AuthGuard],
+        canActivateChild: [AuthGuard],
+        component: LayoutComponent,
+        resolve: {
+            initialData: initialDataResolver
+        },
+        loadChildren: () => import('./hr/attendance/attendance.module').then(m => m.AttendanceModule)
+    },
 ];

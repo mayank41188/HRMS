@@ -65,6 +65,14 @@ export const defaultNavigation: FuseNavigationItem[] = [
             },  
         ]
     },
+
+    {
+        id   : 'Attendance',
+        title: 'Attendance',
+        type : 'basic',
+        icon : 'heroicons_outline:calendar-days',
+        link : '/attendance'
+    },
    
 ];
 
