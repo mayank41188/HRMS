@@ -108,6 +108,21 @@ export const defaultNavigation: FuseNavigationItem[] = [
         icon : 'heroicons_outline:calendar-days',
         link : '/hr-policies'
     },
+    {
+        id   : 'reports',
+        title: 'Reports',
+        type : 'basic',
+        icon : 'heroicons_outline:calendar-days',
+        link : '/hr-reports'
+    },
+    {
+        id   : 'tax-forms',
+        title: 'Tax & Forms',
+        type : 'basic',
+        icon : 'heroicons_outline:calendar-days',
+        link : '/hr-tax-forms'
+    },
+
 ];
 
 
