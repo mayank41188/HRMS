@@ -116,6 +116,21 @@ export const defaultNavigation: FuseNavigationItem[] = [
         icon : 'mat_outline:event_available',
         link : '/events'
     },
+    {
+        id   : 'reports',
+        title: 'Reports',
+        type : 'basic',
+        icon : 'heroicons_outline:calendar-days',
+        link : '/hr-reports'
+    },
+    {
+        id   : 'tax-forms',
+        title: 'Tax & Forms',
+        type : 'basic',
+        icon : 'heroicons_outline:calendar-days',
+        link : '/hr-tax-forms'
+    },
+
 ];
 
 

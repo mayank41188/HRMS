@@ -4,7 +4,7 @@
 
 
         <div class="flex items-center">
-            <button mat-icon-button> <mat-icon><img src="../../../../assets/icons/home-navigation.svg"
+            <button routerLink="/hr-dashboard" mat-icon-button> <mat-icon><img src="../../../../assets/icons/home-navigation.svg"
                         class="w-5"></mat-icon></button>
             <mat-icon><img src="../../../../assets/icons/arrow.png"></mat-icon>
             <button routerLink="/hr-employees" mat-button class="rounded font-semibold p-1">Employees</button>
@@ -12,7 +12,6 @@
             <button mat-button class="rounded font-semibold p-1">Add Employee</button>
         </div>
     </div>
-
 
     <div class="shadow p-4 bg-white rounded pr-0">
 
@@ -57,7 +56,6 @@
 
                 </div>
 
-
             </div>
 
             <div>
@@ -83,9 +81,9 @@
 
                 <mat-form-field class="w-full md:w-4/12" appearance="outline">
                     <mat-label>Date of Birth</mat-label>
-                    <input placeholder="Select DOB" matInput [matDatepicker]="picker">
-                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-                    <mat-datepicker #picker></mat-datepicker>
+                    <input placeholder="Select DOB" matInput [matDatepicker]="picker4">
+                    <mat-datepicker-toggle matIconSuffix [for]="picker4"></mat-datepicker-toggle>
+                    <mat-datepicker #picker4></mat-datepicker>
                 </mat-form-field>
 
                 <mat-form-field class="w-full md:w-4/12 md:pr-4" appearance="outline">
@@ -216,9 +214,9 @@
 
                 <mat-form-field class="w-full md:w-2/12" appearance="outline">
                     <mat-label>End Date</mat-label>
-                    <input placeholder="Select End Date" matInput [matDatepicker]="picker">
-                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-                    <mat-datepicker #picker></mat-datepicker>
+                    <input placeholder="Select End Date" matInput [matDatepicker]="picker1">
+                    <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
+                    <mat-datepicker #picker1></mat-datepicker>
                 </mat-form-field>
 
             </div>
@@ -243,16 +241,16 @@
 
                 <mat-form-field class="w-full md:w-2/12 md:pr-4" appearance="outline">
                     <mat-label>Start Date</mat-label>
-                    <input placeholder="Select Start Date" matInput [matDatepicker]="picker">
-                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-                    <mat-datepicker #picker></mat-datepicker>
+                    <input placeholder="Select Start Date" matInput [matDatepicker]="picker2">
+                    <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
+                    <mat-datepicker #picker2></mat-datepicker>
                 </mat-form-field>
 
                 <mat-form-field class="w-full md:w-2/12" appearance="outline">
                     <mat-label>End Date</mat-label>
-                    <input placeholder="Select End Date" matInput [matDatepicker]="picker">
-                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-                    <mat-datepicker #picker></mat-datepicker>
+                    <input placeholder="Select End Date" matInput [matDatepicker]="picker3">
+                    <mat-datepicker-toggle matIconSuffix [for]="picker3"></mat-datepicker-toggle>
+                    <mat-datepicker #picker3></mat-datepicker>
                 </mat-form-field>
 
             </div>
