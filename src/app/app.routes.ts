@@ -192,7 +192,25 @@ export const appRoutes: Route[] = [
         },
         loadChildren: () => import('./hr/policies/policies.module').then(m => m.PoliciesModule)
     },
+    {
+        path: 'hr-reports',
+        canActivate: [AuthGuard],
+        canActivateChild: [AuthGuard],
+        component: LayoutComponent,
+        resolve: {
+            initialData: initialDataResolver
+        },
+        loadChildren: () => import('./hr/reports/reports.module').then(m => m.ReportsModule)
+    },
 
-
-
+    {
+        path: 'hr-tax-forms',
+        canActivate: [AuthGuard],
+        canActivateChild: [AuthGuard],
+        component: LayoutComponent,
+        resolve: {
+            initialData: initialDataResolver
+        },
+        loadChildren: () => import('./hr/tax-forms/tax-forms.module').then(m => m.TaxFormsModule)
+    },
 ];
