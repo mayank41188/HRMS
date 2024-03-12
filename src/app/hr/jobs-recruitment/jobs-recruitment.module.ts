@@ -6,11 +6,13 @@ import { MaterialModule } from 'app/material/material.module';
 import { RouterModule, Routes } from '@angular/router';
 import { AddNewCandidatePopupComponent } from './popups/add-new-candidate-popup/add-new-candidate-popup.component';
 import { AddJobFormComponent } from './add-job-form/add-job-form.component';
+import { ViewJobComponent } from './view-job/view-job.component';
 
 const routes: Routes = [
   { path: 'list', component: JobsListComponent },
   { path: 'candidatelist', component: CandidatesListComponent },
   { path: 'add-job', component: AddJobFormComponent },
+  { path: 'view-job', component: ViewJobComponent },
 ]
 
 @NgModule({
@@ -18,7 +20,8 @@ const routes: Routes = [
     JobsListComponent,
     CandidatesListComponent,
     AddNewCandidatePopupComponent,
-    AddJobFormComponent
+    AddJobFormComponent,
+    ViewJobComponent
   ],
   imports: [
     CommonModule,
