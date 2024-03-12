@@ -91,3 +91,7 @@ hr {
 .mat-mdc-icon-button {
     --mdc-icon-button-icon-size: 30px !important;
 }
+
+.mat-mdc-paginator-container{
+    justify-content: end !important;
+}
