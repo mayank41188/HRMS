@@ -26,14 +26,14 @@
                 </mat-select>
             </mat-form-field>
             <mat-form-field class="md:w-6/12 w-full pr-4 md:my-0 my-2" appearance="fill">
-                <input matInput [matDatepicker]="dp">
+                <input placeholder="Select Year" matInput [matDatepicker]="dp">
                 <mat-datepicker-toggle matIconSuffix [for]="dp"></mat-datepicker-toggle>
                 <mat-datepicker #dp startView="multi-year" panelClass="example-month-picker">
                 </mat-datepicker>
             </mat-form-field>
-            <button (click)="add()" matTooltip="SHarath" mat-icon-button><img src="../../../../assets/icons/add.svg"></button>
-            <button mat-icon-button><img src="../../../../assets/icons/refresh.svg"></button>
-            <button mat-icon-button><img src="../../../../assets/icons/xlsx-export.svg"></button>
+            <button (click)="add()" matTooltip="Add Holiday" mat-icon-button><img src="../../../../assets/icons/add.svg"></button>
+            <button mat-icon-button matTooltip="Refresh"><img src="../../../../assets/icons/refresh.svg"></button>
+            <button mat-icon-button matTooltip="Export to Excel"><img src="../../../../assets/icons/xlsx-export.svg"></button>
         </div>
     </div>
 
