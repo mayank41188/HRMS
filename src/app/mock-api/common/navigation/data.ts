@@ -108,6 +108,14 @@ export const defaultNavigation: FuseNavigationItem[] = [
         icon : 'heroicons_outline:calendar-days',
         link : '/hr-policies'
     },
+
+    {
+        id   : 'Events',
+        title: 'Events',
+        type : 'basic',
+        icon : 'mat_outline:event_available',
+        link : '/events'
+    },
 ];
 
 

@@ -170,7 +170,7 @@ export const appRoutes: Route[] = [
         resolve: {
             initialData: initialDataResolver
         },
-        loadChildren: () => import('./HR/hr-dashboard/hr-dashboard.module').then(m => m.HrDashboardModule)
+        loadChildren: () => import('./hr/hr-dashboard/hr-dashboard.module').then(m => m.HrDashboardModule)
     },
     {
         path: 'hr-tasks',
@@ -191,6 +191,17 @@ export const appRoutes: Route[] = [
             initialData: initialDataResolver
         },
         loadChildren: () => import('./hr/policies/policies.module').then(m => m.PoliciesModule)
+    },
+
+    {
+        path: 'events',
+        canActivate: [AuthGuard],
+        canActivateChild: [AuthGuard],
+        component: LayoutComponent,
+        resolve: {
+            initialData: initialDataResolver
+        },
+        loadChildren: () => import('./hr/events/events.module').then(m => m.EventsModule)
     },
 
 ];
