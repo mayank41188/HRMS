@@ -82,7 +82,7 @@ export const defaultNavigation: FuseNavigationItem[] = [
         children:[
             {
                 id   : 'jobs-list',
-                title: 'Jobs List',
+                title: 'Jobs',
                 type : 'basic',
                 link : '/hr-jobs/list'
             },  
@@ -102,20 +102,12 @@ export const defaultNavigation: FuseNavigationItem[] = [
         link : '/hr-tasks'
     },
     {
-        id   : 'tasks',
-        title: 'Tasks',
-        type : 'basic',
-        icon : 'heroicons_outline:calendar-days',
-        link : '/hr-tasks'
-    },
-    {
         id   : 'policies',
         title: 'Policies',
         type : 'basic',
         icon : 'heroicons_outline:calendar-days',
         link : '/hr-policies'
     },
-
 ];
 
 
