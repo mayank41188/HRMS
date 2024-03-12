@@ -4,7 +4,7 @@
         <h1 class="text-xl font-bold w-full ">Events</h1>
 
         <div class="flex items-center">
-            <button mat-icon-button> <mat-icon><img src="../../../../assets/icons/home-navigation.svg" class="w-5"></mat-icon></button>
+            <button routerLink="/hr-dashboard" mat-icon-button> <mat-icon><img src="../../../../assets/icons/home-navigation.svg" class="w-5"></mat-icon></button>
             <mat-icon><img src="../../../../assets/icons/arrow.png"></mat-icon>
             <button mat-button class="rounded font-semibold p-1">Events</button>
         </div>
@@ -19,8 +19,8 @@
             </mat-form-field>
         </div>
         <div>
-            <button mat-icon-button (click)="add()" ><img src="../../../../assets/icons/add.svg"></button>
-            <button mat-icon-button><img src="../../../../assets/icons/refresh.svg"></button>
+            <button matTooltip="Add Event" mat-icon-button (click)="add()" ><img src="../../../../assets/icons/add.svg"></button>
+            <button matTooltip="Refresh" mat-icon-button><img src="../../../../assets/icons/refresh.svg"></button>
         </div>
     </div>
 
