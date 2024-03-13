@@ -32,12 +32,12 @@
 
       <ng-container matColumnDef="no">
         <th mat-header-cell *matHeaderCellDef width="50"> No. </th>
-        <td mat-cell *matCellDef="let element"> {{element.no}} </td>
+        <td mat-cell *matCellDef="let element" (click)="openProfile()"> {{element.no}} </td>
       </ng-container>
 
       <ng-container matColumnDef="Image">
         <th mat-header-cell *matHeaderCellDef class="text-center"> Image </th>
-        <td mat-cell *matCellDef="let element">
+        <td mat-cell *matCellDef="let element" (click)="openProfile()">
           <div class="w-9 h-9 rounded-full border-gray-600 m-auto"><img
               src="../../../../assets/images/avatars/female-01.jpg" class="rounded-full"></div>
         </td>
@@ -46,29 +46,29 @@
 
       <ng-container matColumnDef="Name">
         <th mat-header-cell *matHeaderCellDef> Name </th>
-        <td mat-cell *matCellDef="let element"> {{element.Name}} </td>
+        <td mat-cell *matCellDef="let element" (click)="openProfile()"> {{element.Name}} </td>
       </ng-container>
 
 
       <ng-container matColumnDef="Department">
         <th mat-header-cell *matHeaderCellDef> Department </th>
-        <td mat-cell *matCellDef="let element"> {{element.Department}} </td>
+        <td mat-cell *matCellDef="let element" (click)="openProfile()"> {{element.Department}} </td>
       </ng-container>
 
 
       <ng-container matColumnDef="Role">
         <th mat-header-cell *matHeaderCellDef> Role </th>
-        <td mat-cell *matCellDef="let element"> {{element.Role}} </td>
+        <td mat-cell *matCellDef="let element" (click)="openProfile()"> {{element.Role}} </td>
       </ng-container>
 
       <ng-container matColumnDef="Mobile">
         <th mat-header-cell *matHeaderCellDef> Mobile </th>
-        <td mat-cell *matCellDef="let element"> {{element.Mobile}} </td>
+        <td mat-cell *matCellDef="let element" (click)="openProfile()"> {{element.Mobile}} </td>
       </ng-container>
 
       <ng-container matColumnDef="Email">
         <th mat-header-cell *matHeaderCellDef> Email </th>
-        <td mat-cell *matCellDef="let element"> {{element.Email}} </td>
+        <td mat-cell *matCellDef="let element" (click)="openProfile()"> {{element.Email}} </td>
       </ng-container>
 
       <ng-container matColumnDef="Access">
@@ -81,16 +81,13 @@
         <th mat-header-cell *matHeaderCellDef class="text-center"> Action </th>
         <td mat-cell *matCellDef="let element" class="text-center">
           <!-- routerLink="/hr-employees/add-employee"  -->
-          <button mat-icon-button >
-            
-            <img src="../../../../assets/icons/edit.svg"></button>
-          <button mat-icon-button (click)="caution()"><img src="../../../../assets/icons/delete.svg">
-          </button>
+          <button mat-icon-button (click)="onClickEdit('')"><img src="../../../../assets/icons/edit.svg"></button>
+          <button mat-icon-button (click)="caution()"><img src="../../../../assets/icons/delete.svg"></button>
         </td>
       </ng-container>
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr  class="cursor-pointer" mat-row 
+      <tr class="cursor-pointer" mat-row 
         *matRowDef="let row; columns: displayedColumns;"></tr>
 
         <!-- routerLink="/hr-employees/employee-profile" -->

@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 import { ApplyLeaveComponent } from 'app/hr/leave-management/popups/apply-leave/apply-leave.component';
 import { CautionPopupComponent } from 'app/shared/popups/caution-popup/caution-popup.component';
 import { SuccessPopupComponent } from 'app/shared/popups/success-popup/success-popup.component';
@@ -12,10 +13,19 @@ import { SuccessPopupComponent } from 'app/shared/popups/success-popup/success-p
 export class EmployeeListComponent {
   constructor(
     private dialog: MatDialog,
+    private router: Router
   ) { }
 
+  openProfile(){
+    this.router.navigateByUrl('/hr-employees/employee-profile');
+  }
+
+  onClickEdit(){
+    this.router.navigateByUrl('/hr-employees/add-employee');
+  }
+  
+  
   caution() {
-    
     this.dialog.open(SuccessPopupComponent, {
       autoFocus: false
     })
