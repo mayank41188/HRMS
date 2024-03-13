@@ -12,7 +12,7 @@ export class ReportListComponent {
     private dialog: MatDialog,
   ) { }
 
-  add() {
+  addReport() {
     this.dialog.open(AddReportsComponent, {
       autoFocus: false
     })

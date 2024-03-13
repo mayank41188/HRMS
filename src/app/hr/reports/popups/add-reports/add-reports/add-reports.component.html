@@ -1,41 +1,49 @@
-<div style="min-width: 60vw;">
+<div style="min-width: 35vw;">
     <div class="form-head justify-between items-center">
         <h4 class="popup-heading font-semibold text-lg px-6 py-3 bg-primary-100 flex justify-between">Add Report
             <mat-icon class="text-lg cursor-pointer" mat-dialog-close>close</mat-icon>
         </h4>
     </div>
 
-    <div style="max-width: 30vw;">
-    
-        <mat-form-field class="w-full" appearance="outline">
-            <mat-label>Expense Name*</mat-label>
+    <div style="max-width: 35vw;" class="md:w-12/12">
+
+        <mat-form-field class="w-full md:w-6/12 md:pr-6" appearance="outline">
+            <mat-label>Expense Name</mat-label>
             <input placeholder="Enter Expense Name" id="expensename" matInput>
         </mat-form-field>
 
-        <mat-form-field class="w-full" appearance="outline">
-            <mat-label>Purchased From*</mat-label>
+        <mat-form-field class="w-full md:w-6/12" appearance="outline">
+            <mat-label>Purchased From</mat-label>
             <input placeholder="Enter Purchased From" id="purchasedfrom" matInput>
         </mat-form-field>
 
-        <mat-form-field class="w-full" appearance="outline">
-            <mat-label>Purchase Date*</mat-label>
-            <input placeholder="Enter Purchase Date" id="purchasedate" matInput>
-        </mat-form-field>
+        <div class="flex w-full">
+            <div class="md:w-6/12 md:pr-6">
 
-        <mat-form-field class="w-full" appearance="outline">
-            <mat-label>Payment Mode</mat-label>
-            <input placeholder="Enter Payment Mode" id="paymentmode" matInput>
-        </mat-form-field>
+                <mat-form-field class="w-full" appearance="outline">
+                    <mat-label>Purchase Date</mat-label>
+                    <input placeholder="Enter Purchase Date" id="purchasedate" matInput>
+                </mat-form-field>
 
+                <mat-form-field class="w-full" appearance="outline">
+                    <mat-label>Payment Mode</mat-label>
+                    <input placeholder="Enter Payment Mode" id="paymentmode" matInput>
+                </mat-form-field>
+
+            </div>
+
+            <div class="md:w-6/12">
+
+                <div class="border rounded h-32 flex items-center justify-center">
+                    <img src="../../../../assets/icons/upload-file.svg" alt="">
+                </div>
+
+            </div>
+        </div>
         <mat-form-field class="w-full" appearance="outline">
-            <mat-label>Amount*</mat-label>
+            <mat-label>Amount</mat-label>
             <input placeholder="Enter Amount" id="amount" matInput>
         </mat-form-field>
-
-        <div class="border rounded h-30 flex items-center justify-center">
-            <img src="../../../../assets/icons/upload-file.svg" alt="">
-        </div>
-
     </div>
 
     <div class="mt-5 text-center">
