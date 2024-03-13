@@ -26,7 +26,8 @@ export class EmployeeListComponent {
   
   
   caution() {
-    this.dialog.open(SuccessPopupComponent, {
+    
+    this.dialog.open(CautionPopupComponent, {
       autoFocus: false
     })
   }

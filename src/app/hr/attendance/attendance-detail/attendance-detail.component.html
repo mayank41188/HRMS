@@ -3,9 +3,11 @@
         <h1 class="text-xl font-bold w-full ">Attendance</h1>
     
         <div class="flex items-center">
-            <button routerLink="/hr-dashboard" mat-icon-button><mat-icon><img src="../../../../assets/icons/home-navigation.svg" class="w-5"></mat-icon></button>
+            <button mat-icon-button routerLink="/hr-dashboard">
+                <mat-icon><img src="../../../../assets/icons/home-navigation.svg" class="w-5"></mat-icon>
+            </button>
             <mat-icon><img src="../../../../assets/icons/arrow.png"></mat-icon>
-            <button routerLink="/attendance" mat-button class="rounded font-semibold p-1">Attendance</button>
+            <button mat-button class="rounded font-semibold p-1" routerLink="/attendance">Attendance</button>
             <mat-icon><img src="../../../../assets/icons/arrow.png"></mat-icon>
             <button mat-button class="rounded font-semibold p-1">Rohit</button>
         </div>
@@ -87,8 +89,8 @@
             <h3 class="text-lg font-semibold mr-5">Weekly Details</h3>
         </div>
         <div>
-            <button matTooltip="Refresh" mat-icon-button><img src="../../../../assets/icons/refresh.svg"></button>
-            <button matTooltip="Export to Excel" mat-icon-button (click)="generate()" ><img src="../../../../assets/icons/xlsx-export.svg"></button>
+            <button mat-icon-button><img src="../../../../assets/icons/refresh.svg"></button>
+            <button mat-icon-button (click)="generate()" ><img src="../../../../assets/icons/xlsx-export.svg"></button>
         </div>
         
     </div>

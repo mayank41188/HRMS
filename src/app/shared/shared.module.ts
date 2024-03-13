@@ -5,17 +5,23 @@ import { CautionPopupComponent } from './popups/caution-popup/caution-popup.comp
 import { MaterialModule } from 'app/material/material.module';
 import { RouterModule, Routes } from '@angular/router';
 
+
 const routes: Routes = [ ]
 
 @NgModule({
   declarations: [
     SuccessPopupComponent,
-    CautionPopupComponent
+    CautionPopupComponent,
   ],
   imports: [
     CommonModule,
     MaterialModule,
     RouterModule.forChild(routes),
-  ]
+  ],
+  exports: [
+    SuccessPopupComponent,
+    CautionPopupComponent,
+]
+
 })
 export class SharedModule { }

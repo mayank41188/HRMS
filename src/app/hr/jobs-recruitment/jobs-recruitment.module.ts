@@ -7,6 +7,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { AddNewCandidatePopupComponent } from './popups/add-new-candidate-popup/add-new-candidate-popup.component';
 import { AddJobFormComponent } from './add-job-form/add-job-form.component';
 import { ViewJobComponent } from './view-job/view-job.component';
+import { SuccessPopupComponent } from 'app/shared/popups/success-popup/success-popup.component';
+import { CautionPopupComponent } from 'app/shared/popups/caution-popup/caution-popup.component';
 
 const routes: Routes = [
   { path: 'list', component: JobsListComponent },
@@ -27,6 +29,6 @@ const routes: Routes = [
     CommonModule,
     MaterialModule,
     RouterModule.forChild(routes),
-  ]
+  ],
 })
 export class JobsRecruitmentModule { }

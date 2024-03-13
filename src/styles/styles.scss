@@ -110,9 +110,10 @@ hr {
     }
 }
  
-// input[type='time']::-webkit-calendar-picker-indicator {
-//     background: url('../assets/icons/time.svg') no-repeat;
-//   }
+input[type='time']::-webkit-calendar-picker-indicator {
+    background: url('../assets/icons/time.svg') no-repeat;
+  }
+  
 .mat-mdc-paginator-container{
     justify-content: end !important;
 }
@@ -127,4 +128,8 @@ hr {
         display: none;
     }
 
+}
+
+.fuse-vertical-navigation-item-icon{
+    color: #3272EC !important;
 }

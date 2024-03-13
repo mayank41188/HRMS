@@ -10,17 +10,17 @@
     </div>
     </div>
     
-    <div class="bg-primary-100 w-full items-center p-3 flex justify-between rounded-t-md">
-        <div class="flex items-center">
-            <h3 class="text-lg font-semibold mr-5">Leave Request List</h3>
-            <mat-form-field appearance="fill" class="search ">
+    <div class="bg-primary-100 w-full items-center p-3 md:flex justify-between rounded-t-md">
+        <div class="md:flex items-center">
+            <h3 class="text-lg font-semibold md:mr-4 mr-5 md:mb-0 mb-2">Leave Request List</h3>
+            <mat-form-field appearance="fill" class="search w-full md:w-[220px]">
                 <input matInput placeholder="Search">
                 <mat-icon matSuffix>search</mat-icon>
             </mat-form-field>
         </div>
         <div>
-            <button mat-icon-button><img src="../../../../assets/icons/refresh.svg"></button>
-            <button mat-icon-button><img src="../../../../assets/icons/xlsx-export.svg"></button>
+          <button mat-icon-button matTooltip="Refresh"><img src="../../../../assets/icons/refresh.svg"></button>
+          <button mat-icon-button matTooltip="Export to Excel"><img src="../../../../assets/icons/xlsx-export.svg"></button>
         </div>
         
     </div>
@@ -80,9 +80,10 @@
     
           <ng-container matColumnDef="Action">
             <th mat-header-cell *matHeaderCellDef class="text-center"> Action </th>
-            <td mat-cell *matCellDef="let element" class="text-center"> <button mat-icon-button>
-                <img src="../../../../assets/icons/Approve.svg"></button> <button mat-icon-button> <img src="../../../../assets/icons/Reject.svg">
-            </button> </td>
+            <td mat-cell *matCellDef="let element" class="text-center">
+              <button mat-icon-button matTooltip="Approve"> <img src="../../../../assets/icons/Approve.svg">
+                </button> <button mat-icon-button matTooltip="Reject"> <img src="../../../../assets/icons/Reject.svg"></button>
+              </td>
           </ng-container>
     
           
