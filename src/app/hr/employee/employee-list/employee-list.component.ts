@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { ApplyLeaveComponent } from 'app/hr/leave-management/popups/apply-leave/apply-leave.component';
+import { CautionPopupComponent } from 'app/shared/popups/caution-popup/caution-popup.component';
+import { SuccessPopupComponent } from 'app/shared/popups/success-popup/success-popup.component';
 
 @Component({
   selector: 'app-employee-list',
@@ -6,6 +10,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./employee-list.component.scss']
 })
 export class EmployeeListComponent {
+  constructor(
+    private dialog: MatDialog,
+  ) { }
+
+  caution() {
+    
+    this.dialog.open(SuccessPopupComponent, {
+      autoFocus: false
+    })
+  }
+
   displayedColumns: string[] = ['no', 'Image', 'Name', 'Department', 'Role', 'Mobile', 'Email', 'Access', 'Action'];
   dataSource = ELEMENT_DATA;
 }
