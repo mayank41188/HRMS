@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { AttentionComponent } from '../../popups/attention/attention/attention.component';
 import { ShareFormComponent } from '../../popups/share-form/share-form/share-form.component';
-import { UploadFormComponent } from '../../popups/upload-form/upload-form/upload-form.component';
 
 @Component({
   selector: 'app-tax-form-list',

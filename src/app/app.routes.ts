@@ -223,4 +223,14 @@ export const appRoutes: Route[] = [
         },
         loadChildren: () => import('./hr/tax-forms/tax-forms.module').then(m => m.TaxFormsModule)
     },
+    {
+        path: '',
+        canActivate: [AuthGuard],
+        canActivateChild: [AuthGuard],
+        component: LayoutComponent,
+        resolve: {
+            initialData: initialDataResolver
+        },
+        loadChildren: () => import('./shared/shared.module').then(m => m.SharedModule)
+    },
 ];

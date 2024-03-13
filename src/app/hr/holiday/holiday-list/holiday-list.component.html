@@ -12,20 +12,20 @@
 
     <div class="bg-primary-100 w-full items-center p-3 md:flex justify-between rounded-t-md table-header">
         <div class="md:flex items-center">
-            <h3 class="text-lg font-semibold mr-5">Holidays List</h3>
-            <mat-form-field appearance="fill" class="search ">
+            <h3 class="text-lg font-semibold md:mr-4 mr-5 md:mb-0 mb-2">Holidays List</h3>
+            <mat-form-field appearance="fill" class="search w-full md:w-[220px]">
                 <input matInput placeholder="Search">
                 <mat-icon matSuffix>search</mat-icon>
             </mat-form-field>
         </div>
         <div class="md:flex md:w-6/12 items-center">
-            <mat-form-field class="md:w-6/12 w-full pr-4 md:mt-0 mt-2" appearance="fill">
+            <mat-form-field class="md:w-6/12 w-full md:pr-4 md:mt-0 mt-2" appearance="fill">
                 <mat-select placeholder="Select Company">
                     <mat-option value="option">Simbiotik Tech</mat-option>
                     <mat-option value="option">Recstech</mat-option>
                 </mat-select>
             </mat-form-field>
-            <mat-form-field class="md:w-6/12 w-full pr-4 md:my-0 my-2" appearance="fill">
+            <mat-form-field class="md:w-6/12 w-full md:pr-4 md:my-0 my-2" appearance="fill">
                 <input placeholder="Select Year" matInput [matDatepicker]="dp">
                 <mat-datepicker-toggle matIconSuffix [for]="dp"></mat-datepicker-toggle>
                 <mat-datepicker #dp startView="multi-year" panelClass="example-month-picker">

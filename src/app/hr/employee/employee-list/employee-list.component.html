@@ -4,22 +4,22 @@
     <h1 class="text-xl font-bold w-full ">Employees</h1>
 
     <div class="flex items-center">
-      <button routerLink="/hr-dashboard"   mat-icon-button> <mat-icon><img src="../../../../assets/icons/home-navigation.svg"
+      <button  routerLink="/hr-dashboard" mat-icon-button> <mat-icon><img src="../../../../assets/icons/home-navigation.svg"
             class="w-5"></mat-icon></button>
       <mat-icon><img src="../../../../assets/icons/arrow.png"></mat-icon>
       <button mat-button class="rounded font-semibold p-1">Employees</button>
     </div>
   </div>
 
-  <div class="bg-primary-100 w-full items-center p-3 flex justify-between rounded-t-md">
-    <div class="flex items-center">
-      <h3 class="text-lg font-semibold mr-5">Employees List</h3>
-      <mat-form-field appearance="fill" class="search">
+  <div class="bg-primary-100 w-full items-center p-3 md:flex justify-between rounded-t-md">
+    <div class="md:flex items-center">
+      <h3 class="text-lg font-semibold md:mr-4 mr-5 md:mb-0 mb-2">Employees List</h3>
+      <mat-form-field appearance="fill" class="search w-full md:w-[220px]">
         <input matInput placeholder="Search">
         <mat-icon matSuffix>search</mat-icon>
       </mat-form-field>
     </div>
-    <div>
+    <div class="mt-3 md:mt-0">
       <button matTooltip="Add Employee" mat-icon-button routerLink="/hr-employees/add-employee"><img
           src="../../../../assets/icons/add.svg"></button>
           <button mat-icon-button matTooltip="Refresh"><img src="../../../../assets/icons/refresh.svg"></button>
@@ -84,16 +84,17 @@
           <button mat-icon-button >
             
             <img src="../../../../assets/icons/edit.svg"></button>
-          <button mat-icon-button (click)="caution()"><img src="../../../../assets/icons/delete.svg">
+          <button mat-icon-button><img src="../../../../assets/icons/delete.svg">
           </button>
+          <!-- (click)="caution()" -->
         </td>
       </ng-container>
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr  class="cursor-pointer" mat-row 
+      <tr routerLink="/hr-employees/employee-profile" class="cursor-pointer" mat-row 
         *matRowDef="let row; columns: displayedColumns;"></tr>
 
-        <!-- routerLink="/hr-employees/employee-profile" -->
+        
         
     </table>
     <mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page">

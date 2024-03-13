@@ -3,8 +3,8 @@
         <h1 class="text-xl font-bold w-full ">Tax & Forms</h1>
 
         <div class="flex items-center">
-            <button routerLink="/hr-dashboard" mat-icon-button> <mat-icon><img src="../../../../assets/icons/home-navigation.svg"
-                        class="w-5"></mat-icon></button>
+            <button routerLink="/hr-dashboard" mat-icon-button> <mat-icon><img
+                        src="../../../../assets/icons/home-navigation.svg" class="w-5"></mat-icon></button>
             <mat-icon><img src="../../../../assets/icons/arrow.png"></mat-icon>
             <button mat-button class="rounded font-semibold p-1">Tax & Forms</button>
         </div>
@@ -12,21 +12,22 @@
 
     <div class="bg-primary-100 w-full items-center p-3 md:flex justify-between rounded-t-md table-header">
         <div class="md:flex items-center">
-            <h3 class="text-lg font-semibold mr-5">Tax & Forms List</h3>
-            <mat-form-field appearance="fill" class="search ">
+            <h3 class="text-lg font-semibold md:mr-4 mr-5 md:mb-0 mb-2">Tax & Forms List</h3>
+            <mat-form-field appearance="fill" class="search w-full md:w-[220px]">
                 <input matInput placeholder="Search">
                 <mat-icon matSuffix>search</mat-icon>
             </mat-form-field>
         </div>
         <div class="md:flex md:w-12/12 items-center">
-            <mat-form-field class="md:w-10/12 w-full pr-4 md:my-0 my-2" appearance="fill">
+            <mat-form-field class="md:w-10/12 w-full md:pr-4 md:my-0 my-2" appearance="fill">
                 <input placeholder="Select Year" matInput [matDatepicker]="dp">
                 <mat-datepicker-toggle matIconSuffix [for]="dp"></mat-datepicker-toggle>
                 <mat-datepicker #dp startView="multi-year" panelClass="example-month-picker">
                 </mat-datepicker>
             </mat-form-field>
             <button (click)="shareall()" mat-icon-button><img src="../../../../../assets/icons/share-all.svg"></button>
-            <button routerLink="/hr-tax-forms/add-forms" matTooltip="Add Tax & Forms" mat-icon-button><img src="../../../../assets/icons/add.svg"></button>
+            <button routerLink="/hr-tax-forms/add-forms" matTooltip="Add Tax & Forms" mat-icon-button><img
+                    src="../../../../assets/icons/add.svg"></button>
             <button mat-icon-button matTooltip="Refresh"><img src="../../../../assets/icons/refresh.svg"></button>
             <button mat-icon-button matTooltip="Export to Excel"><img
                     src="../../../../assets/icons/xlsx-export.svg"></button>

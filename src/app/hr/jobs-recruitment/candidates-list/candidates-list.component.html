@@ -11,10 +11,10 @@
         </div>
     </div>
 
-    <div class="bg-primary-100 w-full items-center p-3 flex justify-between rounded-t-md">
-        <div class="flex items-center">
-            <h3 class="text-lg font-semibold mr-5">Candidates List</h3>
-            <mat-form-field appearance="fill" class="search ">
+    <div class="bg-primary-100 w-full items-center p-3 md:flex justify-between rounded-t-md">
+        <div class="md:flex items-center">
+            <h3 class="text-lg font-semibold md:mr-4 mr-5 md:mb-0 mb-2">Candidates List</h3>
+            <mat-form-field appearance="fill" class="search w-full md:w-[220px]">
                 <input matInput placeholder="Search">
                 <mat-icon matSuffix>search</mat-icon>
             </mat-form-field>
@@ -83,12 +83,7 @@
             <ng-container matColumnDef="Action">
                 <th mat-header-cell *matHeaderCellDef class="text-center"> Action </th>
                 <td mat-cell *matCellDef="let element" class="text-center">
-<<<<<<< HEAD
-                    <button mat-icon-button matTooltip="Edit">
-=======
-                    <button (click)="add()" mat-icon-button>
-
->>>>>>> 360a7918722a9b491aa3456a554f8f873ac0b67e
+                    <button (click)="add()" mat-icon-button matTooltip="Edit">
                         <img src="../../../../assets/icons/edit.svg"></button>
                 </td>
             </ng-container>

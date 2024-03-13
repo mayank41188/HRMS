@@ -70,7 +70,7 @@ export const defaultNavigation: FuseNavigationItem[] = [
         id   : 'Attendance',
         title: 'Attendance',
         type : 'basic',
-        icon : 'heroicons_outline:calendar-days',
+        icon : 'mat_outline:event_available',
         link : '/attendance'
     },
 
@@ -98,14 +98,14 @@ export const defaultNavigation: FuseNavigationItem[] = [
         id   : 'tasks',
         title: 'Tasks',
         type : 'basic',
-        icon : 'heroicons_outline:calendar-days',
+        icon : 'mat_outline:assignment',
         link : '/hr-tasks'
     },
     {
         id   : 'policies',
         title: 'Policy & Documents',
         type : 'basic',
-        icon : 'heroicons_outline:calendar-days',
+        icon : 'mat_outline:rule',
         link : '/hr-policies'
     },
 
@@ -113,21 +113,21 @@ export const defaultNavigation: FuseNavigationItem[] = [
         id   : 'Events',
         title: 'Events',
         type : 'basic',
-        icon : 'mat_outline:event_available',
+        icon : 'mat_outline:event',
         link : '/events'
     },
     {
         id   : 'reports',
         title: 'Reports',
         type : 'basic',
-        icon : 'heroicons_outline:calendar-days',
+        icon : 'mat_outline:receipt_long',
         link : '/hr-reports'
     },
     {
         id   : 'tax-forms',
         title: 'Tax & Forms',
         type : 'basic',
-        icon : 'heroicons_outline:calendar-days',
+        icon : 'heroicons_outline:document-chart-bar',
         link : '/hr-tax-forms'
     },
 
