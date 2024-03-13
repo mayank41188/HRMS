@@ -13,7 +13,7 @@ fuse-vertical-navigation-basic-item>.fuse-vertical-navigation-item-wrapper .fuse
     border-radius: 100px 0px 0px 100px;
 }
 
-tr {
+tr:not(mat-calendar tr){
     height: 40px;
 }
 img{
@@ -92,6 +92,27 @@ hr {
     --mdc-icon-button-icon-size: 30px !important;
 }
 
+.timefield {
+    // border-radius: 6px;
+    // border-width: 1px;
+    // border-style: solid;
+    // --tw-border-opacity: 1 !important;
+    // border-color: rgb(203 213 225 / var(--tw-border-opacity)) !important;
+    // --tw-bg-opacity: 1 !important;
+    // background-color: rgb(255 255 255 / var(--tw-bg-opacity)) !important;
+    // --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    // height: 56px;
+ 
+    input {
+        width: 100%;
+        padding: 0 16px;
+        height: 56px;
+    }
+}
+ 
+// input[type='time']::-webkit-calendar-picker-indicator {
+//     background: url('../assets/icons/time.svg') no-repeat;
+//   }
 .mat-mdc-paginator-container{
     justify-content: end !important;
 }

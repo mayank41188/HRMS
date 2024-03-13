@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { AttentionComponent } from '../../popups/attention/attention/attention.component';
 import { ShareFormComponent } from '../../popups/share-form/share-form/share-form.component';
 import { UploadFormComponent } from '../../popups/upload-form/upload-form/upload-form.component';
 
@@ -13,7 +14,11 @@ export class TaxFormListComponent {
     private dialog: MatDialog,
   ) { }
 
-
+  shareall() {
+    this.dialog.open(AttentionComponent, {
+      autoFocus: false
+    })
+  }
   shareicon() {
     this.dialog.open(ShareFormComponent, {
       autoFocus: false

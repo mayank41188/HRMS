@@ -103,10 +103,18 @@ export const defaultNavigation: FuseNavigationItem[] = [
     },
     {
         id   : 'policies',
-        title: 'Policies',
+        title: 'Policy & Documents',
         type : 'basic',
         icon : 'heroicons_outline:calendar-days',
         link : '/hr-policies'
+    },
+
+    {
+        id   : 'Events',
+        title: 'Events',
+        type : 'basic',
+        icon : 'mat_outline:event_available',
+        link : '/events'
     },
     {
         id   : 'reports',

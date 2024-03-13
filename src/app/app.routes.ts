@@ -204,6 +204,16 @@ export const appRoutes: Route[] = [
     },
 
     {
+        path: 'events',
+        canActivate: [AuthGuard],
+        canActivateChild: [AuthGuard],
+        component: LayoutComponent,
+        resolve: {
+            initialData: initialDataResolver
+        },
+        loadChildren: () => import('./hr/events/events.module').then(m => m.EventsModule)
+    },
+    {
         path: 'hr-tax-forms',
         canActivate: [AuthGuard],
         canActivateChild: [AuthGuard],

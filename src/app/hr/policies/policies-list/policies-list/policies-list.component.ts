@@ -12,7 +12,7 @@ export class PoliciesListComponent {
     private dialog: MatDialog,
   ) { }
 
-  add() {
+  addPolicy() {
     this.dialog.open(AddPoliciesPopupComponent, {
       autoFocus: false
     })

@@ -4,12 +4,13 @@
         <h1 class="text-xl font-bold w-full ">Tasks</h1>
 
         <div class="flex items-center">
-            <button mat-icon-button> <mat-icon><img src="../../../../assets/icons/home-navigation.svg"
-                        class="w-5"></mat-icon></button>
+            <button routerLink="/hr-dashboard" mat-icon-button> <mat-icon><img
+                src="../../../../assets/icons/home-navigation.svg" class="w-5"></mat-icon></button>
             <mat-icon><img src="../../../../assets/icons/arrow.png"></mat-icon>
+            
             <button mat-button class="rounded font-semibold p-1">Tasks</button>
         </div>
-    </div> 
+    </div>
 
     <div class="bg-primary-100 w-full items-center p-3 flex justify-between rounded-t-md">
 
@@ -22,11 +23,11 @@
         </div>
 
         <div>
-            <button (click)="add()" mat-icon-button><img
-                src="../../../../assets/icons/add.svg"></button>
-            <button mat-icon-button><img src="../../../../assets/icons/refresh.svg"></button>
-            <button mat-icon-button><img src="../../../../assets/icons/xlsx-export.svg"></button>
-        </div>  
+            <button matTooltip="Assign Task" (click)="add()" mat-icon-button><img src="../../../../assets/icons/add-task.svg"></button>
+            <button mat-icon-button matTooltip="Refresh"><img src="../../../../assets/icons/refresh.svg"></button>
+            <button mat-icon-button matTooltip="Export to Excel"><img
+                    src="../../../../assets/icons/xlsx-export.svg"></button>
+        </div>
     </div>
 
     <div class="overflow-x-auto w-full">
@@ -60,7 +61,10 @@
 
             <ng-container matColumnDef="priority">
                 <th mat-header-cell *matHeaderCellDef> Priority </th>
-                <td mat-cell *matCellDef="let element"><span class="bg-red-500 rounded-md text-white p-2 ">{{element.priority}} High   </span></td>
+                <td mat-cell *matCellDef="let element"><span
+                    class="bg-red-600 rounded-md text-white p-2 ">{{element.priority}} </span>
+                </td>
+
             </ng-container>
 
 

@@ -22,8 +22,8 @@
         </div>
         <div>
             <!-- <button mat-icon-button routerLink="/hr-employees/add-employee"><img src="../../../../assets/icons/add.svg"></button> -->
-            <button mat-icon-button matTooltip="Refresh"><img src="../../../../assets/icons/refresh.svg"></button>
-            <button mat-icon-button matTooltip="Export to Excel"><img src="../../../../assets/icons/xlsx-export.svg"></button>  
+            <button matTooltip="Refresh" mat-icon-button><img src="../../../../assets/icons/refresh.svg"></button>
+            <button matTooltip="Export to Excel" mat-icon-button><img src="../../../../assets/icons/xlsx-export.svg"></button>
         </div>
         
     </div>
@@ -70,13 +70,12 @@
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
       </table>
 
+      <mat-paginator [length]="100"
+        [pageSize]="10"
+        [pageSizeOptions]="[5, 10, 25, 100]"
+        aria-label="Select page">
+      </mat-paginator>
     <div class="table-footer">
-        <mat-paginator [length]="100"
-              [pageSize]="10"
-              [pageSizeOptions]="[5, 10, 25, 100]"
-              aria-label="Select page">
-        </mat-paginator>
-    
         <button color="primary" class="rounded min-w-[100px]" mat-raised-button (click)="generate()" >Generate Payslip</button>
     </div>
 

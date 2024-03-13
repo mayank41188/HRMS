@@ -1,0 +1,47 @@
+<div style="min-width: 30vw;">
+    <div class="form-head justify-between items-center">
+        <h4 class="popup-heading font-semibold text-lg px-6 py-3 bg-primary-100 flex justify-between">Add Event
+            <mat-icon class="text-lg cursor-pointer" mat-dialog-close>close</mat-icon>
+        </h4>
+    </div>
+
+    <div style="max-width: 30vw;">
+
+        <mat-form-field class="w-full" appearance="outline">
+            <mat-label>Event Name</mat-label>
+            <input placeholder="Enter Event Name" id="emailId" matInput>
+        </mat-form-field>
+
+        <mat-form-field class="w-full" appearance="outline">
+            <mat-label>Date</mat-label>
+            <input placeholder="Select Date" matInput [matDatepicker]="picker">
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field class="w-full" appearance="outline">
+            <mat-label>Time</mat-label>
+            <input matInput placeholder="Select Time" type="time" class="timefield">
+        </mat-form-field>
+
+        <mat-form-field class="w-full" appearance="outline">
+            <mat-label>Approver</mat-label>
+            <mat-select placeholder="Select Approver">
+                <mat-option value="option">Approver 1</mat-option>
+                <mat-option value="option">Approver 2</mat-option>
+                <mat-option value="option">Approver 3</mat-option>
+                <mat-option value="option">Approver 4</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="md:w-full" appearance="outline">
+            <mat-label>Description</mat-label>
+            <textarea placeholder="Enter Description" id="description" matInput></textarea>
+        </mat-form-field>
+
+    </div>
+
+    <div class="mt-5 text-center">
+        <button color="primary" class="rounded min-w-[100px] mr-5" mat-raised-button>Create</button>
+    </div>
+</div>

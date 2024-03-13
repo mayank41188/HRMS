@@ -20,10 +20,10 @@
             </mat-form-field>
         </div>
         <div>
-            <button  mat-icon-button routerLink="/hr-jobs/add-job" matTooltip="Add Job"><img
+            <button matTooltip="Add Job" mat-icon-button routerLink="/hr-jobs/add-job"><img
                     src="../../../../assets/icons/add.svg"> </button>
                     <button mat-icon-button matTooltip="Refresh"><img src="../../../../assets/icons/refresh.svg"></button>
-                    <button mat-icon-button matTooltip="Export to Excel"><img src="../../../../assets/icons/xlsx-export.svg"></button>          
+                    <button mat-icon-button matTooltip="Export to Excel"><img src="../../../../assets/icons/xlsx-export.svg"></button>
         </div>
 
     </div>
@@ -79,7 +79,7 @@
               </ng-container>
 
             <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-            <tr class="cursor-pointer" mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            <tr class="cursor-pointer" routerLink="/hr-jobs/view-job" mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
         </table>
 
         <mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page">
