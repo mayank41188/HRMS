@@ -43,5 +43,5 @@ export interface PeriodicElement {
   }
   
   const ELEMENT_DATA: PeriodicElement[] = [
-  { no: 1, title: 'Title comes Here', description: 'Description comes here', assignedby: 'Mayank Sharma', assignedon: '28 Feb 2024', priority:'', },
+  { no: 1, title: 'Title comes Here', description: 'Description comes here', assignedby: 'Mayank Sharma', assignedon: '28 Feb 2024', priority:'High', },
   ]
