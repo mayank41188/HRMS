@@ -1,0 +1,43 @@
+<div class="w-full p-6">
+
+    <div class=" flex justify-between w-full mb-4 items-center">
+        <h1 class="text-xl font-bold w-full ">Recent Activity</h1>
+        <div class="flex items-center">
+            <button routerLink="/hr-dashboard" mat-icon-button>
+                <mat-icon><img src="../../../../assets/icons/home-navigation.svg" class="w-5"></mat-icon>
+            </button>
+            <mat-icon><img src="../../../../assets/icons/arrow.png"></mat-icon>
+            <button mat-button class="rounded font-semibold p-1">Recent Activity</button>
+        </div>
+    </div>
+
+    <mat-card class="shadow rounded-md">
+        <div class="bg-primary-100 w-full items-center p-3 pl-5 md:flex justify-between rounded-t-md table-header">
+            <div class="md:flex items-center">
+                <h3 class="text-lg font-semibold mr-5">Activity</h3>
+                <mat-form-field appearance="fill" class="search ">
+                    <input matInput placeholder="Search">
+                    <mat-icon matSuffix>search</mat-icon>
+                </mat-form-field>
+            </div>
+            <div class="md:flex md:w-6/12 items-center justify-end">
+                <mat-form-field class="md:w-4/12 w-full pr-4 md:mt-0 mt-2" appearance="fill">
+                    <mat-select placeholder="Week">
+                        <mat-option value="option">Simbiotik Tech</mat-option>
+                        <mat-option value="option">Recstech</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <button matTooltip="Add Holiday" mat-icon-button><img
+                        src="../../../../assets/icons/add.svg"></button>
+                <button mat-icon-button matTooltip="Refresh"><img src="../../../../assets/icons/refresh.svg"></button>
+                <button mat-icon-button matTooltip="Export to Excel"><img
+                        src="../../../../assets/icons/xlsx-export.svg"></button>
+            </div>
+        </div>
+
+        <div class="m-5">
+            <h5 class="font-medium">Today</h5>
+        </div>
+    </mat-card>
+
+</div>

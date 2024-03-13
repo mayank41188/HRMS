@@ -13,7 +13,7 @@ fuse-vertical-navigation-basic-item>.fuse-vertical-navigation-item-wrapper .fuse
     border-radius: 100px 0px 0px 100px;
 }
 
-tr {
+tr:not(mat-calendar tr){
     height: 40px;
 }
 img{
