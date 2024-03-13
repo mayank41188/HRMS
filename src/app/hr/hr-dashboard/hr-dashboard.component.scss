@@ -1,0 +1,59 @@
+.ActivityList{
+    li{
+        margin-top: 18px;
+        padding-left: 22px;
+        position: relative;
+        &::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 4px;
+            display: block;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: #98B8F5;
+        }
+        &::after{
+            content: "";
+            border: 1px dashed #98B8F5;
+            position: absolute;
+            left: 6px;
+            top: 20px;
+            height: 100%;
+        }
+        &:last-child::after{
+            display: none;
+        }
+        &.active::before{
+            background: #3272EC;
+        }
+    }
+}
+.Meetings-table{
+    width: 100%;
+    table-layout: fixed;
+    td,th{
+        padding: 0 5px;
+        text-align: center;
+    }
+    td{
+        padding-top: 10px;
+    }
+    th{
+        padding-bottom: 10px;
+    }
+    .active{
+        background: #3272EC;
+        color: #ffffff;
+    }
+    td.active{
+        border-radius: 30px 30px 0 0;
+    }
+    th.active{
+        border-radius: 0 0 30px 30px;
+    }
+    tr{
+        height: 35px;
+    }
+}

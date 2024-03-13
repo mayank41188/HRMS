@@ -1,0 +1,309 @@
+<div class="w-full p-6 md:flex text-md">
+    <div class="md:w-9/12 md:pr-2">
+        <div class="grid md:grid-cols-4 grid-cols-1 gap-3">
+            <mat-card class="shadow p-3 md:flex flex-row items-center">
+                <img src="../../../assets/icons/d-Projects.svg" alt="" class="w-12 mr-3">
+                <div>
+                    <p class="text-sm">Total Employees</p>
+                    <h5 class="font-semibold text-xl">130</h5>
+                </div>
+            </mat-card>
+
+            <mat-card class="shadow p-3 md:flex flex-row">
+                <img src="../../../assets/icons/d-Clients.svg" alt="" class="w-12 mr-3">
+                <div>
+                    <p class="text-sm">On Leave</p>
+                    <h5 class="font-semibold text-xl">20</h5>
+                    <p class="text-sm">00.00%</p>
+                </div>
+            </mat-card>
+
+            <mat-card class="shadow p-3 md:flex flex-row">
+                <img src="../../../assets/icons/d-Employees.svg" alt="" class="w-12 mr-3">
+                <div>
+                    <p class="text-sm">Late Arrivals</p>
+                    <h5 class="font-semibold text-xl">20</h5>
+                    <p class="text-sm">00.00%</p>
+                </div>
+            </mat-card>
+
+            <mat-card class="shadow p-3 md:flex flex-row">
+                <img src="../../../assets/icons/d-Tasks.svg" alt="" class="w-12 mr-3">
+                <div>
+                    <p class="text-sm">Leave Request</p>
+                    <h5 class="font-semibold text-xl">20</h5>
+                    <p class="text-sm">00.00%</p>
+                </div>
+            </mat-card>
+        </div>
+
+        <mat-card class="shadow p-4 my-5">
+            <div class="flex justify-between items-center mb-5">
+                <h5 class="text-lg font-bold">Weekly Attendance </h5>
+
+                <div>
+                    <a class="text-red-600 underline font-medium">Today Absent: 70</a>
+
+                    <mat-button-toggle-group class="ml-3">
+                        <mat-button-toggle value="Month">Month</mat-button-toggle>
+                        <mat-button-toggle value="Week" checked>Week</mat-button-toggle>
+                    </mat-button-toggle-group>
+                </div>
+            </div>
+           
+            <div>
+                <img src="../../../assets/images/hr-dash-graph.png" alt="">
+
+                <div class="flex mt-3 justify-center">
+                    <p class="flex items-center"><mat-icon class="text-sm text-[#22C55D]">circle</mat-icon> Simbiotik Employees</p>
+                    <p class="flex items-center ml-3"><mat-icon color="warn" class="text-sm">circle</mat-icon>Recstech Employees</p>
+                </div>
+            </div>
+            
+        </mat-card>
+
+        <div class="grid md:grid-cols-3 grid-cols-1 gap-3">
+            <mat-card class="shadow p-4">
+                <h5 class="text-lg font-semibold flex justify-between items-center w-full mb-3">Task Statistics
+                    <a class="text-primary text-sm font-medium flex items-center cursor-pointer">View All <img src="../../../assets/icons/right-arrow.svg" alt="" class="w-1.5 ml-2"> </a>
+                </h5>
+                <div class="grid md:grid-cols-2 grid-cols-1 gap-3">
+                    <div class="bg-[#EEEFF1] text-center p-1">
+                        <p class="text-sm">Total Tasks</p>
+                        <h5 class="font-semibold text-xl">50</h5>
+                    </div>
+                    <div class="bg-[#EEEFF1] text-center p-1">
+                        <p class="text-sm">Overdue Tasks</p>
+                        <h5 class="font-semibold text-xl">5</h5>
+                    </div>
+                </div>
+
+                <div class="text-white mt-4">
+                    <span class="text-center bg-[#9368E8] w-3/12 inline-block p-1 text-xs rounded-l-full">40%</span>
+                    <span class="text-center bg-[#FFBC34] w-3/12 inline-block p-1 text-xs">30%</span>
+                    <span class="text-center bg-[#55CE63] w-2/12 inline-block p-1 text-xs">10%</span>
+                    <span class="text-center bg-[#F62D51] w-2/12 inline-block p-1 text-xs">20%</span>
+                    <span class="text-center bg-[#019EFB] w-2/12 inline-block p-1 text-xs rounded-r-full">10%</span>
+                </div>
+                <div class="flex items-center justify-between mt-3 font-medium">
+                    <p>Completed Task</p>
+                    <p class="text-[#9368E8]">20</p>
+                </div>
+                <div class="flex items-center justify-between mt-3 font-medium">
+                    <p>Inprogress Task</p>
+                    <p class="text-[#FFBC34]">10</p>
+                </div>
+                <div class="flex items-center justify-between mt-3 font-medium">
+                    <p>On Hold Task</p>
+                    <p class="text-[#55CE63]">5</p>
+                </div>
+                <div class="flex items-center justify-between mt-3 font-medium">
+                    <p>Pending Task</p>
+                    <p class="text-[#F62D51]">15</p>
+                </div>
+                <div class="flex items-center justify-between mt-3 font-medium">
+                    <p>Review Task</p>
+                    <p class="text-[#019EFB]">5</p>
+                </div>
+            </mat-card>
+
+            <mat-card class="shadow p-4">
+                <h5 class="text-lg font-semibold flex justify-between items-center w-full mb-3">Leave Requests
+                    <a class="text-primary text-sm font-medium flex items-center cursor-pointer">View All <img src="../../../assets/icons/right-arrow.svg" alt="" class="w-1.5 ml-2"> </a>
+                </h5>
+
+                <div class="border-b">
+                    <div class="md:flex">
+                        <div class="mr-3 text-center">
+                            <img src="../../../assets/images/avatars/female-01.jpg" alt="" width="60" class="rounded-full">
+                        </div>
+                        <div>
+                            <p class="font-semibold">Nisha</p>
+                            <p class="text-sm"><span class="font-medium">Reason:</span> Health Issue</p>
+                            <p class="text-sm"><span class="font-medium">Leave for:</span> 2 Days</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-between py-3">
+                        <button mat-raised-button class="rounded bg-[#E7E7E7] min-h-[30px] h-[30px] w-1/2 mr-2">Reject</button>
+                        <button mat-raised-button color="primary" class="rounded min-h-[30px] h-[30px] w-1/2 ml-2">Approve</button>
+                    </div>
+                </div>
+
+                <div class="pt-2">
+                    <div class="md:flex">
+                        <div class="mr-3">
+                            <img src="../../../assets/images/avatars/male-07.jpg" alt="" width="60" class="rounded-full">
+                        </div>
+                        <div>
+                            <p class="font-semibold">Gopi</p>
+                            <p class="text-sm"><span class="font-medium">Reason:</span> Health Issue</p>
+                            <p class="text-sm"><span class="font-medium">Leave for:</span> 2 Days</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-between py-3">
+                        <button mat-raised-button class="rounded bg-[#E7E7E7] min-h-[30px] h-[30px] w-1/2 mr-2">Reject</button>
+                        <button mat-raised-button color="primary" class="rounded min-h-[30px] h-[30px] w-1/2 ml-2">Approve</button>
+                    </div>
+                </div>
+            </mat-card>
+
+            <mat-card class="shadow p-4">
+                <h5 class="text-lg font-semibold flex justify-between items-center w-full">Recent Activity
+                    <a class="text-primary text-sm font-medium flex items-center cursor-pointer" routerLink="/hr-dashboard/recent-activity">View All <img src="../../../assets/icons/right-arrow.svg" alt="" class="w-1.5 ml-2"> </a>
+                </h5>
+
+                <ul class="ActivityList">
+                    <li class="active">
+                        <h5 class="font-medium mb-1">Approved Request 1</h5>
+                        <p class="text-sm">From "Samyuktha" HR Manager On Monday 25 Feb 2024</p>
+                    </li>
+
+                    <li>
+                        <h5 class="font-medium mb-1">Approved Request 2</h5>
+                        <p class="text-sm">From "Samyuktha" HR Manager On Monday 25 Feb 2024</p>
+                    </li>
+
+                    <li>
+                        <h5 class="font-medium mb-1">Approved Request 3</h5>
+                        <p class="text-sm">From "Samyuktha" HR Manager On Monday 25 Feb 2024</p>
+                    </li>
+                </ul>
+
+            </mat-card>
+        </div>
+    </div>
+
+    <div class="md:w-3/12 md:pl-2">
+        <mat-card class="shadow p-4">
+            <h5 class="text-lg font-semibold flex justify-between items-center w-full mb-3">Upcoming Meetings
+                <a class="text-primary text-sm font-medium flex items-center cursor-pointer">View All <img src="../../../assets/icons/right-arrow.svg" alt="" class="w-1.5 ml-2"> </a>
+            </h5>
+
+            <div class="flex items-center relative my-0.5">
+                <mat-icon color="primary" class="cursor-pointer absolute left-[-15px]">chevron_left</mat-icon>
+                <table class="Meetings-table">
+                    <tr>
+                        <td>Mo</td>
+                        <td class="active">Tu</td>
+                        <td>We</td>
+                        <td>Th</td>
+                        <td>Fr</td>
+                        <td>Sa</td>
+                        <td>Su</td>
+                    </tr>
+                    <tr>
+                        <th>12</th>
+                        <th class="active">13</th>
+                        <th>14</th>
+                        <th>15</th>
+                        <th>16</th>
+                        <th>17</th>
+                        <th>18</th>
+                    </tr>
+                </table>
+                <mat-icon color="primary" class="cursor-pointer absolute right-[-15px]">chevron_right</mat-icon>
+            </div>
+
+            <div class="bg-[#F5F6F9] rounded-md p-3 md:flex mt-3">
+                <div class="bg-white text-center mr-3 px-5 rounded-md flex flex-col justify-center">
+                    <h5 class="text-primary text-xl font-semibold">13</h5>
+                    <p>Feb</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold">Meeting with Amar</h4>
+                    <p class="text-sm">Time: 10:30 am - 11:00 am</p>
+                    <button mat-button color="primary" class="p-0 rounded min-h-[22px] h-[22px] text-md">Get Meeting Details <img src="../../../assets/icons/right-arrow.svg" alt="" class="w-2 ml-1"></button>
+                </div>
+            </div>
+
+            <div class="bg-[#F5F6F9] rounded-md p-3 md:flex mt-3">
+                <div class="bg-white text-center mr-3 px-5 rounded-md flex flex-col justify-center">
+                    <h5 class="text-primary text-xl font-semibold">13</h5>
+                    <p>Feb</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold">Meeting with Akbar</h4>
+                    <p class="text-sm">Time: 10:30 am - 11:00 am</p>
+                    <button mat-button color="primary" class="p-0 rounded min-h-[22px] h-[22px] text-md">Get Meeting Details <img src="../../../assets/icons/right-arrow.svg" alt="" class="w-2 ml-1"></button>
+                </div>
+            </div>
+        </mat-card>
+
+        <mat-card class="shadow p-4 mt-5" style="background-image: url(../../../assets/images/bday-bg.png);">
+            <h5 class="text-lg font-semibold flex justify-between items-center w-full mb-1">Birthday Wish
+                <a class="text-primary text-sm font-medium flex items-center cursor-pointer">View All <img src="../../../assets/icons/right-arrow.svg" alt="" class="w-1.5 ml-2"> </a>
+            </h5>
+            <div class="md:flex py-3">
+                <div class="mr-3">
+                    <img src="../../../assets/images/avatars/female-07.jpg" alt="" width="40" class="rounded-full">
+                </div>
+                <div class="border-r pr-3">
+                    <p class="text-base font-semibold">Pooja</p>
+                    <p class="text-sm">Backend Developer</p>
+                </div>
+                <div class="pl-3">
+                    <p>DOB:</p>
+                    <p class="font-semibold">09-02</p>
+                </div>
+            </div>
+            <div class="md:flex pt-3 border-t">
+                <div class="mr-3">
+                    <img src="../../../assets/images/avatars/male-08.jpg" alt="" width="40" class="rounded-full">
+                </div>
+                <div class="border-r pr-3">
+                    <p class="text-base font-semibold">Rakesh</p>
+                    <p class="text-sm">Frontend Developer</p>
+                </div>
+                <div class="pl-3">
+                    <p>DOB:</p>
+                    <p class="font-semibold">09-02</p>
+                </div>
+            </div>
+        </mat-card>
+
+        <mat-card class="shadow p-4 mt-5">
+            <h5 class="text-lg font-semibold flex justify-between items-center w-full mb-1">Upcoming Interview
+                <a class="text-primary text-sm font-medium flex items-center cursor-pointer">View All <img src="../../../assets/icons/right-arrow.svg" alt="" class="w-1.5 ml-2"> </a>
+            </h5>
+
+            <div class="md:flex p-3 rounded bg-[#F5F6F9] relative mt-3">
+                <div class="mr-3">
+                    <img src="../../../assets/images/avatars/female-08.jpg" alt="" width="60" class="rounded">
+                </div>
+                <div>
+                    <p class="text-base font-semibold">Natalie Gibson</p>
+                    <p class="text-sm">UI/UX Designer</p>
+                    <p class="text-sm">10:30 am - 11:00 am</p>
+
+                    <button mat-icon-button class="absolute top-[-2px] right-[-6px]"><mat-icon class="text-lg">more_vert</mat-icon></button>
+                </div>
+            </div>
+
+            <div class="md:flex p-3 rounded bg-[#F5F6F9] relative mt-3">
+                <div class="mr-3">
+                    <img src="../../../assets/images/avatars/male-03.jpg" alt="" width="60" class="rounded">
+                </div>
+                <div>
+                    <p class="text-base font-semibold">Mohammed Rizwan</p>
+                    <p class="text-sm">Frontend Developer</p>
+                    <p class="text-sm">11:30 am - 12:00 pm</p>
+
+                    <button mat-icon-button class="absolute top-[-2px] right-[-6px]"><mat-icon class="text-lg">more_vert</mat-icon></button>
+                </div>
+            </div>
+
+            <div class="md:flex p-3 rounded bg-[#F5F6F9] relative mt-3">
+                <div class="mr-3">
+                    <img src="../../../assets/images/avatars/female-04.jpg" alt="" width="60" class="rounded">
+                </div>
+                <div>
+                    <p class="text-base font-semibold">Denise Ledford</p>
+                    <p class="text-sm">Backend Developer</p>
+                    <p class="text-sm">3:00 pm - 04:00 pm</p>
+
+                    <button mat-icon-button class="absolute top-[-2px] right-[-6px]"><mat-icon class="text-lg">more_vert</mat-icon></button>
+                </div>
+            </div>
+        </mat-card>
+    </div>
+</div>

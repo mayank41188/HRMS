@@ -1,0 +1,73 @@
+<div class="w-full p-6">
+
+    <div class=" flex justify-between w-full mb-4 items-center">   
+        <h1 class="text-xl font-bold w-full " >Attendance</h1>
+    
+    <div class="flex items-center">   
+        <button routerLink="/hr-dashboard" mat-icon-button> <mat-icon><img src="../../../../assets/icons/home-navigation.svg" class="w-5"></mat-icon></button>
+        <mat-icon><img src="../../../../assets/icons/arrow.png"></mat-icon>
+        <button mat-button class="rounded font-semibold p-1">Attendance</button>
+    </div>
+    </div>
+    
+    <div class="bg-primary-100 w-full items-center p-3 flex justify-between rounded-t-md">
+        <div class="flex items-center">
+            <h3 class="text-lg font-semibold mr-5">Attendance List</h3>
+            <mat-form-field appearance="fill" class="search">
+                <input matInput placeholder="Search">
+                <mat-icon matSuffix>search</mat-icon>
+            </mat-form-field>
+        </div>
+        <div>
+            <!-- <button mat-icon-button routerLink="/hr-employees/add-employee"><img src="../../../../assets/icons/add.svg"></button> -->
+            <button matTooltip="Refresh" mat-icon-button><img src="../../../../assets/icons/refresh.svg"></button>
+            <button matTooltip="Export to Excel" mat-icon-button><img src="../../../../assets/icons/xlsx-export.svg"></button>
+        </div>
+        
+    </div>
+    <div class="overflow-x-auto w-full">
+    <table mat-table [dataSource]="dataSource"> 
+        
+        <ng-container matColumnDef="no">
+          <th mat-header-cell *matHeaderCellDef width="50"> No. </th>
+          <td mat-cell *matCellDef="let element"> {{element.no}} </td>
+        </ng-container>
+        
+        <ng-container matColumnDef="Name">
+          <th mat-header-cell *matHeaderCellDef> Name </th>
+          <td mat-cell *matCellDef="let element"> {{element.Name}} </td>
+        </ng-container>
+      
+        
+        <ng-container matColumnDef="EmpID">
+          <th mat-header-cell *matHeaderCellDef> Employee ID </th>
+          <td mat-cell *matCellDef="let element"> {{element.EmpID}} </td>
+        </ng-container>
+      
+        
+        <ng-container matColumnDef="Email">
+          <th mat-header-cell *matHeaderCellDef> Email </th>
+          <td mat-cell *matCellDef="let element"> {{element.Email}} </td>
+        </ng-container>
+    
+        <ng-container matColumnDef="Action">
+            <th mat-header-cell *matHeaderCellDef class="text-center"> Action </th>
+            <td mat-cell *matCellDef="let element" class="text-center">
+                <button mat-icon-button (click)="generate()"><mat-icon svgIcon="mat_outline:file_download"></mat-icon></button> 
+            </td>
+        </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr routerLink="/attendance/attendance-detail" class="cursor-pointer" mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+
+        <mat-paginator [length]="100"
+              [pageSize]="10"
+              [pageSizeOptions]="[5, 10, 25, 100]"
+              aria-label="Select page">
+        </mat-paginator>
+
+    </div>
+
+</div>
+      

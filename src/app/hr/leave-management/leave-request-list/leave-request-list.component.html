@@ -4,7 +4,7 @@
         <h1 class="text-xl font-bold w-full " >Leave Management</h1>
     
     <div class="flex items-center">   
-        <button mat-icon-button> <mat-icon><img src="../../../../assets/icons/home-navigation.svg" class="w-5"></mat-icon></button>
+        <button routerLink="/hr-dashboard" mat-icon-button> <mat-icon><img src="../../../../assets/icons/home-navigation.svg" class="w-5"></mat-icon></button>
         <mat-icon><img src="../../../../assets/icons/arrow.png"></mat-icon>
         <button mat-button class="rounded font-semibold p-1">Leave Request</button>
     </div>
@@ -80,8 +80,8 @@
     
           <ng-container matColumnDef="Action">
             <th mat-header-cell *matHeaderCellDef class="text-center"> Action </th>
-            <td mat-cell *matCellDef="let element" class="text-center"> <button mat-icon-button routerLink="/hr-employees/add-employee" >
-                <img src="../../../../assets/icons/edit.svg"></button> <button mat-icon-button> <img src="../../../../assets/icons/delete.svg">
+            <td mat-cell *matCellDef="let element" class="text-center"> <button mat-icon-button>
+                <img src="../../../../assets/icons/Approve.svg"></button> <button mat-icon-button> <img src="../../../../assets/icons/Reject.svg">
             </button> </td>
           </ng-container>
     

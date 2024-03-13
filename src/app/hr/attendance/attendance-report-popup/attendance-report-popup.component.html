@@ -1,0 +1,29 @@
+<div style="min-width: 20vw;">
+    <div class="form-head justify-between items-center">
+        <h4 class="popup-heading font-semibold text-lg px-6 py-3 bg-primary-100 flex justify-between">Export
+            <mat-icon class="text-lg cursor-pointer" mat-dialog-close>close</mat-icon>
+        </h4>
+    </div>
+
+    <div style="max-width: 20vw;">
+
+        <mat-form-field class="w-full" appearance="outline">
+            <mat-label>From Date</mat-label>
+            <input placeholder="Select From Date" matInput [matDatepicker]="picker">
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field class="w-full" appearance="outline">
+            <mat-label>To Date</mat-label>
+            <input placeholder="Select To Date" matInput [matDatepicker]="picker2">
+            <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
+            <mat-datepicker #picker2></mat-datepicker>
+        </mat-form-field>
+
+    </div>
+
+    <div class="mt-5 text-center">
+        <button color="primary" class="rounded min-w-[100px] mr-5" mat-raised-button>Generate</button>
+    </div>
+</div>

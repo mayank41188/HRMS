@@ -1,0 +1,37 @@
+<div style="min-width: 30vw;">
+    <div class="form-head justify-between items-center">
+        <h4 class="popup-heading font-semibold text-lg px-6 py-3 bg-primary-100 flex justify-between">Assign Task
+            <mat-icon class="text-lg cursor-pointer" mat-dialog-close>close</mat-icon>
+        </h4>
+    </div>
+
+    <div style="max-width: 30vw;">
+        <mat-form-field class="w-full" appearance="outline">
+            <mat-label>E-Mail</mat-label>
+            <input placeholder="Enter Email" id="email" matInput>
+        </mat-form-field>
+
+        <mat-form-field class="w-full" appearance="outline">
+            <mat-label>Title</mat-label>
+            <input placeholder="Enter Title" id="title" matInput>
+        </mat-form-field>
+
+        <mat-form-field class="w-full" appearance="outline">
+            <mat-label>Description</mat-label>
+            <input placeholder="Enter Description" id="description" matInput>
+        </mat-form-field>
+
+        <mat-form-field class="w-full" appearance="outline">
+            <mat-label>Priority</mat-label>
+            <mat-select placeholder="Select Priority">
+                <mat-option value="option">High</mat-option>
+                <mat-option value="option">Medium</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+    </div>
+
+    <div class="mt-5 text-center">
+        <button color="primary" class="rounded min-w-[100px] mr-5" mat-raised-button>Assign</button>
+    </div>
+</div>

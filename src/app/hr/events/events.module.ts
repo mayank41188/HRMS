@@ -1,14 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DashboardComponent } from './dashboard.component';
+import { EventsComponent } from './events/events.component';
+import { AddEventComponent } from './add-event/add-event.component';
 import { RouterModule, Routes } from '@angular/router';
 import { MaterialModule } from 'app/material/material.module';
 
-const routes: Routes = [{ path: '', component: DashboardComponent }]
+const routes: Routes = [
+  { path: '', component: EventsComponent },
+
+]
 
 @NgModule({
   declarations: [
-    DashboardComponent
+    EventsComponent,
+    AddEventComponent
   ],
   imports: [
     CommonModule,
@@ -16,4 +21,4 @@ const routes: Routes = [{ path: '', component: DashboardComponent }]
     RouterModule.forChild(routes),
   ]
 })
-export class DashboardModule { }
+export class EventsModule { }
