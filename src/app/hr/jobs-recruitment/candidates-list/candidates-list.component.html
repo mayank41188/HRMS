@@ -4,7 +4,7 @@
         <h1 class="text-xl font-bold w-full ">Candidates</h1>
 
         <div class="flex items-center">
-            <button mat-icon-button> <mat-icon><img src="../../../../assets/icons/home-navigation.svg"
+            <button mat-icon-button routerLink="/hr-dashboard"> <mat-icon><img src="../../../../assets/icons/home-navigation.svg"
                         class="w-5"></mat-icon></button>
             <mat-icon><img src="../../../../assets/icons/arrow.png"></mat-icon>
             <button mat-button class="rounded font-semibold p-1">Candidates</button>
@@ -20,9 +20,9 @@
             </mat-form-field>
         </div>
         <div>
-            <button mat-icon-button (click)="add()"><img src="../../../../assets/icons/add.svg"> </button>
-            <button mat-icon-button><img src="../../../../assets/icons/refresh.svg"></button>
-            <button mat-icon-button><img src="../../../../assets/icons/xlsx-export.svg"></button>
+            <button mat-icon-button (click)="add()" matTooltip="Add Candidate"><img src="../../../../assets/icons/add.svg"> </button>
+            <button mat-icon-button matTooltip="Refresh"><img src="../../../../assets/icons/refresh.svg"></button>
+            <button mat-icon-button matTooltip="Export to Excel"><img src="../../../../assets/icons/xlsx-export.svg"></button>  
         </div>
     </div>
     <div class="overflow-x-auto w-full">
@@ -81,8 +81,7 @@
             <ng-container matColumnDef="Action">
                 <th mat-header-cell *matHeaderCellDef class="text-center"> Action </th>
                 <td mat-cell *matCellDef="let element" class="text-center">
-                    <button mat-icon-button>
-
+                    <button mat-icon-button matTooltip="Edit">
                         <img src="../../../../assets/icons/edit.svg"></button>
                 </td>
             </ng-container>
