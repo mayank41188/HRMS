@@ -279,4 +279,26 @@ export const appRoutes: Route[] = [
         },
         loadChildren: () => import('./employee/jobs/jobs.module').then(m => m.JobsModule)
     },
+
+    {
+        path: 'employee-events',
+        canActivate: [AuthGuard],
+        canActivateChild: [AuthGuard],
+        component: LayoutComponent,
+        resolve: {
+            initialData: initialDataResolver
+        },
+        loadChildren: () => import('./employee/events/events.module').then(m => m.EventsModule)
+    },
+
+    {
+        path: 'employee-policies',
+        canActivate: [AuthGuard],
+        canActivateChild: [AuthGuard],
+        component: LayoutComponent,
+        resolve: {
+            initialData: initialDataResolver
+        },
+        loadChildren: () => import('./employee/policy/policy.module').then(m => m.PolicyModule)
+    },
 ];

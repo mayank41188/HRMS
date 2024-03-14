@@ -158,8 +158,22 @@ export const defaultNavigation: FuseNavigationItem[] = [
         icon : 'exit_to_app',
         link : '/jobs'
     },
-
     
+    {
+        id   : 'Events',
+        title: 'Events',
+        type : 'basic',
+        icon : 'mat_outline:event',
+        link : '/employee-events'
+    },
+
+    {
+        id   : 'Policy',
+        title: 'Policy & Documents',
+        type : 'basic',
+        icon : 'mat_outline:rule',
+        link : '/employee-policies'
+    },
 
 ];
 
