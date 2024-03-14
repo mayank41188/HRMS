@@ -246,4 +246,15 @@ export const appRoutes: Route[] = [
         },
         loadChildren: () => import('./employee/holidays/holidays.module').then(m => m.HolidaysModule)
     },
+
+    {
+        path: 'employee-leaves',
+        canActivate: [AuthGuard],
+        canActivateChild: [AuthGuard],
+        component: LayoutComponent,
+        resolve: {
+            initialData: initialDataResolver
+        },
+        loadChildren: () => import('./employee/leaves/leaves.module').then(m => m.LeavesModule)
+    },
 ];

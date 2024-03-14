@@ -131,6 +131,14 @@ export const defaultNavigation: FuseNavigationItem[] = [
         link : '/hr-tax-forms'
     },
 
+    {
+        id   : 'leaves',
+        title: 'Leaves',
+        type : 'basic',
+        icon : 'heroicons_outline:document-chart-bar',
+        link : '/employee-leaves'
+    },
+
 ];
 
 
