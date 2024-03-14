@@ -233,4 +233,17 @@ export const appRoutes: Route[] = [
         },
         loadChildren: () => import('./shared/shared.module').then(m => m.SharedModule)
     },
+
+    // Employee routs
+
+    {
+        path: 'employee-holiday',
+        canActivate: [AuthGuard],
+        canActivateChild: [AuthGuard],
+        component: LayoutComponent,
+        resolve: {
+            initialData: initialDataResolver
+        },
+        loadChildren: () => import('./employee/holidays/holidays.module').then(m => m.HolidaysModule)
+    },
 ];
