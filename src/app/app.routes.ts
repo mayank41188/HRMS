@@ -248,6 +248,17 @@ export const appRoutes: Route[] = [
     },
 
     {
+        path: 'employee-attendance',
+        canActivate: [AuthGuard],
+        canActivateChild: [AuthGuard],
+        component: LayoutComponent,
+        resolve: {
+            initialData: initialDataResolver
+        },
+        loadChildren: () => import('./employee/attendance/attendance.module').then(m => m.AttendanceModule)
+    },
+
+    {
         path: 'employee-leaves',
         canActivate: [AuthGuard],
         canActivateChild: [AuthGuard],
@@ -256,5 +267,16 @@ export const appRoutes: Route[] = [
             initialData: initialDataResolver
         },
         loadChildren: () => import('./employee/leaves/leaves.module').then(m => m.LeavesModule)
+    },
+
+    {
+        path: 'jobs',
+        canActivate: [AuthGuard],
+        canActivateChild: [AuthGuard],
+        component: LayoutComponent,
+        resolve: {
+            initialData: initialDataResolver
+        },
+        loadChildren: () => import('./employee/jobs/jobs.module').then(m => m.JobsModule)
     },
 ];

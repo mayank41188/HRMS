@@ -131,13 +131,35 @@ export const defaultNavigation: FuseNavigationItem[] = [
         link : '/hr-tax-forms'
     },
 
+    
+
+    //Employee Navigation
+
     {
-        id   : 'leaves',
+        id   : 'employee-leaves',
         title: 'Leaves',
         type : 'basic',
         icon : 'heroicons_outline:document-chart-bar',
         link : '/employee-leaves'
     },
+
+    {
+        id   : 'employee-Attendance',
+        title: 'Attendance',
+        type : 'basic',
+        icon : 'heroicons_outline:calendar-days',
+        link : '/employee-attendance'
+    },
+
+    {
+        id   : 'jobs',
+        title: 'Jobs & Recruitment',
+        type : 'basic',
+        icon : 'exit_to_app',
+        link : '/jobs'
+    },
+
+    
 
 ];
 
