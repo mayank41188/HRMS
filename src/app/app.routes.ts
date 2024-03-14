@@ -301,4 +301,15 @@ export const appRoutes: Route[] = [
         },
         loadChildren: () => import('./employee/policy/policy.module').then(m => m.PolicyModule)
     },
+
+    {
+        path: 'employee-tasks',
+        canActivate: [AuthGuard],
+        canActivateChild: [AuthGuard],
+        component: LayoutComponent,
+        resolve: {
+            initialData: initialDataResolver
+        },
+        loadChildren: () => import('./employee/tasks/tasks.module').then(m => m.TasksModule)
+    },
 ];

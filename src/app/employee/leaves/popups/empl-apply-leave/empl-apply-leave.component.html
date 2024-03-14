@@ -1,0 +1,48 @@
+<div style="min-width: 30vw;">
+    <div class="form-head justify-between items-center">
+        <h4 class="popup-heading font-semibold text-lg px-6 py-3 bg-primary-100 flex justify-between">Apply Leave
+            <mat-icon class="text-lg cursor-pointer" mat-dialog-close>close</mat-icon>
+        </h4>
+    </div>
+
+    <div style="max-width: 30vw;">
+        <mat-form-field class="w-full" appearance="outline">
+            <mat-label>Leave Type</mat-label>
+            <mat-select placeholder="Select Leave Type">
+                <mat-option value="option">Casual Leave</mat-option>
+                <mat-option value="option">Sick Leave</mat-option>
+                <mat-option value="option">Emergency Leave</mat-option>
+                <mat-option value="option">Marriage Leave</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="w-full" appearance="outline">
+            <mat-label>From</mat-label>
+            <input placeholder="Select From Date" matInput [matDatepicker]="picker">
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field class="w-full" appearance="outline">
+            <mat-label>To Date</mat-label>
+            <input placeholder="Select To Date" matInput [matDatepicker]="picker2">
+            <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
+            <mat-datepicker #picker2></mat-datepicker>
+        </mat-form-field>
+
+        <!-- <mat-form-field class="w-full md:w-4/12 md:pr-4" appearance="outline">
+            <mat-label>Number of Days</mat-label>
+            <input placeholder="Enter Number of Days" id="mobileNo" matInput>
+        </mat-form-field> -->
+
+        <mat-form-field class="w-full" appearance="outline">
+            <mat-label>Reason</mat-label>
+            <textarea placeholder="Enter Reason" id="mobileNo" matInput></textarea>
+        </mat-form-field>
+
+    </div>
+
+    <div class="mt-5 text-center">
+        <button color="primary" class="rounded min-w-[100px] mr-5" mat-raised-button>Submit</button>
+    </div>
+</div>

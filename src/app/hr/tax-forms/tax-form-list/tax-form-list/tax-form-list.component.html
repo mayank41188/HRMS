@@ -25,7 +25,7 @@
                 <mat-datepicker #dp startView="multi-year" panelClass="example-month-picker">
                 </mat-datepicker>
             </mat-form-field>
-            <button (click)="shareall()" mat-icon-button><img src="../../../../../assets/icons/share-all.svg"></button>
+            <button (click)="shareall()" matTooltip="Share All" mat-icon-button><img src="../../../../../assets/icons/share-all.svg"></button>
             <button routerLink="/hr-tax-forms/add-forms" matTooltip="Add Tax & Forms" mat-icon-button><img
                     src="../../../../assets/icons/add.svg"></button>
             <button mat-icon-button matTooltip="Refresh"><img src="../../../../assets/icons/refresh.svg"></button>
@@ -40,7 +40,7 @@
             <ng-container matColumnDef="check">
                 <th mat-header-cell *matHeaderCellDef>
                     <section class="example-section">
-                        <mat-checkbox class="example-margin"></mat-checkbox>
+                        <mat-checkbox class="example-margin "></mat-checkbox>
                     </section>
                 </th>
 

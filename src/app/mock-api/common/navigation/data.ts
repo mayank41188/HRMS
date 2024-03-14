@@ -158,6 +158,14 @@ export const defaultNavigation: FuseNavigationItem[] = [
         icon : 'exit_to_app',
         link : '/jobs'
     },
+
+    {
+        id   : 'employee-Tasks',
+        title: 'Tasks',
+        type : 'basic',
+        icon : 'exit_to_app',
+        link : '/employee-tasks'
+    },
     
     {
         id   : 'Events',
