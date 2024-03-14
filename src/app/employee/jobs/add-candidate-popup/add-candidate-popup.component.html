@@ -1,0 +1,45 @@
+<div style="min-width: 30vw;">
+    <div class="form-head justify-between items-center">
+        <h4 class="popup-heading font-semibold text-lg px-6 py-3 bg-primary-100 flex justify-between">Add New Candidate
+            <mat-icon class="text-lg cursor-pointer" mat-dialog-close>close</mat-icon>
+        </h4>
+    </div>
+
+    <div style="max-width: 30vw;">
+
+        <mat-form-field class="w-full" appearance="outline">
+            <mat-label>Job ID</mat-label>
+            <mat-select placeholder="Select Job ID">
+                <mat-option value="option">125631563</mat-option>
+                <mat-option value="option">125631564</mat-option>
+                <mat-option value="option">125631565</mat-option>
+                <mat-option value="option">125631566</mat-option>
+                <mat-option value="option">125631567</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="w-full" appearance="outline">
+            <mat-label>First Name</mat-label>
+            <input placeholder="Enter First Name" id="firstName" matInput>
+        </mat-form-field>
+
+        <mat-form-field class="w-full" appearance="outline">
+            <mat-label>Last Name</mat-label>
+            <input placeholder="Enter Last Name" id="lastName" matInput>
+        </mat-form-field>
+
+        <mat-form-field class="w-full" appearance="outline">
+            <mat-label>Your Employee ID</mat-label>
+            <input placeholder="Enter Employee ID" id="empID" matInput>
+        </mat-form-field>
+
+        <div class="md:w-12/12 border rounded mb-4 shadow-sm h-[90px] flex items-center justify-center">
+            <img src="../../../../assets/icons/upload-file.svg" alt="">
+        </div>
+
+    </div>
+
+    <div class="mt-5 text-center">
+        <button color="primary" class="rounded min-w-[100px] mr-5" mat-raised-button>Save</button>
+    </div>
+</div>
