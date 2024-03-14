@@ -10,7 +10,7 @@ const routes: Routes = [
   { path: '', component: LeavesListComponent },
   { path: 'empl-apply-leave', component: EmplApplyLeaveComponent },
   { path: 'empl-view-leave', component: EmplViewLeaveComponent },
-  
+ 
 ]
 
 @NgModule({

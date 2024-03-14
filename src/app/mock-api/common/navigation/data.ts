@@ -198,6 +198,13 @@ export const defaultNavigation: FuseNavigationItem[] = [
         link: '/employee-policies'
     },
 
+    {
+        id: 'shared-documents',
+        title: 'Shared Documents',
+        type: 'basic',
+        icon: 'mat_outline:rule',
+        link: '/shared-documents'
+    },
 ];
 
 

@@ -237,6 +237,16 @@ export const appRoutes: Route[] = [
     // Employee routs
 
     {
+        path: 'employee-leaves',
+        canActivate: [AuthGuard],
+        canActivateChild: [AuthGuard],
+        component: LayoutComponent,
+        resolve: {
+            initialData: initialDataResolver
+        },
+        loadChildren: () => import('./employee/leaves/leaves.module').then(m => m.LeavesModule)
+    },
+    {
         path: 'employee-holidays',
         canActivate: [AuthGuard],
         canActivateChild: [AuthGuard],
@@ -246,7 +256,6 @@ export const appRoutes: Route[] = [
         },
         loadChildren: () => import('./employee/holidays/holidays.module').then(m => m.HolidaysModule)
     },
-
     {
         path: 'employee-projects',
         canActivate: [AuthGuard],
@@ -257,7 +266,6 @@ export const appRoutes: Route[] = [
         },
         loadChildren: () => import('./employee/projects/projects.module').then(m => m.ProjectsModule)
     },
-
     {
         path: 'employee-attendance',
         canActivate: [AuthGuard],
@@ -268,18 +276,6 @@ export const appRoutes: Route[] = [
         },
         loadChildren: () => import('./employee/attendance/attendance.module').then(m => m.AttendanceModule)
     },
-
-    {
-        path: 'employee-leaves',
-        canActivate: [AuthGuard],
-        canActivateChild: [AuthGuard],
-        component: LayoutComponent,
-        resolve: {
-            initialData: initialDataResolver
-        },
-        loadChildren: () => import('./employee/leaves/leaves.module').then(m => m.LeavesModule)
-    },
-
     {
         path: 'jobs',
         canActivate: [AuthGuard],
@@ -290,7 +286,16 @@ export const appRoutes: Route[] = [
         },
         loadChildren: () => import('./employee/jobs/jobs.module').then(m => m.JobsModule)
     },
-
+    {
+        path: 'employee-tasks',
+        canActivate: [AuthGuard],
+        canActivateChild: [AuthGuard],
+        component: LayoutComponent,
+        resolve: {
+            initialData: initialDataResolver
+        },
+        loadChildren: () => import('./employee/tasks/tasks.module').then(m => m.TasksModule)
+    },
     {
         path: 'employee-events',
         canActivate: [AuthGuard],
@@ -312,15 +317,15 @@ export const appRoutes: Route[] = [
         },
         loadChildren: () => import('./employee/policy/policy.module').then(m => m.PolicyModule)
     },
-
     {
-        path: 'employee-tasks',
+        path: 'shared-documents',
         canActivate: [AuthGuard],
         canActivateChild: [AuthGuard],
         component: LayoutComponent,
         resolve: {
             initialData: initialDataResolver
         },
-        loadChildren: () => import('./employee/tasks/tasks.module').then(m => m.TasksModule)
+        loadChildren: () => import('./employee/shared-folders/shared-folders.module').then(m => m.SharedFoldersModule)
     },
+
 ];
