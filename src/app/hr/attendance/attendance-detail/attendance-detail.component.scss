@@ -18,3 +18,15 @@
     font-size: 2rem !important;
 }
 }
+
+@media (max-width: 620px){
+    .flex{
+        display: block !important;
+    }
+    .min-height{
+        height: auto !important;
+    }
+    .px-3 {
+        padding-left: 0 !important;
+    }
+}
