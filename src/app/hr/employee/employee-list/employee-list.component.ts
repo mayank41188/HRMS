@@ -1,6 +1,8 @@
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
+import { EmployeeService } from 'app/core/service/employee.service';
 import { ApplyLeaveComponent } from 'app/hr/leave-management/popups/apply-leave/apply-leave.component';
 import { CautionPopupComponent } from 'app/shared/popups/caution-popup/caution-popup.component';
 import { SuccessPopupComponent } from 'app/shared/popups/success-popup/success-popup.component';
@@ -10,11 +12,15 @@ import { SuccessPopupComponent } from 'app/shared/popups/success-popup/success-p
   templateUrl: './employee-list.component.html',
   styleUrls: ['./employee-list.component.scss']
 })
-export class EmployeeListComponent {
+export class EmployeeListComponent implements OnInit {
   constructor(
     private dialog: MatDialog,
-    private router: Router
+    private router: Router,
+    private empService: EmployeeService 
   ) { }
+  ngOnInit(): void {
+    this.getEmpList();
+  }
 
   openProfile(){
     this.router.navigateByUrl('/hr-employees/employee-profile');
@@ -33,25 +39,13 @@ export class EmployeeListComponent {
   }
 
   displayedColumns: string[] = ['no', 'Image', 'Name', 'Department', 'Role', 'Mobile', 'Email', 'Access', 'Action'];
-  dataSource = ELEMENT_DATA;
+  dataSource = new MatTableDataSource<any>([]);
+
+  getEmpList(){
+    this.empService.getEmployeeList().subscribe((res)=> {
+      this.dataSource= res;
+      console.log(this.dataSource);
+      
+    })
+  }
 }
-
-export interface PeriodicElement {
-  no: number;
-  Image: string;
-  Name: string;
-  Department: string;
-  Role: string;
-  Mobile: string;
-  Email: string;
-  Access: string;
-  Action: string;
-}
-
-const ELEMENT_DATA: PeriodicElement[] = [
-  {no: 1, Image: '', Name: 'John Dae', Department:'Design', Role: 'Lead', Mobile: '+91 9182736451', Email: 'john@recstech.in', Access: 'Lead', Action: '', },
-  {no: 2, Image: '', Name: 'John Dae', Department:'Design', Role: 'Lead', Mobile: '+91 9182736451', Email: 'john@recstech.in', Access: 'Lead', Action: '', },
-  {no: 3, Image: '', Name: 'John Dae', Department:'Design', Role: 'Lead', Mobile: '+91 9182736451', Email: 'john@recstech.in', Access: 'Lead', Action: '', },
-  {no: 4, Image: '', Name: 'John Dae', Department:'Design', Role: 'Lead', Mobile: '+91 9182736451', Email: 'john@recstech.in', Access: 'Lead', Action: '', },
-
-];
