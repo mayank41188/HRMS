@@ -2,6 +2,18 @@
 import { FuseNavigationItem } from '@fuse/components/navigation';
 
 export const defaultNavigation: FuseNavigationItem[] = [
+
+    // Admin sidemenu Navigation
+    // {
+    //     id: 'hr-projects',
+    //     title: 'Admin Projects',
+    //     type: 'basic',
+    //     icon: 'mat_outline:dashboard',
+    //     link: '/projects'
+    // },
+
+
+    // HR sidemenu Navigation
     {
         id: 'hr-dashboard',
         title: 'Dashboard',
