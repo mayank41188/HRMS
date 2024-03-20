@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, ReactiveFormsModule } from '@angular/forms';
+import { FormGroup, FormControl, FormBuilder,Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-add-employee',
@@ -8,5 +8,66 @@ import { FormControl, ReactiveFormsModule } from '@angular/forms';
 
 })
 export class AddEmployeeComponent {
+  addEmployee:FormGroup;
+  access: any =[ ['Human Resources'], ['Accounts'],  ['Design'],  ['Frontend'], ['Backend'],  ['Backend'], ]
+  employeeType: any =[['Intern'], ['Probationary'],['Permanent']]
+  accessType: any=[['Admin'], ['Hr'], ['Manager'], ['Employee']]
+  city:any=[['City1'],['City2'],['City3'],]
+  state:any=[['State1'], ['State2'], ['State3']]
+  country:any=[['country1'], ['country2'], ['country3']]
+  constructor(private formBuilder: FormBuilder) {
+    this.employeeAddform();
+}
+
+employeeAddform(){
+  this.addEmployee = this.formBuilder.group({
+    name: [''],  
+    dipartment: [''],
+    employeeId: [''],
+    designation: [''],  
+    employeeType: [''],
+    access: [''],
+    dateOfbirth: [''],  
+    mobileNo: [''],
+    emergencyMobileno: [''],
+    mail: [''],  
+    officeMail: [''],
+    leaves: [''],
+    aadharNo: [''],  
+    panNO: [''],
+    pfNo: [''],
+    uanNo: [''],  
+    supervisor: [''],
+    address: [''],
+    area: [''],  
+    street: [''],
+    city: [''],
+    state: [''],
+    country: [''],
+    educationOne: [''],  
+    fieldOfStudy: [''],
+    selectStartdateEdu: [''],
+    selectEnddateEdu: [''],  
+    workExperience: [''],
+    selectStartdate: [''],
+    SelectendDate: [''],
+    uploadDocuments: [''],
+
+  });
+
+
+
 
 }
+
+
+onSubmit() {
+  console.log('Your form data : ', this.addEmployee.value );
+}
+
+
+}
+
+
+
+

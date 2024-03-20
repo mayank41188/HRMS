@@ -14,7 +14,7 @@
     </div>
 
     <div class="shadow p-4 bg-white rounded pr-0">
-
+<form [formGroup]="addEmployee" (ngSubmit)="onSubmit()">
         <div class="border p-5 m-5">
 
             <div class="md:flex  ">
@@ -26,18 +26,14 @@
                 <div class="md:w-5/12 md:pr-4">
                     <mat-form-field class="w-full" appearance="outline">
                         <mat-label>Name</mat-label>
-                        <input placeholder="Enter Name" id="name" matInput>
+                        <input placeholder="Enter Name" id="name" formControlName="name" matInput>
                     </mat-form-field>
 
                     <mat-form-field class="w-full" appearance="outline">
                         <mat-label>Department</mat-label>
-                        <mat-select placeholder="Select Access">
-                            <mat-option value="option">Human Resources</mat-option>
-                            <mat-option value="option">Accounts</mat-option>
-                            <mat-option value="option">Design</mat-option>
-                            <mat-option value="option">Frontend</mat-option>
-                            <mat-option value="option">Backend</mat-option>
-                            <mat-option value="option">Testing</mat-option>
+                        <mat-select placeholder="Select Access" formControlName="dipartment">
+                            <mat-option *ngFor="let access of access" [value]="access">{{access}}</mat-option>
+                         
                         </mat-select>
                     </mat-form-field>
 
@@ -46,12 +42,12 @@
                 <div class="md:w-5/12 ">
                     <mat-form-field class="w-full" appearance="outline">
                         <mat-label>Employee ID</mat-label>
-                        <input placeholder="Enter Employee ID" id="employeeId" matInput>
+                        <input placeholder="Enter Employee ID" id="employeeId" formControlName="employeeId" matInput>
                     </mat-form-field>
 
                     <mat-form-field class="w-full" appearance="outline">
                         <mat-label>Designation</mat-label>
-                        <input placeholder="Enter Designation" id="designation" matInput>
+                        <input placeholder="Enter Designation" id="designation" formControlName="designation" matInput>
                     </mat-form-field>
 
                 </div>
@@ -62,78 +58,74 @@
 
                 <mat-form-field class="w-full md:w-4/12 md:pr-4" appearance="outline">
                     <mat-label>Employee Type</mat-label>
-                    <mat-select placeholder="Select Employee Type">
-                        <mat-option value="option">Intern</mat-option>
-                        <mat-option value="option">Probationary</mat-option>
-                        <mat-option value="option">Permanent</mat-option>
+                    <mat-select placeholder="Select Employee Type" formControlName="employeeType">
+                        <mat-option [value]="employeeType">{{employeeType}}</mat-option>
                     </mat-select>
                 </mat-form-field>
 
                 <mat-form-field class="w-full md:w-4/12 md:pr-4" appearance="outline">
                     <mat-label>Access</mat-label>
-                    <mat-select placeholder="Select Access">
-                        <mat-option value="option">Admin</mat-option>
-                        <mat-option value="option">HR</mat-option>
-                        <mat-option value="option">Manager</mat-option>
-                        <mat-option value="option">Employee</mat-option>
+                    <mat-select placeholder="Select Access" formControlName="access">
+                        <mat-option  *ngFor="let accessType of accessType" [value]="accessType">{{accessType}}</mat-option>
+                
                     </mat-select>
                 </mat-form-field>
 
                 <mat-form-field class="w-full md:w-4/12" appearance="outline">
                     <mat-label>Date of Birth</mat-label>
-                    <input placeholder="Select DOB" matInput [matDatepicker]="picker4">
+                    <input placeholder="Select DOB" matInput [matDatepicker]="picker4" formControlName="dateOfbirth">
                     <mat-datepicker-toggle matIconSuffix [for]="picker4"></mat-datepicker-toggle>
                     <mat-datepicker #picker4></mat-datepicker>
                 </mat-form-field>
 
                 <mat-form-field class="w-full md:w-4/12 md:pr-4" appearance="outline">
                     <mat-label>Mobile No</mat-label>
-                    <input placeholder="Enter Mobile No" id="mobileNo" matInput>
+                    <input placeholder="Enter Mobile No" id="mobileNo" matInput formControlName="mobileNo">
                 </mat-form-field>
 
                 <mat-form-field class="w-full md:w-4/12 md:pr-4" appearance="outline">
                     <mat-label>Emergency Mobile No</mat-label>
-                    <input placeholder="Enter Emergency Mobile No" id="number" matInput>
+                    <input placeholder="Enter Emergency Mobile No" id="number" matInput formControlName="emergencyMobileno">
                 </mat-form-field>
 
                 <mat-form-field class="w-full md:w-4/12" appearance="outline">
                     <mat-label>Enter Email</mat-label>
-                    <input placeholder="Enter Enter Email" id="email" matInput>
+                    <input placeholder="Enter Enter Email" id="email" matInput formControlName="mail">
                 </mat-form-field>
 
                 <mat-form-field class="w-full md:w-4/12 md:pr-4" appearance="outline">
                     <mat-label>Enter Office Mail</mat-label>
-                    <input placeholder="Enter Office Mail" id="email" matInput>
+                    <input placeholder="Enter Office Mail" id="email" matInput formControlName="officeMail">
                 </mat-form-field>
 
                 <mat-form-field class="w-full md:w-4/12 md:pr-4" appearance="outline">
                     <mat-label>Leaves</mat-label>
-                    <input placeholder="Leaves" id="leaves" matInput>
+                    <input placeholder="Leaves" id="leaves" matInput formControlName="leaves">
                 </mat-form-field>
 
                 <mat-form-field class="w-full md:w-4/12 " appearance="outline">
                     <mat-label>Aadhar No</mat-label>
-                    <input placeholder="Enter Aadhar No" id="aadharNo" matInput>
+                    <input placeholder="Enter Aadhar No" id="aadharNo" matInput formControlName="aadharNo">
                 </mat-form-field>
 
                 <mat-form-field class="w-full md:w-4/12 md:pr-4" appearance="outline">
                     <mat-label>Pan No</mat-label>
-                    <input placeholder="Enter Pan No" id="panNo" matInput>
+                    <input placeholder="Enter Pan No" id="panNo" matInput formControlName="panNO">
                 </mat-form-field>
 
                 <mat-form-field class="w-full md:w-4/12 md:pr-4" appearance="outline">
                     <mat-label>PF No</mat-label>
-                    <input placeholder="Enter PF No" id="pfNo" matInput>
+                    <input placeholder="Enter PF No" id="pfNo" matInput formControlName="pfNo">
                 </mat-form-field>
 
                 <mat-form-field class="w-full md:w-4/12 " appearance="outline">
                     <mat-label>UAN No</mat-label>
-                    <input placeholder="Enter UAN No" id="uanNo" matInput>
+                    <input placeholder="Enter UAN No" id="uanNo" matInput formControlName="uanNo">
                 </mat-form-field>
 
                 <mat-form-field class="w-full md:w-4/12 md:pr-4 mb-0" appearance="outline">
                     <mat-label>Supervisor</mat-label>
-                    <input placeholder="Supervisor" id="supervisor" matInput>
+                    <input placeholder="Supervisor" id="supervisor" matInput formControlName="supervisor">
                 </mat-form-field>
             </div>
 
@@ -143,46 +135,40 @@
                 <h5 class="font-semibold text-xl mb-4">Address</h5>
                 <mat-form-field class="w-full md:w-4/12 md:pr-4" appearance="outline">
                     <mat-label>Address</mat-label>
-                    <input placeholder="Address" id="Address" matInput>
+                    <input placeholder="Address" id="Address" matInput formControlName="address">
                 </mat-form-field>
 
                 <mat-form-field class="w-full md:w-4/12 md:pr-4" appearance="outline">
                     <mat-label>Area</mat-label>
-                    <input placeholder="Area/Landmark" id="Area" matInput>
+                    <input placeholder="Area/Landmark" id="Area" matInput formControlName="area">
                 </mat-form-field>
 
                 <mat-form-field class="w-full md:w-4/12" appearance="outline">
                     <mat-label>Street</mat-label>
-                    <input placeholder="Street" id="Street" matInput>
+                    <input placeholder="Street" id="Street" matInput formControlName="street">
                 </mat-form-field>
 
                 <mat-form-field class="w-full md:w-4/12 md:pr-4" appearance="outline">
                     <mat-label>City</mat-label>
-                    <mat-select placeholder="Select City">
-                        <mat-option value="option">City 1</mat-option>
-                        <mat-option value="option">City 2</mat-option>
-                        <mat-option value="option">City 3</mat-option>
-                        <mat-option value="option">City 4</mat-option>
+                    <mat-select placeholder="Select City" formControlName="city">
+                        <mat-option *ngFor="let city of city" [value]="city">{{city}}</mat-option>
+                        
                     </mat-select>
                 </mat-form-field>
 
                 <mat-form-field class="w-full md:w-4/12 md:pr-4" appearance="outline">
                     <mat-label>State</mat-label>
-                    <mat-select placeholder="Select State">
-                        <mat-option value="option">State 1</mat-option>
-                        <mat-option value="option">State 2</mat-option>
-                        <mat-option value="option">State 3</mat-option>
-                        <mat-option value="option">State 4</mat-option>
+                    <mat-select placeholder="Select State" formControlName="state">
+                        <mat-option  *ngFor="let state of state" [value]="state">{{state}}</mat-option>
+                     
                     </mat-select>
                 </mat-form-field>
 
                 <mat-form-field class="w-full md:w-4/12" appearance="outline">
                     <mat-label>Country</mat-label>
-                    <mat-select placeholder="Select Country">
-                        <mat-option value="option">Country 1</mat-option>
-                        <mat-option value="option">Country 2</mat-option>
-                        <mat-option value="option">Country 3</mat-option>
-                        <mat-option value="option">Country 4</mat-option>
+                    <mat-select placeholder="Select Country" formControlName="country">
+                        <mat-option  *ngFor="let country of country" [value]="country">{{country}}</mat-option>
+                       
                     </mat-select>
                 </mat-form-field>
 
@@ -197,24 +183,24 @@
 
                 <mat-form-field class="w-full md:w-4/12 md:pr-4" appearance="outline">
                     <mat-label>Education 1</mat-label>
-                    <input placeholder="eg: University of Mysore" id="Area" matInput>
+                    <input placeholder="eg: University of Mysore" id="Area" matInput formControlName="educationOne">
                 </mat-form-field>
 
                 <mat-form-field class="w-full md:w-4/12 md:pr-4" appearance="outline">
                     <mat-label>Field of Study</mat-label>
-                    <input placeholder="eg: BCA" id="Area" matInput>
+                    <input placeholder="eg: BCA" id="Area" matInput formControlName="fieldOfStudy">
                 </mat-form-field>
 
                 <mat-form-field class="w-full md:w-2/12 md:pr-4" appearance="outline">
                     <mat-label>Start Date</mat-label>
-                    <input placeholder="Select Start Date" matInput [matDatepicker]="picker">
+                    <input placeholder="Select Start Date" matInput [matDatepicker]="picker" formControlName="selectStartdateEdu">
                     <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
                     <mat-datepicker #picker></mat-datepicker>
                 </mat-form-field>
 
                 <mat-form-field class="w-full md:w-2/12" appearance="outline">
                     <mat-label>End Date</mat-label>
-                    <input placeholder="Select End Date" matInput [matDatepicker]="picker1">
+                    <input placeholder="Select End Date" matInput [matDatepicker]="picker1" formControlName="selectEnddateEdu">
                     <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
                     <mat-datepicker #picker1></mat-datepicker>
                 </mat-form-field>
@@ -231,24 +217,24 @@
 
                 <mat-form-field class="w-full md:w-4/12 md:pr-4" appearance="outline">
                     <mat-label>Work Experience</mat-label>
-                    <input placeholder="Add Work Experience" id="workExperience" matInput>
+                    <input placeholder="Add Work Experience" id="workExperience" matInput formControlName="workExperience">
                 </mat-form-field>
 
                 <mat-form-field class="w-full md:w-4/12 md:pr-4" appearance="outline">
                     <mat-label>Designation</mat-label>
-                    <input placeholder="eg: UIUX Designer" id="designation" matInput>
+                    <input placeholder="eg: UIUX Designer" id="designation" matInput formControlName="designation">
                 </mat-form-field>
 
                 <mat-form-field class="w-full md:w-2/12 md:pr-4" appearance="outline">
                     <mat-label>Start Date</mat-label>
-                    <input placeholder="Select Start Date" matInput [matDatepicker]="picker2">
+                    <input placeholder="Select Start Date" matInput [matDatepicker]="picker2" formControlName="selectStartdate">
                     <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
                     <mat-datepicker #picker2></mat-datepicker>
                 </mat-form-field>
 
                 <mat-form-field class="w-full md:w-2/12" appearance="outline">
                     <mat-label>End Date</mat-label>
-                    <input placeholder="Select End Date" matInput [matDatepicker]="picker3">
+                    <input placeholder="Select End Date" matInput [matDatepicker]="picker3" formControlName="SelectendDate">
                     <mat-datepicker-toggle matIconSuffix [for]="picker3"></mat-datepicker-toggle>
                     <mat-datepicker #picker3></mat-datepicker>
                 </mat-form-field>
@@ -265,7 +251,7 @@
                 <div class="inline-block md:w-4/12 md:pr-4 w-full">
                     <mat-form-field class="w-full" appearance="outline">
                         <mat-label>Upload Documents</mat-label>
-                        <input placeholder="eg: Aadhar Card*" id="workExperience" matInput>
+                        <input placeholder="eg: Aadhar Card*" id="workExperience" matInput formControlName="uploadDocuments">
                     </mat-form-field>
                     <div class="border rounded h-30 flex items-center justify-center">
                         <img src="../../../../assets/icons/upload-file.svg" alt="">
@@ -274,8 +260,10 @@
             </div>
             <div class="mt-5 text-right">
                 <button mat-stroked-button class="rounded mr-5">Cancel</button>
-                <button color="primary" class="rounded min-w-[100px]" mat-raised-button>Save</button>
+                <button color="primary" type="submit" class="rounded min-w-[100px]" mat-raised-button>Save</button>
             </div>
         </div>
+    </form>
     </div>
+
 </div>

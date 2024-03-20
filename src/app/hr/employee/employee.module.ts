@@ -6,6 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AddEmployeeComponent } from './add-employee/add-employee.component';
 import { EmployeeProfileComponent } from './employee-profile/employee-profile.component';
 import { AddAccesComponent } from './add-acces/add-acces.component';
+import { FormsModule, ReactiveFormsModule,  } from '@angular/forms';
 
 const routes: Routes = [
   { path: '', component: EmployeeListComponent },
@@ -25,6 +26,8 @@ const routes: Routes = [
     CommonModule,
     MaterialModule,
     RouterModule.forChild(routes),
+    FormsModule, 
+    ReactiveFormsModule
   ]
 })
 export class EmployeeModule { }
