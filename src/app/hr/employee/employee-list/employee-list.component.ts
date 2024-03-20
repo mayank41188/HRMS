@@ -19,7 +19,7 @@ export class EmployeeListComponent implements OnInit {
     private empService: EmployeeService 
   ) { }
   ngOnInit(): void {
-    this.getEmpList();
+    // this.getEmpList();
   }
 
   openProfile(){
