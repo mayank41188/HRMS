@@ -9,7 +9,7 @@ import { FormGroup, FormControl, FormBuilder,Validators } from '@angular/forms';
 })
 export class AddEmployeeComponent {
   addEmployee:FormGroup;
-  Department: any =[ ['Human Resources'], ['Accounts'],  ['Design'],  ['Frontend'], ['Backend'],  ['Backend'], ]
+  department: any =[ ['Human Resources'], ['Accounts'],  ['Design'],  ['Frontend'], ['Backend'],  ['Backend'], ]
   employeeType: any =[['Intern'], ['Probationary'],['Permanent']]
   accessType: any=[['Admin'], ['Hr'], ['Manager'], ['Employee']]
   city:any=[['City1'],['City2'],['City3'],]
@@ -22,7 +22,7 @@ export class AddEmployeeComponent {
 employeeAddform(){
   this.addEmployee = this.formBuilder.group({
     name: [''],  
-    dipartment: [''],
+    department: [''],
     employeeId: [''],
     designation: [''],  
     employeeType: [''],

@@ -9,24 +9,22 @@
 
         <mat-form-field class="w-full" appearance="outline">
             <mat-label>Leave Type</mat-label>
-            <mat-select placeholder="Select Leave Type">
-                <mat-option value="option">Casual Leave</mat-option>
-                <mat-option value="option">Sick Leave</mat-option>
-                <mat-option value="option">Emergency Leave</mat-option>
-                <mat-option value="option">Marriage Leave</mat-option>
+            <mat-select placeholder="Select Leave Type" formControlName="leaveType">
+                <mat-option *ngFor="let leaveType of leaveType"
+                [value]="leaveType">{{leaveType}}</mat-option>
             </mat-select>
         </mat-form-field>
 
         <mat-form-field class="w-full" appearance="outline">
             <mat-label>From</mat-label>
-            <input placeholder="Select From Date" matInput [matDatepicker]="picker">
-            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-            <mat-datepicker #picker></mat-datepicker>
+            <input placeholder="Select From Date" matInput [matDatepicker]="picker1" formControlName="fromDate">
+            <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
+            <mat-datepicker #picker1></mat-datepicker>
         </mat-form-field>
 
         <mat-form-field class="w-full" appearance="outline">
             <mat-label>To Date</mat-label>
-            <input placeholder="Select To Date" matInput [matDatepicker]="picker2">
+            <input placeholder="Select To Date" matInput [matDatepicker]="picker2" formControlName="toDate">
             <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
             <mat-datepicker #picker2></mat-datepicker>
         </mat-form-field>
@@ -38,12 +36,13 @@
 
         <mat-form-field class="w-full" appearance="outline">
             <mat-label>Reason</mat-label>
-            <textarea placeholder="Enter Reason" id="mobileNo" matInput></textarea>
+            <textarea placeholder="Enter Reason" id="mobileNo" matInput id="reason" matInput formControlName="reason"></textarea>
         </mat-form-field>
 
-    </form>
+        <div class="mt-5 text-center">
+            <button color="primary" type="submit" class="rounded min-w-[100px] mr-5" mat-raised-button>Submit</button>
+        </div>
 
-    <div class="mt-5 text-center">
-        <button color="primary" class="rounded min-w-[100px] mr-5" mat-raised-button>Submit</button>
-    </div>
+    </form>
+    
 </div>
