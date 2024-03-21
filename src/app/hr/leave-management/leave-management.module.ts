@@ -6,6 +6,7 @@ import { MaterialModule } from 'app/material/material.module';
 import { RouterModule, Routes } from '@angular/router';
 import { ViewLeaveRequestComponent } from './popups/view-leave-request/view-leave-request.component';
 import { ApplyLeaveComponent } from './popups/apply-leave/apply-leave.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const routes: Routes = [
   { path: 'list', component: LeaveRequestListComponent },
@@ -23,6 +24,8 @@ const routes: Routes = [
     CommonModule,
     MaterialModule,
     RouterModule.forChild(routes),
+    FormsModule, 
+    ReactiveFormsModule,
   ]
 })
 export class LeaveManagementModule { }
