@@ -65,7 +65,7 @@
         <div class="grid md:grid-cols-3 grid-cols-1 gap-3">
             <mat-card class="shadow p-4">
                 <h5 class="text-lg font-semibold flex justify-between items-center w-full mb-3">Task Statistics
-                    <a class="text-primary text-sm font-medium flex items-center cursor-pointer">View All <img src="../../../assets/icons/right-arrow.svg" alt="" class="w-1.5 ml-2"> </a>
+                    <a class="text-primary text-sm font-medium flex items-center cursor-pointer" routerLink="/hr-tasks">View All <img src="../../../assets/icons/right-arrow.svg" alt="" class="w-1.5 ml-2"> </a>
                 </h5>
                 <div class="grid md:grid-cols-2 grid-cols-1 gap-3">
                     <div class="bg-[#EEEFF1] text-center p-1">
@@ -109,11 +109,11 @@
 
             <mat-card class="shadow p-4">
                 <h5 class="text-lg font-semibold flex justify-between items-center w-full mb-3">Leave Requests
-                    <a class="text-primary text-sm font-medium flex items-center cursor-pointer">View All <img src="../../../assets/icons/right-arrow.svg" alt="" class="w-1.5 ml-2"> </a>
+                    <a class="text-primary text-sm font-medium flex items-center cursor-pointer" routerLink="/hr-leave-management/list">View All <img src="../../../assets/icons/right-arrow.svg" alt="" class="w-1.5 ml-2"> </a>
                 </h5>
 
                 <div class="border-b">
-                    <div class="md:flex">
+                    <div class="flex">
                         <div class="mr-3 text-center">
                             <img src="../../../assets/images/avatars/female-01.jpg" alt="" width="60" class="rounded-full">
                         </div>
@@ -130,7 +130,7 @@
                 </div>
 
                 <div class="pt-2">
-                    <div class="md:flex">
+                    <div class="flex">
                         <div class="mr-3">
                             <img src="../../../assets/images/avatars/male-07.jpg" alt="" width="60" class="rounded-full">
                         </div>
@@ -176,7 +176,7 @@
     <div class="md:w-3/12 md:pl-2">
         <mat-card class="shadow p-4">
             <h5 class="text-lg font-semibold flex justify-between items-center w-full mb-3">Upcoming Meetings
-                <a class="text-primary text-sm font-medium flex items-center cursor-pointer">View All <img src="../../../assets/icons/right-arrow.svg" alt="" class="w-1.5 ml-2"> </a>
+                <a class="text-primary text-sm font-medium flex items-center cursor-pointer" routerLink="/events">View All <img src="../../../assets/icons/right-arrow.svg" alt="" class="w-1.5 ml-2"> </a>
             </h5>
 
             <div class="flex items-center relative my-0.5">
@@ -204,7 +204,7 @@
                 <mat-icon color="primary" class="cursor-pointer absolute right-[-15px]">chevron_right</mat-icon>
             </div>
 
-            <div class="bg-[#F5F6F9] rounded-md p-3 md:flex mt-3">
+            <div class="bg-[#F5F6F9] rounded-md p-3 flex mt-3">
                 <div class="bg-white text-center mr-3 px-5 rounded-md flex flex-col justify-center">
                     <h5 class="text-primary text-xl font-semibold">13</h5>
                     <p>Feb</p>
@@ -216,7 +216,7 @@
                 </div>
             </div>
 
-            <div class="bg-[#F5F6F9] rounded-md p-3 md:flex mt-3">
+            <div class="bg-[#F5F6F9] rounded-md p-3 flex mt-3">
                 <div class="bg-white text-center mr-3 px-5 rounded-md flex flex-col justify-center">
                     <h5 class="text-primary text-xl font-semibold">13</h5>
                     <p>Feb</p>
@@ -231,9 +231,9 @@
 
         <mat-card class="shadow p-4 mt-5" style="background-image: url(../../../assets/images/bday-bg.png);">
             <h5 class="text-lg font-semibold flex justify-between items-center w-full mb-1">Birthday Wish
-                <a class="text-primary text-sm font-medium flex items-center cursor-pointer">View All <img src="../../../assets/icons/right-arrow.svg" alt="" class="w-1.5 ml-2"> </a>
+                <a class="text-primary text-sm font-medium flex items-center cursor-pointer" routerLink="/events">View All <img src="../../../assets/icons/right-arrow.svg" alt="" class="w-1.5 ml-2"> </a>
             </h5>
-            <div class="md:flex py-3">
+            <div class="flex py-3">
                 <div class="mr-3">
                     <img src="../../../assets/images/avatars/female-07.jpg" alt="" width="40" class="rounded-full">
                 </div>
@@ -246,7 +246,7 @@
                     <p class="font-semibold">09-02</p>
                 </div>
             </div>
-            <div class="md:flex pt-3 border-t">
+            <div class="flex pt-3 border-t">
                 <div class="mr-3">
                     <img src="../../../assets/images/avatars/male-08.jpg" alt="" width="40" class="rounded-full">
                 </div>
@@ -263,10 +263,10 @@
 
         <mat-card class="shadow p-4 mt-5">
             <h5 class="text-lg font-semibold flex justify-between items-center w-full mb-1">Upcoming Interview
-                <a class="text-primary text-sm font-medium flex items-center cursor-pointer">View All <img src="../../../assets/icons/right-arrow.svg" alt="" class="w-1.5 ml-2"> </a>
+                <a class="text-primary text-sm font-medium flex items-center cursor-pointer" routerLink="/hr-dashboard/upcoming-interviews">View All <img src="../../../assets/icons/right-arrow.svg" alt="" class="w-1.5 ml-2"> </a>
             </h5>
 
-            <div class="md:flex p-3 rounded bg-[#F5F6F9] relative mt-3">
+            <div class="flex p-3 rounded bg-[#F5F6F9] relative mt-3">
                 <div class="mr-3">
                     <img src="../../../assets/images/avatars/female-08.jpg" alt="" width="60" class="rounded">
                 </div>
@@ -279,7 +279,7 @@
                 </div>
             </div>
 
-            <div class="md:flex p-3 rounded bg-[#F5F6F9] relative mt-3">
+            <div class="flex p-3 rounded bg-[#F5F6F9] relative mt-3">
                 <div class="mr-3">
                     <img src="../../../assets/images/avatars/male-03.jpg" alt="" width="60" class="rounded">
                 </div>
@@ -292,7 +292,7 @@
                 </div>
             </div>
 
-            <div class="md:flex p-3 rounded bg-[#F5F6F9] relative mt-3">
+            <div class="flex p-3 rounded bg-[#F5F6F9] relative mt-3">
                 <div class="mr-3">
                     <img src="../../../assets/images/avatars/female-04.jpg" alt="" width="60" class="rounded">
                 </div>

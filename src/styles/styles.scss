@@ -132,4 +132,10 @@ input[type='time']::-webkit-calendar-picker-indicator {
 
 .fuse-vertical-navigation-item-icon{
     color: #3272EC !important;
+    opacity:1 !important ;
 }
+
+.fuse-vertical-navigation-item-active .fuse-vertical-navigation-item-icon{
+    color: #fff !important;
+}
+

@@ -1,0 +1,63 @@
+<div class="w-full p-6">
+    <div class=" flex justify-between w-full mb-4 items-center">
+        <h1 class="text-xl font-bold w-full ">Shared Documents</h1>
+
+        <div class="flex items-center">
+            <button routerLink="/hr-dashboard" mat-icon-button> <mat-icon><img
+                        src="../../../../assets/icons/home-navigation.svg" class="w-5"></mat-icon></button>
+            <mat-icon><img src="../../../../assets/icons/arrow.png"></mat-icon>
+            <button mat-button class="rounded font-semibold p-1">Shared Documents</button>
+        </div>
+    </div>
+
+    <div class="bg-primary-100 w-full items-center p-3 md:flex md:mb-0  justify-between rounded-t-md">
+
+        <div class="md:flex items-center">
+            <h3 class="text-lg font-semibold md:mr-4 mr-5 md:mb-0 mb-2">Shared Documents List</h3>
+            <mat-form-field appearance="fill" class="search w-full md:w-[220px]">
+                <input matInput placeholder="Search">
+                <mat-icon matSuffix>search</mat-icon>
+            </mat-form-field>
+        </div>
+
+        <div>
+            <button mat-icon-button matTooltip="Refresh"><img src="../../../../assets/icons/refresh.svg"></button> 
+        </div>
+    </div>
+
+    <div class="overflow-x-auto w-full">
+        <table mat-table [dataSource]="dataSource">
+
+            <ng-container matColumnDef="no">
+                <th mat-header-cell *matHeaderCellDef width="50"> No. </th>
+                <td mat-cell *matCellDef="let element"> {{element.no}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="attachmentName">
+                <th mat-header-cell *matHeaderCellDef> Attachment Name </th>
+                <td mat-cell *matCellDef="let element" class="text-blue-700 font-medium"> {{element.attachmentName}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="sharedDate">
+                <th mat-header-cell *matHeaderCellDef> Shared Date </th>
+                <td mat-cell *matCellDef="let element"> {{element.sharedDate}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="Action">
+                <th mat-header-cell *matHeaderCellDef class="text-center"> Action </th>
+                <td mat-cell *matCellDef="let element" class="text-center">
+                    <button mat-icon-button><img src="../../../../../assets/icons/download.svg"></button>
+                </td>
+            </ng-container>
+
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr class="cursor-pointer" mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+
+        <mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page">
+        </mat-paginator>
+
+    </div>
+
+</div>

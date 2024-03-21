@@ -21,22 +21,76 @@
                 </mat-form-field>
             </div>
             <div class="md:flex md:w-6/12 items-center justify-end">
-                <mat-form-field class="md:w-4/12 w-full pr-4 md:mt-0 mt-2" appearance="fill">
+                <mat-form-field class="md:w-3/12 w-full pr-4 md:mt-0 mt-2" appearance="fill">
                     <mat-select placeholder="Week">
                         <mat-option value="option">Simbiotik Tech</mat-option>
                         <mat-option value="option">Recstech</mat-option>
                     </mat-select>
                 </mat-form-field>
-                <button matTooltip="Add Holiday" mat-icon-button><img
-                        src="../../../../assets/icons/add.svg"></button>
                 <button mat-icon-button matTooltip="Refresh"><img src="../../../../assets/icons/refresh.svg"></button>
-                <button mat-icon-button matTooltip="Export to Excel"><img
-                        src="../../../../assets/icons/xlsx-export.svg"></button>
             </div>
         </div>
 
         <div class="m-5">
-            <h5 class="font-medium">Today</h5>
+            <h5 class="font-medium mb-3">Today</h5>
+            <div class="rounded-md border overflow-x-auto px-4 mb-5">
+                <table mat-table [dataSource]="dataSource">
+
+                    <ng-container matColumnDef="Particular">
+                      <th mat-header-cell *matHeaderCellDef> Particular </th>
+                      <td mat-cell *matCellDef="let element"> {{element.Particular}} </td>
+                    </ng-container>
+                  
+                    <ng-container matColumnDef="Requestedby">
+                      <th mat-header-cell *matHeaderCellDef> Requested by </th>
+                      <td mat-cell *matCellDef="let element"> {{element.Requestedby}} </td>
+                    </ng-container>
+                  
+                    <ng-container matColumnDef="Department">
+                      <th mat-header-cell *matHeaderCellDef> Department </th>
+                      <td mat-cell *matCellDef="let element"> {{element.Department}} </td>
+                    </ng-container>
+                  
+                    <ng-container matColumnDef="RequestedDate">
+                      <th mat-header-cell *matHeaderCellDef> Requested Date </th>
+                      <td mat-cell *matCellDef="let element"> {{element.RequestedDate}} </td>
+                    </ng-container>
+                  
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                  </table>
+                                  
+            </div>
+
+            <h5 class="font-medium mb-3">27 Feb 2024</h5>
+            <div class="rounded-md border overflow-x-auto px-4">
+                <table mat-table [dataSource]="dataSource">
+
+                    <ng-container matColumnDef="Particular">
+                      <th mat-header-cell *matHeaderCellDef> Particular </th>
+                      <td mat-cell *matCellDef="let element"> {{element.Particular}} </td>
+                    </ng-container>
+                  
+                    <ng-container matColumnDef="Requestedby">
+                      <th mat-header-cell *matHeaderCellDef> Requested by </th>
+                      <td mat-cell *matCellDef="let element"> {{element.Requestedby}} </td>
+                    </ng-container>
+                  
+                    <ng-container matColumnDef="Department">
+                      <th mat-header-cell *matHeaderCellDef> Department </th>
+                      <td mat-cell *matCellDef="let element"> {{element.Department}} </td>
+                    </ng-container>
+                  
+                    <ng-container matColumnDef="RequestedDate">
+                      <th mat-header-cell *matHeaderCellDef> Requested Date </th>
+                      <td mat-cell *matCellDef="let element"> {{element.RequestedDate}} </td>
+                    </ng-container>
+                  
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                  </table>
+                                  
+            </div>
         </div>
     </mat-card>
 

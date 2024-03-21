@@ -1,0 +1,94 @@
+<div class="w-full p-6">
+
+    <div class=" flex justify-between w-full mb-4 items-center">
+        <h1 class="text-xl font-bold w-full ">Events</h1>
+
+        <div class="flex items-center">
+            <button routerLink="/hr-dashboard" mat-icon-button> <mat-icon><img src="../../../../assets/icons/home-navigation.svg" class="w-5"></mat-icon></button>
+            <mat-icon><img src="../../../../assets/icons/arrow.png"></mat-icon>
+            <button mat-button class="rounded font-semibold p-1">Events</button>
+        </div>
+    </div>
+
+    <div class="bg-primary-100 w-full items-center p-3 mb-5 md:flex md:mb-0 mb-2 justify-between rounded-t-md">
+        <div class="md:flex items-center">
+            <h3 class="text-lg font-semibold md:mr-4 mr-5 md:mb-0 mb-2">Events</h3>
+            <mat-form-field appearance="fill" class="search w-full md:w-[220px]">
+                <input matInput placeholder="Search">
+                <mat-icon matSuffix>search</mat-icon>
+            </mat-form-field>
+        </div>
+        <div>
+            <button matTooltip="Refresh" mat-icon-button><img src="../../../../assets/icons/refresh.svg"></button>
+        </div>
+    </div>
+
+    <div class="w-full md:flex text-md mt-5">
+        <div class="md:w-9/12 md:pr-2">
+            <img src="../../../assets/images/calendar.svg" alt="" width="100%">
+        </div>
+    
+        <div class="md:w-3/12 md:pl-2">
+            <mat-card class="shadow p-4 mb-4">
+                <h5 class="text-lg font-semibold flex justify-between items-center w-full">Upcoming Events
+                    <a class="text-primary text-sm font-medium flex items-center cursor-pointer">View All <img src="../../../assets/icons/right-arrow.svg" alt="" class="w-1.5 ml-2"> </a>
+                </h5>
+    
+                <div class="bg-[#F5F6F9] rounded-md p-3 flex mt-3">
+                    <div class="bg-white text-center mr-3 px-5 rounded-md flex flex-col justify-center">
+                        <h5 class="text-primary text-xl font-semibold">13</h5>
+                        <p>Feb</p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold">Birthday Celebration</h4>
+                        <p class="text-sm">Event hall : 10:30 am - 11:00 am</p>
+                        <button mat-button color="primary" class="p-0 rounded min-h-[22px] h-[22px] text-md">Get Details <img src="../../../assets/icons/right-arrow.svg" alt="" class="w-2 ml-1"></button>
+                    </div>
+                </div>
+    
+                <div class="bg-[#F5F6F9] rounded-md p-3 flex mt-3">
+                    <div class="bg-white text-center mr-3 px-5 rounded-md flex flex-col justify-center">
+                        <h5 class="text-primary text-xl font-semibold">15</h5>
+                        <p>Feb</p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold">Team Lunch</h4>
+                        <p class="text-sm">Grand Hotel : 10:30 am - 11:00 am</p>
+                        <button mat-button color="primary" class="p-0 rounded min-h-[22px] h-[22px] text-md">Get Details <img src="../../../assets/icons/right-arrow.svg" alt="" class="w-2 ml-1"></button>
+                    </div>
+                </div>
+            </mat-card>
+
+            <mat-card class="shadow p-4">
+                <h5 class="text-lg font-semibold flex justify-between items-center w-full">Upcoming Meetings
+                    <a class="text-primary text-sm font-medium flex items-center cursor-pointer">View All <img src="../../../assets/icons/right-arrow.svg" alt="" class="w-1.5 ml-2"> </a>
+                </h5>
+    
+                <div class="bg-[#F5F6F9] rounded-md p-3 flex mt-3">
+                    <div class="bg-white text-center mr-3 px-5 rounded-md flex flex-col justify-center">
+                        <h5 class="text-primary text-xl font-semibold">13</h5>
+                        <p>Feb</p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold">Meeting with Amar</h4>
+                        <p class="text-sm">Time: 10:30 am - 11:00 am</p>
+                        <button mat-button color="primary" class="p-0 rounded min-h-[22px] h-[22px] text-md">Get Meeting Details <img src="../../../assets/icons/right-arrow.svg" alt="" class="w-2 ml-1"></button>
+                    </div>
+                </div>
+    
+                <div class="bg-[#F5F6F9] rounded-md p-3 flex mt-3">
+                    <div class="bg-white text-center mr-3 px-5 rounded-md flex flex-col justify-center">
+                        <h5 class="text-primary text-xl font-semibold">13</h5>
+                        <p>Feb</p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold">Meeting with Akbar</h4>
+                        <p class="text-sm">Time: 10:30 am - 11:00 am</p>
+                        <button mat-button color="primary" class="p-0 rounded min-h-[22px] h-[22px] text-md">Get Meeting Details <img src="../../../assets/icons/right-arrow.svg" alt="" class="w-2 ml-1"></button>
+                    </div>
+                </div>
+            </mat-card>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,84 @@
+<div class="w-full p-6">
+    <div class=" flex justify-between w-full mb-3 items-center">
+        <h1 class="text-xl font-bold w-full ">View Job</h1>
+
+        <div class="flex items-center">
+            <button routerLink="/hr-dashboard" mat-icon-button>
+                <mat-icon><img src="../../../../assets/icons/home-navigation.svg" class="w-5"></mat-icon>
+            </button>
+            <mat-icon><img src="../../../../assets/icons/arrow.png"></mat-icon>
+            <button routerLink="/jobs" mat-button class="rounded font-semibold p-1">Jobs List</button>
+            <mat-icon><img src="../../../../assets/icons/arrow.png"></mat-icon>
+            <button mat-button class="rounded font-semibold p-1">View Job</button>
+        </div>
+    </div>
+
+    <mat-card class="py-4 shadow">
+        <h5 class="text-lg font-semibold mb-4 px-4">JavaScript</h5>
+        <div class="md:flex">
+
+            <div class="md:w-4/12 px-5">
+                <div class="flex mb-5">
+                    <p class="md:w-5/12">Job ID: </p>
+                    <p class="md:w-7/12 font-medium md:pl-0 pl-13">125631563</p>
+                </div>
+                <div class="flex mb-5">
+                    <p class="md:w-5/12">Role: </p>
+                    <p class="md:w-7/12 font-medium md:pl-0 pl-16">Java Developer</p>
+                </div>
+            </div>
+
+            <div class="md:w-4/12 px-5">
+                <div class="flex mb-5">
+                    <p class="md:w-5/12">Job Title: </p>
+                    <p class="md:w-7/12 font-medium md:pl-0 pl-13">JavaScript</p>
+                </div>
+                <div class="flex mb-5">
+                    <p class="md:w-5/12">Vacancies:</p>
+                    <p class="md:w-7/12 font-medium md:pl-0 pl-5">03</p>
+                </div>
+            </div>
+
+            <div class="md:w-4/12 px-5">
+                <div class="flex mb-5">
+                    <p class="md:w-5/12">Department: </p>
+                    <p class="md:w-7/12 font-medium md:pl-0 pl-2">Software Development</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="flex mb-5 px-5">
+            <p class="md:w-1/12">Skills: </p>
+            <p class="md:w-11/12 md:pl-13 font-medium md:ml-0 ml-2">JavaScript, Ajax, HTML5, CSS3, AngularJS, KnockoutJS</p>
+        </div>
+
+        <div class="flex mb-5 px-5">
+            <p class="md:w-1/12">Department: </p>
+            <p class="md:w-11/12 md:pl-13 font-medium md:ml-0 ml-2">We are looking for a JavaScript Developer who is motivated to
+                combine the art of design with the art of programming. Responsibilities will include implementing visual
+                elements and their behaviors with user interactions. You will work with both front-end and back-end web
+                developers to build all client-side logic. You will also be bridging the gap between the visual elements
+                and the server-side infrastructure, taking an active role on both sides, and defining how the
+                application looks and functions.</p>
+        </div>
+
+        <div class="flex mb-5 px-5 ">
+
+            <p class="md:w-1/12">Requirement: </p>
+            <ul class="md:w-11/12 md:pl-13 font-medium list-disc md:ml-0 ml-4">
+                <li>Develop new user-facing features</li>
+                <li>Build reusable code and libraries for future use</li>
+                <li>Ensure the technical feasibility of UI/UX designs</li>
+                <li>Assure that all user input is validated before submitting to back-end services</li>
+                <li>Collaborate with other team members and stakeholders</li>
+            </ul>
+        </div>
+
+        <div class="mt-5 text-right mr-5">
+            <button mat-stroked-button class="rounded mr-5">Cancel</button>
+            <button color="primary" class="rounded min-w-[100px]" mat-raised-button (click)="add()">Refer</button>
+        </div>
+    </mat-card>
+
+</div>
