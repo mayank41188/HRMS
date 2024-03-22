@@ -5,10 +5,10 @@
         </h4>
     </div>
 
-    <div>
+    <form [formGroup]="addHoliday" (ngSubmit)="onSubmit()">
         <mat-form-field class="w-full" appearance="outline">
             <mat-label>Company</mat-label>
-            <mat-select placeholder="Select Company">
+            <mat-select placeholder="Select Company" formControlName="selectCompany">
                 <mat-option value="option">Simbiotik Tech</mat-option>
                 <mat-option value="option">Recstech</mat-option>
             </mat-select>
@@ -16,19 +16,19 @@
 
         <mat-form-field class="w-full" appearance="outline">
             <mat-label>Reason</mat-label>
-            <input placeholder="Enter Reason" id="reason" matInput>
+            <input placeholder="Enter Reason" id="reason" matInput formControlName="reason">
         </mat-form-field>
 
         <mat-form-field class="w-full" appearance="outline">
             <mat-label>Date</mat-label>
-            <input placeholder="Select Date" matInput [matDatepicker]="picker">
+            <input placeholder="Select Date" matInput [matDatepicker]="picker" formControlName="date">
             <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
         </mat-form-field>
 
-    </div>
+        <div class="mt-5 text-center">
+            <button color="primary" type="submit" class="rounded min-w-[100px] mr-5" mat-raised-button>Save</button>
+        </div>
 
-    <div class="mt-5 text-center">
-        <button color="primary" class="rounded min-w-[100px] mr-5" mat-raised-button>Save</button>
-    </div>
+    </form>
 </div>
