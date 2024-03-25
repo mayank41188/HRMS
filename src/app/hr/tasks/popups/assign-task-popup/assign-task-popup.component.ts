@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { UtilService } from 'app/services/util.service';
 
 @Component({
   selector: 'app-assign-task-popup',
@@ -6,5 +9,34 @@ import { Component } from '@angular/core';
   styleUrls: ['./assign-task-popup.component.scss']
 })
 export class AssignTaskPopupComponent {
+  assignTaskform : FormGroup;
 
+  constructor(
+    private fb:FormBuilder,
+    private utilService:UtilService,
+    private matSnackBar:MatSnackBar
+    ){}
+
+  ngOnInit(): void {
+		this.assignTasks();
+  }
+
+  assignTasks(){
+    this.assignTaskform = this.fb.group({
+      email: new FormControl('', [Validators.required, Validators.email]),
+      title: new FormControl('', [Validators.required]),
+      description: new FormControl(''),
+      priority : new FormControl('')
+    })
+  }
+
+  onSubmit(){
+    console.log(this.assignTaskform.value);
+    if(this.assignTaskform.valid){
+      this.utilService.showSuccessSnack(this.matSnackBar,'Submitted Successfully')
+    }
+    else{
+      this.utilService.showErrorSnack(this.matSnackBar, 'Please fill required field')
+    }
+  }
 }

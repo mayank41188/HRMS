@@ -5,33 +5,33 @@
         </h4>
     </div>
 
-    <div>
+    <form [formGroup]="assignTaskform" (ngSubmit)="onSubmit()">
         <mat-form-field class="w-full" appearance="outline">
             <mat-label>E-Mail</mat-label>
-            <input placeholder="Enter Email" id="email" matInput>
+            <input placeholder="Enter Email" id="email" matInput formControlName="email">
         </mat-form-field>
 
         <mat-form-field class="w-full" appearance="outline">
             <mat-label>Title</mat-label>
-            <input placeholder="Enter Title" id="title" matInput>
+            <input placeholder="Enter Title" id="title" matInput formControlName="title">
         </mat-form-field>
 
         <mat-form-field class="w-full" appearance="outline">
             <mat-label>Description</mat-label>
-            <input placeholder="Enter Description" id="description" matInput>
+            <input placeholder="Enter Description" id="description" matInput formControlName="description">
         </mat-form-field>
 
         <mat-form-field class="w-full" appearance="outline">
             <mat-label>Priority</mat-label>
-            <mat-select placeholder="Select Priority">
-                <mat-option value="option">High</mat-option>
-                <mat-option value="option">Medium</mat-option>
+            <mat-select placeholder="Select Priority" formControlName="priority">
+                <mat-option value="High">High</mat-option>
+                <mat-option value="Medium">Medium</mat-option>
             </mat-select>
         </mat-form-field>
 
+    <div class="mt-5 text-center">
+        <button color="primary" class="rounded min-w-[100px] mr-5" mat-raised-button type="submit">Assign</button>
     </div>
 
-    <div class="mt-5 text-center">
-        <button color="primary" class="rounded min-w-[100px] mr-5" mat-raised-button>Assign</button>
-    </div>
+</form>
 </div>

@@ -138,4 +138,16 @@ input[type='time']::-webkit-calendar-picker-indicator {
 .fuse-vertical-navigation-item-active .fuse-vertical-navigation-item-icon{
     color: #fff !important;
 }
-
+.mdc-snackbar{
+    border-radius: 4px;
+}
+.mat-mdc-snack-bar-container .mdc-snackbar__surface{
+    background-color: inherit !important;
+}
+.green-snackbar{
+    background: rgb(34 197 94) !important;
+}
+ 
+.red-snackbar{
+    background: #E01919 !important;
+}

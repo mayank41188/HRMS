@@ -5,6 +5,7 @@ import { AssignTaskPopupComponent } from './popups/assign-task-popup/assign-task
 import { TaskStatusPopupComponent } from './popups/task-status-popup/task-status-popup.component';
 import { MaterialModule } from 'app/material/material.module';
 import { RouterModule, Routes } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const routes: Routes = [
   { path: '', component: TaskListComponent },
@@ -19,6 +20,8 @@ const routes: Routes = [
   imports: [
     CommonModule,
     MaterialModule,
+    ReactiveFormsModule,
+    FormsModule,
     RouterModule.forChild(routes),
   ]
 })
