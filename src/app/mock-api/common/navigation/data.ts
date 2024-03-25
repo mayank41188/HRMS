@@ -3,36 +3,26 @@ import { FuseNavigationItem } from '@fuse/components/navigation';
 
 export const defaultNavigation: FuseNavigationItem[] = [
 
-    // Admin sidemenu Navigation
-    // {
-    //     id: 'hr-projects',
-    //     title: 'Admin Projects',
-    //     type: 'basic',
-    //     icon: 'mat_outline:dashboard',
-    //     link: '/projects'
-    // },
-
-
     // HR sidemenu Navigation
     {
         id: 'hr-dashboard',
         title: 'Dashboard',
         type: 'basic',
-        icon: 'mat_outline:dashboard',
+        icon: 'dashboard',
         link: '/hr-dashboard'
     },
     {
         id: 'hr-employees',
         title: 'Employees',
         type: 'basic',
-        icon: 'heroicons_outline:user-group',
+        icon: 'Employee',
         link: '/hr-employees'
     },
     {
         id: 'hr-leave-management',
         title: 'Leave Management',
         type: 'collapsable',
-        icon: 'exit_to_app',
+        icon: 'Leave-Management',
         children: [
             {
                 id: 'leave-request',
@@ -52,7 +42,7 @@ export const defaultNavigation: FuseNavigationItem[] = [
         id: 'Holidays',
         title: 'Holidays',
         type: 'basic',
-        icon: 'heroicons_outline:calendar-days',
+        icon: 'Holidays',
         link: '/hr-holiday'
     },
 
@@ -60,7 +50,7 @@ export const defaultNavigation: FuseNavigationItem[] = [
         id: 'payroll',
         title: 'Payroll',
         type: 'collapsable',
-        icon: 'mat_outline:account_balance_wallet',
+        icon: 'Payroll',
         link: '',
         children: [
             {
@@ -82,7 +72,7 @@ export const defaultNavigation: FuseNavigationItem[] = [
         id: 'Attendance',
         title: 'Attendance',
         type: 'basic',
-        icon: 'mat_outline:event_available',
+        icon: 'Attendance',
         link: '/attendance'
     },
 
@@ -90,7 +80,7 @@ export const defaultNavigation: FuseNavigationItem[] = [
         id: 'jobs-recruitment',
         title: 'Jobs & Recruitment',
         type: 'collapsable',
-        icon: 'exit_to_app',
+        icon: 'Jobs-Recruitment',
         children: [
             {
                 id: 'jobs-list',
@@ -110,14 +100,14 @@ export const defaultNavigation: FuseNavigationItem[] = [
         id: 'tasks',
         title: 'Tasks',
         type: 'basic',
-        icon: 'mat_outline:assignment',
+        icon: 'Task',
         link: '/hr-tasks'
     },
     {
         id: 'policies',
         title: 'Policy & Documents',
         type: 'basic',
-        icon: 'mat_outline:rule',
+        icon: 'Policy-Documents',
         link: '/hr-policies'
     },
 
@@ -125,21 +115,21 @@ export const defaultNavigation: FuseNavigationItem[] = [
         id: 'Events',
         title: 'Events',
         type: 'basic',
-        icon: 'mat_outline:event',
+        icon: 'Events',
         link: '/events'
     },
     {
         id: 'reports',
         title: 'Reports',
         type: 'basic',
-        icon: 'mat_outline:receipt_long',
+        icon: 'Reports',
         link: '/hr-reports'
     },
     {
         id: 'tax-forms',
         title: 'Tax & Forms',
         type: 'basic',
-        icon: 'heroicons_outline:document-chart-bar',
+        icon: 'Tax-Forms',
         link: '/hr-tax-forms'
     },
 
@@ -151,7 +141,7 @@ export const defaultNavigation: FuseNavigationItem[] = [
         id: 'employee-leaves',
         title: 'Leaves',
         type: 'basic',
-        icon: 'heroicons_outline:document-chart-bar',
+        icon: 'Leave-Management',
         link: '/employee-leaves'
     },
 
@@ -159,14 +149,14 @@ export const defaultNavigation: FuseNavigationItem[] = [
         id: 'employee-holidays',
         title: 'Holidays',
         type: 'basic',
-        icon: 'heroicons_outline:document-chart-bar',
+        icon: 'Holidays',
         link: '/employee-holidays'
     },
     {
         id: 'employee-projects',
         title: 'Projects',
         type: 'basic',
-        icon: 'heroicons_outline:document-chart-bar',
+        icon: 'Projects',
         link: '/employee-projects'
     },
 
@@ -174,7 +164,7 @@ export const defaultNavigation: FuseNavigationItem[] = [
         id: 'employee-Attendance',
         title: 'Attendance',
         type: 'basic',
-        icon: 'heroicons_outline:calendar-days',
+        icon: 'Attendance',
         link: '/employee-attendance'
     },
 
@@ -182,7 +172,7 @@ export const defaultNavigation: FuseNavigationItem[] = [
         id: 'jobs',
         title: 'Jobs & Recruitment',
         type: 'basic',
-        icon: 'exit_to_app',
+        icon: 'Jobs-Recruitment',
         link: '/jobs'
     },
 
@@ -190,7 +180,7 @@ export const defaultNavigation: FuseNavigationItem[] = [
         id: 'employee-Tasks',
         title: 'Tasks',
         type: 'basic',
-        icon: 'exit_to_app',
+        icon: 'Task',
         link: '/employee-tasks'
     },
 
@@ -198,7 +188,7 @@ export const defaultNavigation: FuseNavigationItem[] = [
         id: 'Events',
         title: 'Events',
         type: 'basic',
-        icon: 'mat_outline:event',
+        icon: 'Events',
         link: '/employee-events'
     },
 
@@ -206,7 +196,7 @@ export const defaultNavigation: FuseNavigationItem[] = [
         id: 'Policy',
         title: 'Policy & Documents',
         type: 'basic',
-        icon: 'mat_outline:rule',
+        icon: 'Policy-Documents',
         link: '/employee-policies'
     },
 
@@ -214,7 +204,7 @@ export const defaultNavigation: FuseNavigationItem[] = [
         id: 'shared-documents',
         title: 'Shared Documents',
         type: 'basic',
-        icon: 'mat_outline:rule',
+        icon: 'Policy-Documents',
         link: '/shared-documents'
     },
 ];

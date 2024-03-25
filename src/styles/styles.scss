@@ -136,6 +136,6 @@ input[type='time']::-webkit-calendar-picker-indicator {
 }
 
 .fuse-vertical-navigation-item-active .fuse-vertical-navigation-item-icon{
-    color: #fff !important;
+    filter: brightness(0) invert(1);
 }
 
