@@ -54,10 +54,6 @@ employeeAddform(){
     uploadDocuments: [''],
 
   });
-
-
-
-
 }
 
 

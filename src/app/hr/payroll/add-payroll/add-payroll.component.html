@@ -15,12 +15,13 @@
 
     <div class="shadow p-4 bg-white rounded pr-0">
 
-        <div class="border p-5 m-5">
+        <form class="border p-5 m-5" [formGroup]="addpayroll" (ngSubmit)="onSubmit()">
+
 
             <div>
                 <mat-form-field class="w-full md:w-4/12 md:pr-4" appearance="outline">
                     <mat-label>Employee ID</mat-label>
-                    <input placeholder="Enter Employee ID" id="employeeId" matInput>
+                    <input placeholder="Enter Employee ID" id="employeeId" matInput formControlName="employeeID">
                 </mat-form-field>
             </div>
 
@@ -28,31 +29,31 @@
                 <h5 class="font-semibold text-xl mt-10 mb-4">Earnings - RT0002</h5>
                 <mat-form-field class="w-full md:w-4/12 md:pr-4" appearance="outline">
                     <mat-label>Basic</mat-label>
-                    <input placeholder="Enter Basic" id="basic" matInput>
+                    <input placeholder="Enter Basic" id="basic" matInput formControlName="basic">
                 </mat-form-field>
 
                 <mat-form-field class="w-full md:w-4/12 md:pr-4" appearance="outline">
                     <mat-label>HRA</mat-label>
-                    <input placeholder="Enter HRA" id="hra" matInput>
+                    <input placeholder="Enter HRA" id="hra" type="number" matInput formControlName="hra">
                 </mat-form-field>
 
                 <mat-form-field class="w-full md:w-4/12" appearance="outline">
                     <mat-label>CONV. Allowance</mat-label>
-                    <input placeholder="Enter CONV. Allowance" id="convAllowance" matInput>
+                    <input placeholder="Enter CONV. Allowance" id="convAllowance" matInput formControlName="convAllown"> 
                 </mat-form-field>
                 <mat-form-field class="w-full md:w-4/12 md:pr-4" appearance="outline">
                     <mat-label>Bonus</mat-label>
-                    <input placeholder="Enter Bonus" id="bonus" matInput>
+                    <input placeholder="Enter Bonus" id="bonus" matInput formControlName="bonus">
                 </mat-form-field>
 
                 <mat-form-field class="w-full md:w-4/12 md:pr-4" appearance="outline">
                     <mat-label>Special Allowance</mat-label>
-                    <input placeholder="Enter Special Allowance" id="specialAllowance" matInput>
+                    <input placeholder="Enter Special Allowance" id="specialAllowance" matInput formControlName="specialAllown">
                 </mat-form-field>
 
                 <mat-form-field class="w-full md:w-4/12" appearance="outline">
                     <mat-label>Total Earnings</mat-label>
-                    <input placeholder="Enter Total Earnings" id="earnings" matInput>
+                    <input placeholder="Enter Total Earnings" id="earnings" matInput formControlName="totalEarnings">
                 </mat-form-field>
             </div>
 
@@ -62,27 +63,27 @@
                 <h5 class="font-semibold text-xl mb-4">Deductions</h5>
                 <mat-form-field class="w-full md:w-4/12 md:pr-4" appearance="outline">
                     <mat-label>Professional Tax</mat-label>
-                    <input placeholder="Enter Professional Tax" id="tax" matInput>
+                    <input placeholder="Enter Professional Tax" id="tax" matInput formControlName="professionalTax">
                 </mat-form-field>
 
                 <mat-form-field class="w-full md:w-4/12 md:pr-4" appearance="outline">
                     <mat-label>TDS</mat-label>
-                    <input placeholder="Enter TDS" id="tds" matInput>
+                    <input placeholder="Enter TDS" id="tds" matInput formControlName="tds">
                 </mat-form-field>
 
                 <mat-form-field class="w-full md:w-4/12" appearance="outline">
                     <mat-label>PF</mat-label>
-                    <input placeholder="Enter PF" id="pf" matInput>
+                    <input placeholder="Enter PF" id="pf" matInput formControlName="pf">
                 </mat-form-field>
 
                 <mat-form-field class="w-full md:w-4/12 md:pr-4" appearance="outline">
                     <mat-label>Advance</mat-label>
-                    <input placeholder="Enter Advance" id="advance" matInput>
+                    <input placeholder="Enter Advance" id="advance" matInput formControlName="advance">
                 </mat-form-field>
 
                 <mat-form-field class="w-full md:w-4/12 md:pr-4" appearance="outline">
                     <mat-label>Total Deductions</mat-label>
-                    <input placeholder="Enter Total Deductions" id="deductions" matInput>
+                    <input placeholder="Enter Total Deductions" id="deductions" matInput formControlName="totalDeductions">
                 </mat-form-field>
             </div>
 
@@ -92,30 +93,30 @@
                 <h5 class="font-semibold text-xl mb-4">Bank Transfer Details</h5>
                 <mat-form-field class="w-full md:w-6/12 md:pr-4" appearance="outline">
                     <mat-label>Date of Transfer</mat-label>
-                    <input placeholder="Select Date of Transfer" matInput [matDatepicker]="picker">
+                    <input placeholder="Select Date of Transfer" matInput [matDatepicker]="picker" formControlName="dateOfTransfer">
                     <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
                     <mat-datepicker #picker></mat-datepicker>
                 </mat-form-field>
 
                 <mat-form-field class="w-full md:w-6/12" appearance="outline">
                     <mat-label>Account Holder Name</mat-label>
-                    <input placeholder="Enter Account Holder Name" id="name" matInput>
+                    <input placeholder="Enter Account Holder Name" id="name" matInput formControlName="accountHolderName">
                 </mat-form-field>
                 <mat-form-field class="w-full md:w-6/12 md:pr-4" appearance="outline">
                     <mat-label>Bank Name</mat-label>
-                    <input placeholder="Enter Bank Name" id="bankName" matInput>
+                    <input placeholder="Enter Bank Name" id="bankName" matInput formControlName="bankName">
                 </mat-form-field>
                 <mat-form-field class="w-full md:w-6/12" appearance="outline">
                     <mat-label>Account Number</mat-label>
-                    <input placeholder="Enter Account Number" id="number" matInput>
+                    <input placeholder="Enter Account Number" id="number" matInput formControlName="accountNumber">
                 </mat-form-field>
             </div>
            
             <div class="mt-5 text-right">
                 <button mat-stroked-button class="rounded mr-5">Cancel</button>
-                <button color="primary" class="rounded min-w-[100px]" mat-raised-button>Save</button>
+                <button color="primary" class="rounded min-w-[100px]" mat-raised-button type="submit" (click)="onSubmit()">Save</button>
             </div>
-        </div>
+        </form>
     </div>
 
     <div class="md:flex">

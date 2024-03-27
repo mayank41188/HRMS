@@ -5,15 +5,15 @@
         </h4>
     </div>
 
-    <div>
+    <form [formGroup]="addCandidate" (ngSubmit)="onSubmit()">
         <mat-form-field class="w-full" appearance="outline">
             <mat-label>Job ID</mat-label>
-            <mat-select placeholder="Select Job ID">
-                <mat-option value="option">125631563</mat-option>
-                <mat-option value="option">125631564</mat-option>
+            <mat-select placeholder="Select Job ID" formControlName="jobId">
+                <mat-option value="option" *ngFor="let jobId of jobId">125631563</mat-option>
+                <!-- <mat-option value="option">125631564</mat-option>
                 <mat-option value="option">125631565</mat-option>
                 <mat-option value="option">125631566</mat-option>
-                <mat-option value="option">125631567</mat-option>
+                <mat-option value="option">125631567</mat-option> -->
             </mat-select>
         </mat-form-field>
 
@@ -36,7 +36,7 @@
             <img src="../../../../assets/icons/upload-file.svg" alt="">
         </div>
 
-    </div>
+    </form>
 
     <div class="mt-5 text-center">
         <button color="primary" class="rounded min-w-[100px] mr-5" mat-raised-button>Save</button>

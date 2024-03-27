@@ -2,10 +2,9 @@
     <div class=" flex justify-between w-full mb-3">
         <h1 class="text-xl font-bold w-full ">Add New Job</h1>
 
-
         <div class="flex items-center">
-            <button routerLink="/hr-dashboard" mat-icon-button> <mat-icon><img src="../../../../assets/icons/home-navigation.svg"
-                        class="w-5"></mat-icon></button>
+            <button routerLink="/hr-dashboard" mat-icon-button> <mat-icon><img
+                        src="../../../../assets/icons/home-navigation.svg" class="w-5"></mat-icon></button>
             <mat-icon><img src="../../../../assets/icons/arrow.png"></mat-icon>
             <button routerLink="/hr-jobs/list" mat-button class="rounded font-semibold p-1">Jobs</button>
             <mat-icon><img src="../../../../assets/icons/arrow.png"></mat-icon>
@@ -13,10 +12,9 @@
         </div>
     </div>
 
-
     <div class="shadow p-4 bg-white rounded pr-0">
 
-        <div class="border p-5 m-5">
+        <form class="border p-5 m-5" [formGroup]="addJobForm" (ngSubmit)="onSubmit()">
 
             <mat-form-field class="w-full md:w-4/12 md:pr-4" appearance="outline">
                 <mat-label>Job Title</mat-label>
@@ -25,23 +23,17 @@
 
             <mat-form-field class="w-full md:w-4/12 md:pr-4" appearance="outline">
                 <mat-label>Department</mat-label>
-                <mat-select placeholder="Select Access">
-                    <mat-option value="option">Human Resources</mat-option>
-                    <mat-option value="option">Accounts</mat-option>
-                    <mat-option value="option">Design</mat-option>
-                    <mat-option value="option">Frontend</mat-option>
-                    <mat-option value="option">Backend</mat-option>
-                    <mat-option value="option">Testing</mat-option>
+                <mat-select placeholder="Select Department" formControlName="department">
+                    <mat-option value="option" *ngFor="let department of department"
+                        [value]="department">{{department}}</mat-option>
                 </mat-select>
             </mat-form-field>
 
             <mat-form-field class="w-full md:w-4/12 md:pr-4" appearance="outline">
                 <mat-label>Role</mat-label>
-                <mat-select placeholder="Select Role">
-                    <mat-option value="option">Internship</mat-option>
-                    <mat-option value="option">Junior</mat-option>
-                    <mat-option value="option">Senior</mat-option>
-                    <mat-option value="option">Manager</mat-option>
+                <mat-select placeholder="Select Role" formControlName="role">
+                    <mat-option value="option" *ngFor="let role of role" [value]="role">{{role}}
+                    </mat-option>
                 </mat-select>
             </mat-form-field>
 
@@ -49,46 +41,42 @@
                 <div class="md:w-8/12 w-full md:flex">
                     <mat-form-field class="md:w-full w-full md:pr-4" appearance="outline">
                         <mat-label>Description</mat-label>
-                        <textarea placeholder="Enter Description" id="description" matInput></textarea>
+                        <textarea placeholder="Enter Description" id="description" matInput
+                            formControlName="description"></textarea>
                     </mat-form-field>
 
                     <mat-form-field class="md:w-full w-full md:pr-4" appearance="outline">
                         <mat-label>Requirement</mat-label>
-                        <textarea placeholder="Enter Requirement" id="requirement*" matInput></textarea>
+                        <textarea placeholder="Enter Requirement" id="requirement*" matInput
+                            formControlName="requirments"></textarea>
                     </mat-form-field>
                 </div>
-                <div  class="md:w-4/12 w-full mb-3">
+                <div class="md:w-4/12 w-full mb-3">
                     <mat-form-field class="md:w-full w-full md:pr-4" appearance="outline">
                         <mat-label>Skills</mat-label>
-                        <mat-select placeholder="Enter / Select Skills">
-                            <mat-option value="option">JavaScript</mat-option>
-                            <mat-option value="option">Ajax</mat-option>
-                            <mat-option value="option">HTML5</mat-option>
-                            <mat-option value="option">CSS3</mat-option>
-                            <mat-option value="option">AngularJS</mat-option>
-                            <mat-option value="option">KnockoutJS</mat-option>
+                        <mat-select placeholder="Enter / Select Skills" formControlName="skills">
+                            <mat-option value="option" *ngFor="let skills of skills"
+                                [value]="skills">{{skills}}</mat-option>
                         </mat-select>
                     </mat-form-field>
 
                     <mat-chip-option class="mr-3">HTML5<mat-icon matChipRemove>cancel</mat-icon></mat-chip-option>
                     <mat-chip-option class="mr-3">CSS<mat-icon matChipRemove>cancel</mat-icon></mat-chip-option>
                     <mat-chip-option>Javascript<mat-icon matChipRemove>cancel</mat-icon></mat-chip-option>
-                    
+
                 </div>
             </div>
 
-
             <mat-form-field class="w-full md:w-4/12 md:pr-4" appearance="outline">
                 <mat-label>Vacancies</mat-label>
-                <input placeholder="Enter No of Vacancies" id="jobtitle" matInput>
+                <input placeholder="Enter No of Vacancies" id="jobtitle" matInput formControlName="vacancies">
             </mat-form-field>
 
             <mat-form-field class="w-full md:w-4/12 md:pr-4" appearance="outline">
                 <mat-label>Status</mat-label>
-                <mat-select placeholder="Select Access">
-                    <mat-option value="option">Open</mat-option>
-                    <mat-option value="option">Hold</mat-option>
-                    <mat-option value="option">Closed</mat-option>
+                <mat-select placeholder="Select Access" formControlName="status">
+                    <mat-option value="option" value="option" *ngFor="let status of status"
+                        [value]="status">{{status}}</mat-option>
                 </mat-select>
             </mat-form-field>
 
@@ -96,7 +84,7 @@
                 <button mat-stroked-button class="rounded mr-5">Cancel</button>
                 <button color="primary" class="rounded min-w-[100px]" mat-raised-button>Save</button>
             </div>
-        </div>
+        </form>
     </div>
 
 </div>

@@ -5,39 +5,46 @@
         </h4>
     </div>
 
-    <div>
+    <form [formGroup]="generatePayslip" (ngSubmit)="onSubmit()">
         <mat-form-field class="w-full" appearance="outline">
             <mat-label>Employee ID</mat-label>
-            <mat-select placeholder="Select Employee ID">
-                <mat-option value="option">RT0001</mat-option>
-                <mat-option value="option">RT0002</mat-option>
-                <mat-option value="option">RT0003</mat-option>
-                <mat-option value="option">RT0004</mat-option>
-            </mat-select>
+            <!-- <mat-select placeholder="Select Employee ID">
+                <mat-option *ngFor="let employeeID of employeeID"
+                [value]="employeeID">{{employeeID}}</mat-option>
+            </mat-select> -->
+            <input type="text" placeholder="Enter/Select Employee ID" aria-label="Number" matInput
+                [formControl]="myControl" [matAutocomplete]="auto">
+            <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                <mat-option *ngFor="let Employeepayslip of filteredOptions | async" [value]="Employeepayslip">{{Employeepayslip}}</mat-option>
+            </mat-autocomplete>
+
         </mat-form-field>
 
         <mat-form-field class="w-full" appearance="outline">
             <mat-label>Email ID</mat-label>
-            <input placeholder="Enter Email ID" id="emailId" matInput>
+            <input placeholder="Enter Email ID" id="emailId" matInput formControlName="emailId">
         </mat-form-field>
 
         <mat-form-field class="w-full" appearance="outline">
             <mat-label>From</mat-label>
-            <input placeholder="Select From Date" matInput [matDatepicker]="picker">
+            <input placeholder="Select From Date" matInput [matDatepicker]="picker" formControlName="fromDate">
             <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
         </mat-form-field>
 
         <mat-form-field class="w-full" appearance="outline">
             <mat-label>To Date</mat-label>
-            <input placeholder="Select To Date" matInput [matDatepicker]="picker2">
+            <input placeholder="Select To Date" matInput [matDatepicker]="picker2" formControlName="toDate">
             <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
             <mat-datepicker #picker2></mat-datepicker>
         </mat-form-field>
 
-    </div>
+        <div class="mt-5 text-center">
+            <button color="primary" class="rounded min-w-[100px] mr-5" mat-raised-button type="submit" mat-dialog-close>Generate &
+                Email</button>
+        </div>
 
-    <div class="mt-5 text-center">
-        <button color="primary" class="rounded min-w-[100px] mr-5" mat-raised-button>Generate & Email</button>
-    </div>
+    </form>
+
+
 </div>

@@ -9,6 +9,7 @@ import { AddJobFormComponent } from './add-job-form/add-job-form.component';
 import { ViewJobComponent } from './view-job/view-job.component';
 import { SuccessPopupComponent } from 'app/shared/popups/success-popup/success-popup.component';
 import { CautionPopupComponent } from 'app/shared/popups/caution-popup/caution-popup.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const routes: Routes = [
   { path: 'list', component: JobsListComponent },
@@ -29,6 +30,8 @@ const routes: Routes = [
     CommonModule,
     MaterialModule,
     RouterModule.forChild(routes),
+    FormsModule, 
+    ReactiveFormsModule,
   ],
 })
 export class JobsRecruitmentModule { }

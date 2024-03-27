@@ -27,7 +27,7 @@ const routes: Routes = [
     MaterialModule,
     RouterModule.forChild(routes),
     FormsModule, 
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ]
 })
 export class EmployeeModule { }
