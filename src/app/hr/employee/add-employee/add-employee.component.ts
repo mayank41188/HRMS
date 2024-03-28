@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder,Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { UtilService } from 'app/services/util.service';
 
 @Component({
   selector: 'app-add-employee',
@@ -15,7 +17,11 @@ export class AddEmployeeComponent {
   city:any=[['City1'],['City2'],['City3'],]
   state:any=[['State1'], ['State2'], ['State3']]
   country:any=[['country1'], ['country2'], ['country3']]
-  constructor(private formBuilder: FormBuilder) {
+  dialogRef: any;
+  constructor(private formBuilder: FormBuilder,
+    private matSnackBar: MatSnackBar,
+    private utilService:UtilService,
+    ) {
     this.employeeAddform();
 }
 
@@ -59,8 +65,13 @@ employeeAddform(){
 
 onSubmit() {
   console.log('Your form data : ', this.addEmployee.value );
+  if(this.addEmployee.valid){
+    this.utilService.showSuccessSnack(this.matSnackBar,'Submitted Successfully')
+  }
+  else{
+    this.utilService.showErrorSnack(this.matSnackBar, 'Please fill required field')
+  }
 }
-
 
 }
 

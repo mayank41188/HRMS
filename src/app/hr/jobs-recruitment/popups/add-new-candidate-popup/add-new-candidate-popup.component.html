@@ -9,7 +9,7 @@
         <mat-form-field class="w-full" appearance="outline">
             <mat-label>Job ID</mat-label>
             <mat-select placeholder="Select Job ID" formControlName="jobId">
-                <mat-option value="option" *ngFor="let jobId of jobId">125631563</mat-option>
+                <mat-option value="option" *ngFor="let jobId of jobId">{{jobId}}</mat-option>
                 <!-- <mat-option value="option">125631564</mat-option>
                 <mat-option value="option">125631565</mat-option>
                 <mat-option value="option">125631566</mat-option>
@@ -19,26 +19,28 @@
 
         <mat-form-field class="w-full" appearance="outline">
             <mat-label>First Name</mat-label>
-            <input placeholder="Enter First Name" id="reason" matInput>
+            <input placeholder="Enter First Name" id="firstName" matInput formControlName="firstName">
         </mat-form-field>
 
         <mat-form-field class="w-full" appearance="outline">
             <mat-label>Last Name</mat-label>
-            <input placeholder="Enter Last Name" id="reason" matInput>
+            <input placeholder="Enter Last Name" id="lastName" matInput formControlName="lastName">
         </mat-form-field>
 
         <mat-form-field class="w-full" appearance="outline">
             <mat-label>Source</mat-label>
-            <input placeholder="Employee ID /Job Portal" id="reason" matInput>
+            <input placeholder="Employee ID /Job Portal" id="source" matInput formControlName="source">
         </mat-form-field>
 
         <div class="md:w-12/12 border rounded mb-4 shadow-sm h-[90px] flex items-center justify-center">
             <img src="../../../../assets/icons/upload-file.svg" alt="">
         </div>
 
+        <div class="mt-5 text-center">
+            <button color="primary" class="rounded min-w-[100px] mr-5" mat-raised-button>Save</button>
+        </div>
+        
     </form>
 
-    <div class="mt-5 text-center">
-        <button color="primary" class="rounded min-w-[100px] mr-5" mat-raised-button>Save</button>
-    </div>
+    
 </div>

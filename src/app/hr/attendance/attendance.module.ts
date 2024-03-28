@@ -5,6 +5,7 @@ import { MaterialModule } from 'app/material/material.module';
 import { RouterModule, Routes } from '@angular/router';
 import { AttendanceDetailComponent } from './attendance-detail/attendance-detail.component';
 import { AttendanceReportPopupComponent } from './attendance-report-popup/attendance-report-popup.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const routes: Routes = [
   { path: '', component: AttendanceListComponent },
@@ -21,6 +22,8 @@ const routes: Routes = [
     CommonModule,
     MaterialModule,
     RouterModule.forChild(routes),
+    FormsModule, 
+    ReactiveFormsModule,
   ]
 })
 export class AttendanceModule { }

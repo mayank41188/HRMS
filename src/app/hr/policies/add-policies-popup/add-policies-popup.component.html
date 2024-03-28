@@ -5,15 +5,15 @@
         </h4>
     </div>
 
-    <div>
+    <form [formGroup]="addPolicies" (ngSubmit)="onSubmit()">
         <mat-form-field class="w-full" appearance="outline">
             <mat-label>Title</mat-label>
-            <input placeholder="Enter Title" id="title" matInput>
+            <input placeholder="Enter Title" id="title" matInput formControlName="title">
         </mat-form-field>
 
         <mat-form-field class="w-full" appearance="outline">
             <mat-label>Date</mat-label>
-            <input placeholder="Select Date" matInput [matDatepicker]="picker2">
+            <input placeholder="Select Date" matInput [matDatepicker]="picker2" formControlName="date">
             <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
             <mat-datepicker #picker2></mat-datepicker>
         </mat-form-field>
@@ -22,9 +22,11 @@
             <img src="../../../../assets/icons/upload-file.svg" alt="">
         </div>
 
-    </div>
+        <div class="mt-5 text-center">
+            <button color="primary" class="rounded min-w-[100px] mr-5" mat-raised-button>Save</button>
+        </div>
 
-    <div class="mt-5 text-center">
-        <button color="primary" class="rounded min-w-[100px] mr-5" mat-raised-button>Save</button>
-    </div>
+    </form>
+
+    
 </div>

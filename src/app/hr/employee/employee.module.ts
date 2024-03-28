@@ -7,6 +7,7 @@ import { AddEmployeeComponent } from './add-employee/add-employee.component';
 import { EmployeeProfileComponent } from './employee-profile/employee-profile.component';
 import { AddAccesComponent } from './add-acces/add-acces.component';
 import { FormsModule, ReactiveFormsModule,  } from '@angular/forms';
+import { MatRadioModule } from '@angular/material/radio';
 
 const routes: Routes = [
   { path: '', component: EmployeeListComponent },
@@ -28,6 +29,7 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     FormsModule, 
     ReactiveFormsModule,
+    MatRadioModule,
   ]
 })
 export class EmployeeModule { }

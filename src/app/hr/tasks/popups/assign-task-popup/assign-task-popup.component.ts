@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { UtilService } from 'app/services/util.service';
 
@@ -14,7 +15,8 @@ export class AssignTaskPopupComponent {
   constructor(
     private fb:FormBuilder,
     private utilService:UtilService,
-    private matSnackBar:MatSnackBar
+    private matSnackBar:MatSnackBar,
+    private dialogRef: MatDialog,
     ){}
 
   ngOnInit(): void {
@@ -33,6 +35,7 @@ export class AssignTaskPopupComponent {
   onSubmit(){
     console.log(this.assignTaskform.value);
     if(this.assignTaskform.valid){
+      this.dialogRef.closeAll();
       this.utilService.showSuccessSnack(this.matSnackBar,'Submitted Successfully')
     }
     else{

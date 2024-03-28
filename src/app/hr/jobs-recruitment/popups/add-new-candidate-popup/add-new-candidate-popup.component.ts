@@ -15,6 +15,10 @@ export class AddNewCandidatePopupComponent {
 
   addCandiatepop(){
     this.addCandidate = this.formBuilder.group({
+      jobId: [''],  
+      firstName: [''],  
+      lastName: [''],  
+      source: [''],  
 
     });
 

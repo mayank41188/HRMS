@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-add-acces',
@@ -6,8 +7,26 @@ import { Component } from '@angular/core';
   styleUrls: ['./add-acces.component.scss']
 })
 export class AddAccesComponent {
+  addAccessForm : FormGroup;
+
   displayedColumns: string[] = [ 'ModulePermission', 'Read', 'Create', 'Delete',];
   dataSource = ELEMENT_DATA;
+  constructor(private formBuilder: FormBuilder) {
+    this.addAccess();
+  }
+
+  addAccess() {
+    this.addAccessForm = this.formBuilder.group({
+      username: [''],
+      password: [''],
+    });
+
+  }
+  
+  onSubmit(){
+    console.log(this.addAccessForm.value);
+  }
+
 }
 
 export interface PeriodicElement {
@@ -29,3 +48,6 @@ const ELEMENT_DATA: PeriodicElement[] = [
   { ModulePermission: 'Employee', Read:'', Create: '', Delete: '',},
 
 ];
+
+
+
