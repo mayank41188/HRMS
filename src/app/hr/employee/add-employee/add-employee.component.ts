@@ -13,7 +13,7 @@ export class AddEmployeeComponent {
   addEmployee:FormGroup;
   department: any =[ ['Human Resources'], ['Accounts'],  ['Design'],  ['Frontend'], ['Backend'],  ['Backend'], ]
   employeeType: any =[['Intern'], ['Probationary'],['Permanent']]
-  accessType: any=[['Admin'], ['Hr'], ['Manager'], ['Employee']]
+  // accessType: any=[['Admin'], ['Hr'], ['Manager'], ['Employee']]
   city:any=[['City1'],['City2'],['City3'],]
   state:any=[['State1'], ['State2'], ['State3']]
   country:any=[['country1'], ['country2'], ['country3']]
@@ -27,34 +27,35 @@ export class AddEmployeeComponent {
 
 employeeAddform(){
   this.addEmployee = this.formBuilder.group({
-    name: [''],  
-    department: [''],
-    employeeId: [''],
-    designation: [''],  
-    employeeType: [''],
-    access: [''],
-    dateOfbirth: [''],  
-    mobileNo: [''],
+    name: ['', Validators.required],  
+    department: ['', Validators.required],
+    employeeId: ['', Validators.required],
+    designation1: ['', Validators.required],  
+    employeeType: ['', Validators.required],
+    // access: ['', Validators.required],
+    dateOfbirth: ['', Validators.required],  
+    mobileNo: ['', Validators.required],
     emergencyMobileno: [''],
-    mail: [''],  
+    mail: ['', Validators.required],  
     officeMail: [''],
-    leaves: [''],
-    aadharNo: [''],  
-    panNO: [''],
-    pfNo: [''],
+    leaves: ['', Validators.required],
+    aadharNo: ['', Validators.required],  
+    panNO: ['', Validators.required],
+    pfNo: ['', Validators.required],
     uanNo: [''],  
-    supervisor: [''],
-    address: [''],
-    area: [''],  
-    street: [''],
-    city: [''],
-    state: [''],
-    country: [''],
-    educationOne: [''],  
-    fieldOfStudy: [''],
-    selectStartdateEdu: [''],
-    selectEnddateEdu: [''],  
+    supervisor: ['', Validators.required],
+    address: ['', Validators.required],
+    area: ['', Validators.required],  
+    street: ['', Validators.required],
+    city: ['', Validators.required],
+    state: ['', Validators.required],
+    country: ['', Validators.required],
+    educationOne: ['', Validators.required],  
+    fieldOfStudy: ['', Validators.required],
+    selectStartdateEdu: ['', Validators.required],
+    selectEnddateEdu: ['', Validators.required],  
     workExperience: [''],
+    designation2: ['',], 
     selectStartdate: [''],
     SelectendDate: [''],
     uploadDocuments: [''],

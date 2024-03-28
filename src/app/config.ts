@@ -6,5 +6,10 @@ export const GlobalVariable = Object.freeze({
 });
 
 export const ApiUrls = Object.freeze({
+    // For Employees
     GET_EMPLOYEE: `${GlobalVariable.BASE_URL}employees`,
+  
+  //For Holidays
+    GET_HOLIDAYS: `${GlobalVariable.BASE_URL}holidays`,
 })
+

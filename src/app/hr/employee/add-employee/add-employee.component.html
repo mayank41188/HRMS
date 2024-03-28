@@ -50,7 +50,7 @@
 
                         <mat-form-field class="w-full" appearance="outline">
                             <mat-label>Designation</mat-label>
-                            <input placeholder="Enter Designation" id="designation" formControlName="designation"
+                            <input placeholder="Enter Designation" id="designation1" formControlName="designation1"
                                 matInput>
                         </mat-form-field>
 
@@ -63,20 +63,22 @@
                     <mat-form-field class="w-full md:w-4/12 md:pr-4" appearance="outline">
                         <mat-label>Employee Type</mat-label>
                         <mat-select placeholder="Select Employee Type" formControlName="employeeType">
-                            <mat-option [value]="employeeType">{{employeeType}}</mat-option>
+                            <mat-option *ngFor="let employeeType of employeeType"
+                                [value]="employeeType">{{employeeType}}</mat-option>
+
                         </mat-select>
                     </mat-form-field>
 
-                    <mat-form-field class="w-full md:w-4/12 md:pr-4" appearance="outline">
+                    <!-- <mat-form-field class="w-full md:w-4/12 md:pr-4" appearance="outline">
                         <mat-label>Access</mat-label>
                         <mat-select placeholder="Select Access" formControlName="access">
                             <mat-option *ngFor="let accessType of accessType"
                                 [value]="accessType">{{accessType}}</mat-option>
 
                         </mat-select>
-                    </mat-form-field>
+                    </mat-form-field> -->
 
-                    <mat-form-field class="w-full md:w-4/12" appearance="outline">
+                    <mat-form-field class="w-full md:w-4/12 md:pr-4" appearance="outline">
                         <mat-label>Date of Birth</mat-label>
                         <input placeholder="Select DOB" matInput [matDatepicker]="picker4"
                             formControlName="dateOfbirth">
@@ -84,7 +86,7 @@
                         <mat-datepicker #picker4></mat-datepicker>
                     </mat-form-field>
 
-                    <mat-form-field class="w-full md:w-4/12 md:pr-4" appearance="outline">
+                    <mat-form-field class="w-full md:w-4/12" appearance="outline">
                         <mat-label>Mobile No</mat-label>
                         <input placeholder="Enter Mobile No" id="mobileNo" matInput formControlName="mobileNo">
                     </mat-form-field>
@@ -95,14 +97,14 @@
                             formControlName="emergencyMobileno">
                     </mat-form-field>
 
-                    <mat-form-field class="w-full md:w-4/12" appearance="outline">
+                    <mat-form-field class="w-full md:w-4/12 md:pr-4" appearance="outline">
                         <mat-label>Enter Email</mat-label>
-                        <input placeholder="Enter Enter Email" id="email" matInput formControlName="mail">
+                        <input placeholder="Enter Enter Email" id="personalEmail" matInput formControlName="mail">
                     </mat-form-field>
 
-                    <mat-form-field class="w-full md:w-4/12 md:pr-4" appearance="outline">
+                    <mat-form-field class="w-full md:w-4/12" appearance="outline">
                         <mat-label>Enter Office Mail</mat-label>
-                        <input placeholder="Enter Office Mail" id="email" matInput formControlName="officeMail">
+                        <input placeholder="Enter Office Mail" id="officeEmail" matInput formControlName="officeMail">
                     </mat-form-field>
 
                     <mat-form-field class="w-full md:w-4/12 md:pr-4" appearance="outline">
@@ -110,12 +112,12 @@
                         <input placeholder="Leaves" id="leaves" matInput formControlName="leaves">
                     </mat-form-field>
 
-                    <mat-form-field class="w-full md:w-4/12 " appearance="outline">
+                    <mat-form-field class="w-full md:w-4/12 md:pr-4" appearance="outline">
                         <mat-label>Aadhar No</mat-label>
                         <input placeholder="Enter Aadhar No" id="aadharNo" matInput formControlName="aadharNo">
                     </mat-form-field>
 
-                    <mat-form-field class="w-full md:w-4/12 md:pr-4" appearance="outline">
+                    <mat-form-field class="w-full md:w-4/12" appearance="outline">
                         <mat-label>Pan No</mat-label>
                         <input placeholder="Enter Pan No" id="panNo" matInput formControlName="panNO">
                     </mat-form-field>
@@ -125,12 +127,12 @@
                         <input placeholder="Enter PF No" id="pfNo" matInput formControlName="pfNo">
                     </mat-form-field>
 
-                    <mat-form-field class="w-full md:w-4/12 " appearance="outline">
+                    <mat-form-field class="w-full md:w-4/12 md:pr-4" appearance="outline">
                         <mat-label>UAN No</mat-label>
                         <input placeholder="Enter UAN No" id="uanNo" matInput formControlName="uanNo">
                     </mat-form-field>
 
-                    <mat-form-field class="w-full md:w-4/12 md:pr-4 mb-0" appearance="outline">
+                    <mat-form-field class="w-full md:w-4/12 mb-0" appearance="outline">
                         <mat-label>Supervisor</mat-label>
                         <input placeholder="Supervisor" id="supervisor" matInput formControlName="supervisor">
                     </mat-form-field>
@@ -232,7 +234,8 @@
 
                     <mat-form-field class="w-full md:w-4/12 md:pr-4" appearance="outline">
                         <mat-label>Designation</mat-label>
-                        <input placeholder="eg: UIUX Designer" id="designation" matInput formControlName="designation">
+                        <input placeholder="eg: UIUX Designer" id="designation2" matInput
+                            formControlName="designation2">
                     </mat-form-field>
 
                     <mat-form-field class="w-full md:w-2/12 md:pr-4" appearance="outline">
@@ -273,7 +276,8 @@
                 </div>
                 <div class="mt-5 text-right">
                     <button mat-stroked-button class="rounded mr-5">Cancel</button>
-                    <button color="primary" type="submit" class="rounded min-w-[100px]" mat-raised-button routerLink="/hr-employees">Save</button>
+                    <button color="primary" type="submit" class="rounded min-w-[100px]" mat-raised-button>Save</button>
+                    <!-- routerLink="/hr-employees" -->
                 </div>
             </div>
         </form>
