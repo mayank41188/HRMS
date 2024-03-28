@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder,Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { UtilService } from 'app/services/util.service';
+import { UtilService } from 'app/core/service/util.service';
 
 @Component({
   selector: 'app-add-employee',

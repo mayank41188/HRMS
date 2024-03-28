@@ -3,7 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
 import { ApplyLeaveComponent } from 'app/hr/leave-management/popups/apply-leave/apply-leave.component';
-import { EmployeeService } from 'app/services/hr-services/employee.service';
+import { EmployeeService } from 'app/hr/hr-services/employee.service';
 import { CautionPopupComponent } from 'app/shared/popups/caution-popup/caution-popup.component';
 import { SuccessPopupComponent } from 'app/shared/popups/success-popup/success-popup.component';
 
