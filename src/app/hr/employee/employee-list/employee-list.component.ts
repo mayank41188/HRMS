@@ -2,8 +2,8 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
-import { EmployeeService } from 'app/core/service/employee.service';
 import { ApplyLeaveComponent } from 'app/hr/leave-management/popups/apply-leave/apply-leave.component';
+import { EmployeeService } from 'app/services/hr-services/employee.service';
 import { CautionPopupComponent } from 'app/shared/popups/caution-popup/caution-popup.component';
 import { SuccessPopupComponent } from 'app/shared/popups/success-popup/success-popup.component';
 
@@ -18,8 +18,19 @@ export class EmployeeListComponent implements OnInit {
     private router: Router,
     private empService: EmployeeService 
   ) { }
+
+  displayedColumns: string[] = ['no', 'Image', 'Name', 'Department', 'Role', 'Mobile', 'Email', 'Access', 'Action'];
+  dataSource = new MatTableDataSource<any>([]);
+
+  getEmpList(){
+    this.empService.getEmployeeList().subscribe((res)=> {
+      this.dataSource= res;
+      console.log(this.dataSource);
+    })
+  }
+
   ngOnInit(): void {
-    // this.getEmpList();
+    this.getEmpList();
   }
 
   openProfile(){
@@ -35,17 +46,6 @@ export class EmployeeListComponent implements OnInit {
     
     this.dialog.open(CautionPopupComponent, {
       autoFocus: false
-    })
-  }
-
-  displayedColumns: string[] = ['no', 'Image', 'Name', 'Department', 'Role', 'Mobile', 'Email', 'Access', 'Action'];
-  dataSource = new MatTableDataSource<any>([]);
-
-  getEmpList(){
-    this.empService.getEmployeeList().subscribe((res)=> {
-      this.dataSource= res;
-      console.log(this.dataSource);
-      
     })
   }
 }
